@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RaccoltApp</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_calendar">Calendario</string>
+    <string name="nav_map">Mappa</string>
+    <string name="nav_reports">Segnalazioni</string>
+    <string name="nav_waste_guide">Dove lo butto?</string>
+    <string name="nav_profile">Profilo</string>
+    
+    <!-- Calendar Fragment -->
+    <string name="calendar_title">Calendario Raccolta</string>
+    <string name="calendar_today">Oggi</string>
+    <string name="calendar_no_collections">Nessuna raccolta prevista</string>
+    <string name="calendar_add_reminder">Aggiungi promemoria</string>
+    <string name="filter_all">Tutti</string>
+    <string name="filter_organic">Organico</string>
+    <string name="filter_plastic">Plastica</string>
+    <string name="filter_paper">Carta</string>
+    <string name="filter_glass">Vetro</string>
+    
+    <!-- Map Fragment -->
+    <string name="map_title">Punti di Raccolta</string>
+    <string name="map_search_hint">Cerca un punto di raccolta…</string>
+    <string name="map_my_location">La mia posizione</string>
+    <string name="map_loading">Caricamento mappa…</string>
+    <string name="map_no_permission">Permessi di localizzazione necessari</string>
+    
+    <!-- Reports Fragment -->
+    <string name="reports_title">Segnalazioni</string>
+    <string name="reports_new">Nuova segnalazione</string>
+    <string name="reports_filter_all">Tutte</string>
+    <string name="reports_filter_open">Aperte</string>
+    <string name="reports_filter_resolved">Risolte</string>
+    <string name="reports_empty">Nessuna segnalazione</string>
+    <string name="report_description_hint">Descrivi il problema…</string>
+    <string name="report_add_photo">Aggiungi foto</string>
+    <string name="report_send">Invia segnalazione</string>
+    
+    <!-- Waste Guide Fragment -->
+    <string name="waste_guide_title">Dove lo butto?</string>
+    <string name="waste_search_hint">Cerca un materiale…</string>
+    <string name="waste_categories">Categorie</string>
+    <string name="waste_frequently_searched">Ricerche frequenti</string>
+    <string name="waste_category_organic">Organico</string>
+    <string name="waste_category_plastic">Plastica e Metalli</string>
+    <string name="waste_category_paper">Carta</string>
+    <string name="waste_category_glass">Vetro</string>
+    <string name="waste_category_electronics">RAEE</string>
+    <string name="waste_category_general">Indifferenziato</string>
+    
+    <!-- Profile Fragment -->
+    <string name="profile_title">Il mio profilo</string>
+    <string name="profile_name">Nome e Cognome</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_address">Indirizzo</string>
+    <string name="profile_notifications">Notifiche</string>
+    <string name="profile_notification_reminder">Promemoria raccolta</string>
+    <string name="profile_notification_news">Novità e aggiornamenti</string>
+    <string name="profile_statistics">Le mie statistiche</string>
+    <string name="profile_reports_sent">Segnalazioni inviate</string>
+    <string name="profile_eco_points">Eco punti</string>
+    <string name="profile_logout">Esci</string>
+    <string name="profile_save">Salva modifiche</string>
+    
+    <!-- Common -->
+    <string name="loading">Caricamento…</string>
+    <string name="error_generic">Si è verificato un errore</string>
+    <string name="retry">Riprova</string>
+    <string name="cancel">Annulla</string>
+    <string name="save">Salva</string>
+    <string name="delete">Elimina</string>
+    <string name="edit">Modifica</string>
+    <string name="search">Cerca</string>
+</resources>

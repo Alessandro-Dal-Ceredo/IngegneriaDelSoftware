@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary colors (Green) -->
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#C8E6C9</color>
+    
+    <!-- Accent colors (Blue) -->
+    <color name="accent">#03A9F4</color>
+    <color name="accent_dark">#0288D1</color>
+    <color name="accent_light">#B3E5FC</color>
+    
+    <!-- Waste type colors -->
+    <color name="waste_organic">#795548</color>
+    <color name="waste_plastic">#FFC107</color>
+    <color name="waste_paper">#2196F3</color>
+    <color name="waste_glass">#4CAF50</color>
+    <color name="waste_metal">#9E9E9E</color>
+    <color name="waste_electronics">#FF5722</color>
+    <color name="waste_general">#607D8B</color>
+    
+    <!-- UI colors -->
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#F44336</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
+</resources>

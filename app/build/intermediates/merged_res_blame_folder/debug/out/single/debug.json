@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_item_collection_event.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/item_collection_event.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_fragment_profile.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_fragment_waste_guide.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/fragment_waste_guide.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_fragment_calendar.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/fragment_calendar.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_fragment_map.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/fragment_map.xml"
+    },
+    {
+        "merged": "it.unive.raccoltapp-merged_res-31:/layout_fragment_profile.xml.flat",
+        "source": "it.unive.raccoltapp-main-33:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-merged_res-31:/layout_fragment_reports.xml.flat",
+        "source": "/Users/dalce/.gradle/daemon/8.2/it.unive.raccoltapp-main-33:/layout/fragment_reports.xml"
+    }
+]
