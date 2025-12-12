@@ -8,115 +8,154 @@
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
-11    <permission
-11-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-12        android:name="it.unive.raccoltapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="it.unive.raccoltapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:5:5-18:19
-18        android:allowBackup="true"
-18-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-20        android:debuggable="true"
-21        android:extractNativeLibs="false"
-22        android:label="@string/app_name"
-22-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:7:9-41
-23        android:supportsRtl="true"
-23-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:8:9-35
-24        android:testOnly="true"
-25        android:theme="@style/Theme.RaccoltApp" >
-25-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:9:9-48
-26        <activity
-26-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:10:9-17:20
-27            android:name="it.unive.raccoltapp.MainActivity"
-27-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:11:13-41
-28            android:exported="true" >
-28-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:12:13-36
-29            <intent-filter>
-29-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:13:13-16:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:14:17-69
-30-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:14:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:15:17-77
-32-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:15:27-74
-33            </intent-filter>
-34        </activity>
-35
-36        <provider
-36-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-37            android:name="androidx.startup.InitializationProvider"
-37-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-38            android:authorities="it.unive.raccoltapp.androidx-startup"
-38-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-39            android:exported="false" >
-39-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-40            <meta-data
-40-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-41                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-41-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-42                android:value="androidx.startup" />
-42-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/4cbcf27c467347a1a697d011e0391f2d/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-43            <meta-data
-43-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/dalce/.gradle/caches/transforms-3/d1c1e0b187f385ec39da9225d1799ef7/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-44                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-44-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/dalce/.gradle/caches/transforms-3/d1c1e0b187f385ec39da9225d1799ef7/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-45                android:value="androidx.startup" />
-45-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/dalce/.gradle/caches/transforms-3/d1c1e0b187f385ec39da9225d1799ef7/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-46            <meta-data
-46-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-47                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-47-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-48                android:value="androidx.startup" />
-48-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-49        </provider>
-50
-51        <receiver
-51-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-52            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-52-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-53            android:directBootAware="false"
-53-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-54            android:enabled="true"
-54-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-55            android:exported="true"
-55-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-56            android:permission="android.permission.DUMP" >
-56-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-57            <intent-filter>
-57-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-58                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-58-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-58-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-59            </intent-filter>
-60            <intent-filter>
-60-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-61                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-62            </intent-filter>
-63            <intent-filter>
-63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-64                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-65            </intent-filter>
-66            <intent-filter>
-66-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-67                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-67-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-67-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/9cc5a4a18c45fd86efd7331730c4561d/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-68            </intent-filter>
-69        </receiver>
-70    </application>
+11    <!-- Permessi richiesti -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:8:5-81
+14-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:8:22-78
+15
+16    <permission
+16-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+17        android:name="it.unive.raccoltapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="it.unive.raccoltapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:10:5-33:19
+23        android:allowBackup="true"
+23-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:11:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.9.0] /Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:fullBackupContent="@xml/backup_rules"
+27-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:12:9-54
+28        android:icon="@mipmap/ic_launcher"
+28-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:13:9-43
+29        android:label="@string/app_name"
+29-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:14:9-41
+30        android:supportsRtl="true"
+30-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:15:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.RaccoltApp" >
+32-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:16:9-48
+33
+34        <!-- Chiave API di Google Maps (DA SOSTITUIRE) -->
+35        <meta-data
+35-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:19:9-21:50
+36            android:name="com.google.android.geo.API_KEY"
+36-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:20:13-58
+37            android:value="TUA_CHIAVE_API_QUI" />
+37-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:21:13-47
+38
+39        <activity
+39-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:23:9-32:20
+40            android:name="it.unive.raccoltapp.ui.MainActivity"
+40-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:24:13-44
+41            android:exported="true"
+41-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:25:13-36
+42            android:theme="@style/Theme.RaccoltApp" >
+42-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:26:13-52
+43            <intent-filter>
+43-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:27:13-31:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:28:17-69
+44-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:28:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:30:17-77
+46-->/Users/dalce/Developer/IngegneriaSoftware/RaccoltApp/app/src/main/AndroidManifest.xml:30:27-74
+47            </intent-filter>
+48        </activity>
+49
+50        <provider
+50-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+51            android:name="androidx.startup.InitializationProvider"
+51-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+52            android:authorities="it.unive.raccoltapp.androidx-startup"
+52-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+53            android:exported="false" >
+53-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+54            <meta-data
+54-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+55                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+55-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+56                android:value="androidx.startup" />
+56-->[androidx.emoji2:emoji2:1.2.0] /Users/dalce/.gradle/caches/transforms-3/986cb90b811bf58fb8e8ff4e6584552d/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+57            <meta-data
+57-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/dalce/.gradle/caches/transforms-3/25b8dec5de7e8577fe24c61e3788d8e4/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+58-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/dalce/.gradle/caches/transforms-3/25b8dec5de7e8577fe24c61e3788d8e4/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+59                android:value="androidx.startup" />
+59-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/dalce/.gradle/caches/transforms-3/25b8dec5de7e8577fe24c61e3788d8e4/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+60            <meta-data
+60-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+62                android:value="androidx.startup" />
+62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+63        </provider>
+64
+65        <uses-library
+65-->[androidx.window:window:1.0.0] /Users/dalce/.gradle/caches/transforms-3/f85d8380377799d3d79bbe7a0a0e480a/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+66            android:name="androidx.window.extensions"
+66-->[androidx.window:window:1.0.0] /Users/dalce/.gradle/caches/transforms-3/f85d8380377799d3d79bbe7a0a0e480a/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+67            android:required="false" />
+67-->[androidx.window:window:1.0.0] /Users/dalce/.gradle/caches/transforms-3/f85d8380377799d3d79bbe7a0a0e480a/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+68        <uses-library
+68-->[androidx.window:window:1.0.0] /Users/dalce/.gradle/caches/transforms-3/f85d8380377799d3d79bbe7a0a0e480a/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+69            android:name="androidx.window.sidecar"
+69-->[androidx.window:window:1.0.0] /Users/dalce/.gradle/caches/transforms-3/f85d8380377799d3d79bbe7a0a0e480a/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+70            android:required="false" />
+70-->[androidx.window:window:1.0.0] /Users/dalce/.gradle/caches/transforms-3/f85d8380377799d3d79bbe7a0a0e480a/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
 71
-72</manifest>
+72        <receiver
+72-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+73            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+73-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+74            android:directBootAware="false"
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+75            android:enabled="true"
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+76            android:exported="true"
+76-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+77            android:permission="android.permission.DUMP" >
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+78            <intent-filter>
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+79                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+80            </intent-filter>
+81            <intent-filter>
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+82                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+83            </intent-filter>
+84            <intent-filter>
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+85                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+86            </intent-filter>
+87            <intent-filter>
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+88                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dalce/.gradle/caches/transforms-3/92e8251532aef0a688bfdf15bbedba07/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+89            </intent-filter>
+90        </receiver>
+91    </application>
+92
+93</manifest>

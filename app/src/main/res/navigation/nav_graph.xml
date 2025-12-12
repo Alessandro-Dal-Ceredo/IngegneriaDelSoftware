@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CalendarFragment">
+
+    <!-- 1. FRAMMENTO PRINCIPALE (Home/Calendario) -->
+    <fragment
+        android:id="@+id/CalendarFragment"
+        android:name="it.unive.raccoltapp.ui.CalendarFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendar">
+        <!-- Da qui non servono action verso gli altri tab della bottom nav,
+             ci pensa il menu inferiore a gestire il cambio -->
+    </fragment>
+
+    <!-- 2. FRAMMENTO PROFILO (Contiene il Logout) -->
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="it.unive.raccoltapp.ui.ProfileFragment"
+        android:label="Profilo"
+        tools:layout="@layout/fragment_profile">
+
+        <!-- Azione per il Logout: Va al Login e pulisce la backstack -->
+        <action
+            android:id="@+id/action_ProfileFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Placeholder per gli altri 3 frammenti della Bottom Bar -->
+    <!-- Copia e incolla questi blocchi cambiando ID e Name con i tuoi file -->
+    <!--
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="it.unive.raccoltapp.ui.SearchFragment"
+        android:label="Cerca" />
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="it.unive.raccoltapp.ui.MapFragment"
+        android:label="Mappa" />
+
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="it.unive.raccoltapp.ui.CameraFragment"
+        android:label="Camera" />
+    -->
+
+    <!-- FLUSSO DI AUTENTICAZIONE (Fuori dalla Bottom Nav) -->
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="it.unive.raccoltapp.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <!-- Login Riuscito -> Vai al Calendario -->
+        <action
+            android:id="@+id/action_LoginFragment_to_CalendarFragment"
+            app:destination="@id/CalendarFragment"
+            app:popUpTo="@id/LoginFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Vai alla Registrazione -->
+        <action
+            android:id="@+id/action_LoginFragment_to_SignUpFragment"
+            app:destination="@id/SignUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignUpFragment"
+        android:name="it.unive.raccoltapp.ui.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+
+        <!-- Registrazione finita -> Vai al Login -->
+        <action
+            android:id="@+id/action_SignUpFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:popUpTo="@id/SignUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

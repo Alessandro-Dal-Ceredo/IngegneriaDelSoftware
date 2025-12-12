@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "it.unive.raccoltapp-mergeDebugResources-29:/values-v16/values-v16.xml",
+            "outputFile": "it.unive.raccoltapp-mergeDebugResources-41:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/dalce/.gradle/caches/transforms-3/3c3e8d87979f80077854f6234c4ddaef/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/dalce/.gradle/caches/transforms-3/68b2f9db80fd5fbadc0f11fe19280caa/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/dalce/.gradle/caches/transforms-3/f0f4ee7c3b88100b2d2cd4b05ab423cd/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/dalce/.gradle/caches/transforms-3/69031d9de34e6ae4e80492f7a424b6d1/transformed/core-1.9.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
