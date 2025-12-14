@@ -27,18 +27,30 @@ import okhttp3.Response;
 
 public class CalendarManager {
 
-    private static final String NOME_FILE_LOCALE = "calendario_raccolta_locale.json";
-    private static final String URL_SERVER = API_MANAGER.BASE_URL + "storage/v1/object/public/calendari_rifiuti/treviso.json";
+    private static final String NOME_FILE_LOCALE_PREFIX = "calendario_raccolta_locale_";
+    private String comuneSelezionato = "treviso"; // default
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final OkHttpClient client = new OkHttpClient();
+
+    public void setComune(String comune) {
+        this.comuneSelezionato = comune;
+    }
+
+    private String getUrlServer() {
+        return API_MANAGER.BASE_URL + "storage/v1/object/public/calendari_rifiuti/" + comuneSelezionato + ".json";
+    }
+
+    private String getNomeFileLocale() {
+        return NOME_FILE_LOCALE_PREFIX + comuneSelezionato + ".json";
+    }
 
     // Legge il calendario in modo robusto
     public List<RaccoltaGiorno> leggiCalendarioLocale(Context context) {
         InputStream inputStream = null;
         try {
             // Priorità 1: Cerca il file scaricato dal server
-            File file = new File(context.getFilesDir(), NOME_FILE_LOCALE);
+            File file = new File(context.getFilesDir(), getNomeFileLocale());
             if (file.exists() && file.length() > 0) {
                 inputStream = new FileInputStream(file);
             } else {
@@ -80,7 +92,7 @@ public class CalendarManager {
     public void aggiornaDaServer(Context context, Runnable onSuccess) {
         executor.execute(() -> {
             Request request = new Request.Builder()
-                    .url(URL_SERVER)
+                    .url(getUrlServer())
                     .addHeader("apikey", API_MANAGER.API_KEY)
                     .build();
 
@@ -90,7 +102,7 @@ public class CalendarManager {
                     return;
                 }
 
-                File fileOutput = new File(context.getFilesDir(), NOME_FILE_LOCALE);
+                File fileOutput = new File(context.getFilesDir(), getNomeFileLocale());
                 try (FileOutputStream fos = new FileOutputStream(fileOutput)) {
                     fos.write(response.body().bytes());
                 }

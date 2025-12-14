@@ -24,6 +24,12 @@
 
     </LinearLayout>
 
+    <Spinner
+        android:id="@+id/spinner_comuni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp" />
+
     <!-- Il widget del calendario -->
     <CalendarView
         android:id="@+id/calendar_view"

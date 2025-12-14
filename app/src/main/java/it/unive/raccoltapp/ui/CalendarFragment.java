@@ -4,18 +4,24 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.databinding.FragmentCalendarBinding;
 import it.unive.raccoltapp.model.CalendarManager;
 import it.unive.raccoltapp.model.RaccoltaGiorno;
@@ -25,6 +31,9 @@ public class CalendarFragment extends Fragment {
     private FragmentCalendarBinding binding;
     private CalendarManager calendarManager;
     private Map<String, RaccoltaGiorno> calendarioMap;
+    private String dataSelezionata;
+    private final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,54 +52,72 @@ public class CalendarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Imposta il listener per il cambio di data
-        binding.calendarView.setOnDateChangeListener((v, year, month, dayOfMonth) -> {
-            // Formatta la data selezionata nel formato yyyy-MM-dd per la ricerca
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(year, month, dayOfMonth);
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-            String selectedDate = sdf.format(calendar.getTime());
+        if (dataSelezionata == null) {
+            dataSelezionata = sdf.format(new Date(binding.calendarView.getDate()));
+        }
 
-            // Aggiorna la UI con le informazioni del giorno
-            aggiornaInfoGiorno(selectedDate);
+        Spinner spinner = binding.spinnerComuni;
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.comuni, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String comuneSelezionato = parent.getItemAtPosition(position).toString().toLowerCase(Locale.ROOT);
+                calendarManager.setComune(comuneSelezionato);
+                caricaDatiEInizializza();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
 
-        // Carica i dati e aggiorna la UI con la data corrente
+        binding.calendarView.setOnDateChangeListener((v, year, month, dayOfMonth) -> {
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(year, month, dayOfMonth);
+            dataSelezionata = sdf.format(calendar.getTime());
+            aggiornaInfoGiorno(dataSelezionata);
+        });
+
         caricaDatiEInizializza();
     }
 
     private void caricaDatiEInizializza() {
-        // Carica i dati in background
         calendarManager.aggiornaDaServer(getContext(), () -> {
             if (getActivity() != null) {
                 getActivity().runOnUiThread(this::mappaDatiEInizializzaUI);
             }
         });
-        // Nel frattempo, carica i dati locali
         mappaDatiEInizializzaUI();
     }
 
     private void mappaDatiEInizializzaUI() {
         List<RaccoltaGiorno> calendario = calendarManager.leggiCalendarioLocale(getContext());
         if (calendario != null) {
-            // Converte la lista in una mappa per un accesso rapido
             calendarioMap = calendario.stream()
                     .collect(Collectors.toMap(g -> g.data, g -> g));
-            
-            // Mostra le informazioni per la data corrente all'avvio
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-            String oggi = sdf.format(Calendar.getInstance().getTime());
-            aggiornaInfoGiorno(oggi);
+
+            aggiornaInfoGiorno(dataSelezionata);
+
+            try {
+                Date date = sdf.parse(dataSelezionata);
+                if (date != null && binding.calendarView.getDate() != date.getTime()) {
+                    binding.calendarView.setDate(date.getTime(), true, true);
+                }
+            } catch (ParseException e) {
+                // ignore
+            }
         }
     }
 
     private void aggiornaInfoGiorno(String data) {
         if (calendarioMap == null) return;
 
-        // Aggiorna il testo della data selezionata
         binding.selectedDateText.setText("Raccolta per il " + data + ":");
 
-        // Cerca le informazioni per la data e aggiorna il testo della raccolta
         RaccoltaGiorno giorno = calendarioMap.get(data);
         String info;
         if (giorno != null && giorno.tipologie != null && !giorno.tipologie.isEmpty()) {
@@ -104,6 +131,6 @@ public class CalendarFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null; // Evita memory leak
+        binding = null;
     }
 }
