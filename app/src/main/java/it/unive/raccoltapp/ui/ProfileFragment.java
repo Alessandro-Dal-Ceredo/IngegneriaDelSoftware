@@ -13,6 +13,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.databinding.FragmentProfileBinding;
+import it.unive.raccoltapp.network.API_MANAGER;
 
 public class ProfileFragment extends Fragment {
 
@@ -29,32 +30,16 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Definizione dell'azione di navigazione verso il Login
-        View.OnClickListener logoutAction = v -> {
-            Toast.makeText(getContext(), "Logout in corso...", Toast.LENGTH_SHORT).show();
+        // Imposta l'azione di logout
+        binding.buttonLogout.setOnClickListener(v -> {
+            // Esegue il logout
+            API_MANAGER.getInstance().logout();
+            Toast.makeText(getContext(), "Logout effettuato", Toast.LENGTH_SHORT).show();
+
+            // Usa l'azione globale per tornare al login e pulire lo stack
             NavHostFragment.findNavController(ProfileFragment.this)
-                    .navigate(R.id.action_ProfileFragment_to_LoginFragment);
-        };
-
-        // --- APPLICO L'AZIONA A TUTTI I BOTTONI ---
-
-        // 1. Applica al bottone Material rosso (se presente nell'XML come btn_logout)
-        if (binding.btnLogout != null) {
-            binding.btnLogout.setOnClickListener(logoutAction);
-        }
-
-        // 2. Applica al bottone standard (se presente nell'XML come button_logout)
-        // PRIMA QUI C'ERA "finishAffinity()" CHE CHIUDEVA L'APP. ORA NAVIGA AL LOGIN.
-        if (binding.buttonLogout != null) {
-            binding.buttonLogout.setOnClickListener(logoutAction);
-        }
-
-        // Tasto Salva (opzionale)
-        if (binding.btnSave != null) {
-            binding.btnSave.setOnClickListener(v -> {
-                Toast.makeText(getContext(), "Dati salvati!", Toast.LENGTH_SHORT).show();
-            });
-        }
+                    .navigate(R.id.action_global_to_LoginFragment);
+        });
     }
 
     @Override

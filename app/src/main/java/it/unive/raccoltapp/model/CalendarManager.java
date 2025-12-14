@@ -28,7 +28,7 @@ import okhttp3.Response;
 public class CalendarManager {
 
     private static final String NOME_FILE_LOCALE = "calendario_raccolta_locale.json";
-    private static final String URL_SERVER = API_MANAGER.BASE_URL + "storage/v1/object/public/calendari/calendario.json";
+    private static final String URL_SERVER = API_MANAGER.BASE_URL + "storage/v1/object/public/calendari_rifiuti/treviso.json";
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final OkHttpClient client = new OkHttpClient();
