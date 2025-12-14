@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_item_collection_event.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\item_collection_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_signup.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_reports.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_reports.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_map.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_map.xml"
+    },
+    {
+        "merged": "it.unive.raccoltapp-debug-43:/layout_fragment_calendar.xml.flat",
+        "source": "it.unive.raccoltapp-main-45:/layout/fragment_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_waste_guide.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_waste_guide.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_calendar.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-debug-43:\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\bellino\\.gradle\\daemon\\8.13\\it.unive.raccoltapp-main-45:\\layout\\content_main.xml"
+    }
+]

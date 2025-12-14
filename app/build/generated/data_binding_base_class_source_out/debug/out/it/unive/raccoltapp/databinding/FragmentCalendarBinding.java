@@ -9,13 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import it.unive.raccoltapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -23,64 +18,33 @@ import java.lang.String;
 
 public final class FragmentCalendarBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final CalendarView calendarView;
 
   @NonNull
-  public final Chip chipAll;
+  public final TextView collectionInfoText;
 
   @NonNull
-  public final Chip chipGlass;
-
-  @NonNull
-  public final ChipGroup chipGroupFilters;
-
-  @NonNull
-  public final Chip chipOrganic;
-
-  @NonNull
-  public final Chip chipPaper;
-
-  @NonNull
-  public final Chip chipPlastic;
-
-  @NonNull
-  public final LinearLayout emptyState;
-
-  @NonNull
-  public final FloatingActionButton fabAddReminder;
-
-  @NonNull
-  public final RecyclerView recyclerViewEvents;
+  public final TextView selectedDateText;
 
   @NonNull
   public final TextView tvCalendarTitle;
 
-  private FragmentCalendarBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull CalendarView calendarView, @NonNull Chip chipAll, @NonNull Chip chipGlass,
-      @NonNull ChipGroup chipGroupFilters, @NonNull Chip chipOrganic, @NonNull Chip chipPaper,
-      @NonNull Chip chipPlastic, @NonNull LinearLayout emptyState,
-      @NonNull FloatingActionButton fabAddReminder, @NonNull RecyclerView recyclerViewEvents,
-      @NonNull TextView tvCalendarTitle) {
+  private FragmentCalendarBinding(@NonNull LinearLayout rootView,
+      @NonNull CalendarView calendarView, @NonNull TextView collectionInfoText,
+      @NonNull TextView selectedDateText, @NonNull TextView tvCalendarTitle) {
     this.rootView = rootView;
     this.calendarView = calendarView;
-    this.chipAll = chipAll;
-    this.chipGlass = chipGlass;
-    this.chipGroupFilters = chipGroupFilters;
-    this.chipOrganic = chipOrganic;
-    this.chipPaper = chipPaper;
-    this.chipPlastic = chipPlastic;
-    this.emptyState = emptyState;
-    this.fabAddReminder = fabAddReminder;
-    this.recyclerViewEvents = recyclerViewEvents;
+    this.collectionInfoText = collectionInfoText;
+    this.selectedDateText = selectedDateText;
     this.tvCalendarTitle = tvCalendarTitle;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -111,57 +75,15 @@ public final class FragmentCalendarBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.chip_all;
-      Chip chipAll = ViewBindings.findChildViewById(rootView, id);
-      if (chipAll == null) {
+      id = R.id.collection_info_text;
+      TextView collectionInfoText = ViewBindings.findChildViewById(rootView, id);
+      if (collectionInfoText == null) {
         break missingId;
       }
 
-      id = R.id.chip_glass;
-      Chip chipGlass = ViewBindings.findChildViewById(rootView, id);
-      if (chipGlass == null) {
-        break missingId;
-      }
-
-      id = R.id.chip_group_filters;
-      ChipGroup chipGroupFilters = ViewBindings.findChildViewById(rootView, id);
-      if (chipGroupFilters == null) {
-        break missingId;
-      }
-
-      id = R.id.chip_organic;
-      Chip chipOrganic = ViewBindings.findChildViewById(rootView, id);
-      if (chipOrganic == null) {
-        break missingId;
-      }
-
-      id = R.id.chip_paper;
-      Chip chipPaper = ViewBindings.findChildViewById(rootView, id);
-      if (chipPaper == null) {
-        break missingId;
-      }
-
-      id = R.id.chip_plastic;
-      Chip chipPlastic = ViewBindings.findChildViewById(rootView, id);
-      if (chipPlastic == null) {
-        break missingId;
-      }
-
-      id = R.id.empty_state;
-      LinearLayout emptyState = ViewBindings.findChildViewById(rootView, id);
-      if (emptyState == null) {
-        break missingId;
-      }
-
-      id = R.id.fab_add_reminder;
-      FloatingActionButton fabAddReminder = ViewBindings.findChildViewById(rootView, id);
-      if (fabAddReminder == null) {
-        break missingId;
-      }
-
-      id = R.id.recycler_view_events;
-      RecyclerView recyclerViewEvents = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerViewEvents == null) {
+      id = R.id.selected_date_text;
+      TextView selectedDateText = ViewBindings.findChildViewById(rootView, id);
+      if (selectedDateText == null) {
         break missingId;
       }
 
@@ -171,9 +93,8 @@ public final class FragmentCalendarBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCalendarBinding((CoordinatorLayout) rootView, calendarView, chipAll,
-          chipGlass, chipGroupFilters, chipOrganic, chipPaper, chipPlastic, emptyState,
-          fabAddReminder, recyclerViewEvents, tvCalendarTitle);
+      return new FragmentCalendarBinding((LinearLayout) rootView, calendarView, collectionInfoText,
+          selectedDateText, tvCalendarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

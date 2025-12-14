@@ -4,10 +4,10 @@ package it.unive.raccoltapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,24 +18,24 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final BottomNavigationView bottomNav;
 
   @NonNull
-  public final FrameLayout fragmentContainer;
+  public final FragmentContainerView navHostFragment;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView,
-      @NonNull BottomNavigationView bottomNav, @NonNull FrameLayout fragmentContainer) {
+  private ActivityMainBinding(@NonNull RelativeLayout rootView,
+      @NonNull BottomNavigationView bottomNav, @NonNull FragmentContainerView navHostFragment) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
-    this.fragmentContainer = fragmentContainer;
+    this.navHostFragment = navHostFragment;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -66,13 +66,13 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.fragment_container;
-      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainer == null) {
+      id = R.id.nav_host_fragment;
+      FragmentContainerView navHostFragment = ViewBindings.findChildViewById(rootView, id);
+      if (navHostFragment == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, bottomNav, fragmentContainer);
+      return new ActivityMainBinding((RelativeLayout) rootView, bottomNav, navHostFragment);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

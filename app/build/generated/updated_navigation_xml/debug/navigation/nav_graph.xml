@@ -1,0 +1,73 @@
+<navigation
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/nav_graph"
+app:startDestination="@id/nav_calendar" >
+
+<!-- Frammenti della Bottom Nav -->
+<fragment
+    android:id="@+id/nav_calendar"
+    android:name="it.unive.raccoltapp.ui.CalendarFragment"
+    android:label="Calendario"
+    tools:layout="@layout/fragment_calendar" />
+<fragment
+    android:id="@+id/nav_map"
+    android:name="it.unive.raccoltapp.ui.MapFragment"
+    android:label="Mappa"
+    tools:layout="@layout/fragment_map" />
+<fragment
+    android:id="@+id/nav_reports"
+    android:name="it.unive.raccoltapp.ui.ReportsFragment"
+    android:label="Segnalazioni"
+    tools:layout="@layout/fragment_reports" />
+<fragment
+    android:id="@+id/nav_waste_guide"
+    android:name="it.unive.raccoltapp.ui.WasteGuideFragment"
+    android:label="Dove lo butto?"
+    tools:layout="@layout/fragment_waste_guide" />
+<fragment
+    android:id="@+id/nav_profile"
+    android:name="it.unive.raccoltapp.ui.ProfileFragment"
+    android:label="Profilo"
+    tools:layout="@layout/fragment_profile" >
+
+    <action
+        android:id="@+id/action_ProfileFragment_to_LoginFragment"
+        app:destination="@id/LoginFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+
+</fragment>
+
+<!-- Flusso di Autenticazione -->
+<fragment
+    android:id="@+id/LoginFragment"
+    android:name="it.unive.raccoltapp.ui.LoginFragment"
+    android:label="Login"
+    tools:layout="@layout/fragment_login" >
+
+    <action
+        android:id="@+id/action_LoginFragment_to_CalendarFragment"
+        app:destination="@id/nav_calendar"
+        app:popUpTo="@id/LoginFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_LoginFragment_to_SignUpFragment"
+        app:destination="@id/SignUpFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/SignUpFragment"
+    android:name="it.unive.raccoltapp.ui.SignUpFragment"
+    android:label="Sign Up"
+    tools:layout="@layout/fragment_signup" >
+
+    <action
+        android:id="@+id/action_SignUpFragment_to_LoginFragment"
+        app:destination="@id/LoginFragment"
+        app:popUpTo="@id/SignUpFragment"
+        app:popUpToInclusive="true" />
+
+</fragment>
+</navigation>
