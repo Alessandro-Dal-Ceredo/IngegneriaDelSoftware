@@ -1,0 +1,2111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="overpass-turbo"><metadata><desc>Filtered OSM data converted to GPX by overpass turbo</desc><copyright author="The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."/><time>2025-12-16T16:18:00Z</time></metadata><wpt lat="45.4196475" lon="10.9933612"><name>AMIA</name><desc>amenity=recycling
+name=AMIA
+opening_hours=Mo-Sa 07:30-12:30,14:00-18:00
+recycling:batteries=yes
+recycling:books=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:clothes=yes
+recycling:electrical_appliances=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:scrap_metal=yes
+recycling:small_appliances=yes
+recycling:waste=yes
+recycling:wood=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/36481296"/></wpt><wpt lat="45.529169" lon="11.0044985"><name>Ecocentro Grezzana</name><desc>addr:city=Grezzana
+addr:postcode=37023
+addr:street=Via Cavaliere Cesare Bellamoli
+amenity=recycling
+name=Ecocentro Grezzana
+operator=SERIT
+operator:type=public
+recycling:batteries=yes
+recycling:cans=yes
+recycling:clothes=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:wood=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/70992401"/></wpt><wpt lat="45.5760408" lon="10.7192448"><name>Oasi Ecologica</name><desc>amenity=recycling
+area=yes
+name=Oasi Ecologica
+recycling_type=centre</desc><link href="http://osm.org/browse/way/75039712"/></wpt><wpt lat="45.4350956" lon="11.2828599"><name>way/137266653</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:cans=yes
+recycling:clothes=yes
+recycling:glass=yes
+recycling:paper=yes
+recycling:scrap_metal=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/137266653"/></wpt><wpt lat="45.437383" lon="11.0641448"><name>way/137496225</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling:glass=yes
+recycling:paper=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/137496225"/></wpt><wpt lat="45.5471199" lon="10.8853948"><name>way/174177236</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/174177236"/></wpt><wpt lat="45.3264564" lon="10.8007058"><name>Ecocentro Quaderni</name><desc>amenity=recycling
+name=Ecocentro Quaderni
+recycling:batteries=yes
+recycling:cans=yes
+recycling:cartons=yes
+recycling:clothes=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:scrap_metal=yes
+recycling:small_appliances=yes
+recycling_type=centre
+website=https://www.comune.villafranca.vr.it/nqcontent.cfm?a_id=1511</desc><link href="http://osm.org/browse/way/204509620"/></wpt><wpt lat="45.4359269" lon="10.6902702"><name>way/216510953</name><desc>amenity=recycling
+barrier=fence
+recycling_type=centre</desc><link href="http://osm.org/browse/way/216510953"/></wpt><wpt lat="45.138447" lon="11.3610944"><name>Ecocentro di Villa Bartolomea</name><desc>amenity=recycling
+name=Ecocentro di Villa Bartolomea
+recycling_type=centre</desc><link href="http://osm.org/browse/way/220861153"/></wpt><wpt lat="45.3959201" lon="11.2850615"><name>ECO Centro</name><desc>amenity=recycling
+name=ECO Centro
+recycling:batteries=yes
+recycling:books=yes
+recycling:cartons=yes
+recycling:clothes=yes
+recycling:electrical_appliances=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:scrap_metal=yes
+recycling:small_appliances=yes
+recycling:waste=yes
+recycling:wood=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/222484383"/></wpt><wpt lat="45.6392068" lon="10.9978717"><name>way/234083840</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/234083840"/></wpt><wpt lat="45.5082869" lon="10.732698"><name>way/269078040</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/way/269078040"/></wpt><wpt lat="45.8081195" lon="10.8495703"><name>Centro Raccolta Materiali</name><desc>amenity=recycling
+name=Centro Raccolta Materiali
+recycling_type=centre</desc><link href="http://osm.org/browse/way/270807849"/></wpt><wpt lat="45.3723054" lon="10.9188116"><name>way/275238251</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/275238251"/></wpt><wpt lat="45.52993" lon="10.73465"><name>node/281135435</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/281135435"/></wpt><wpt lat="45.6026094" lon="10.8014994"><name>Piattaforma Ecologica Caprino Veronese</name><desc>amenity=recycling
+ele=260.4
+name=Piattaforma Ecologica Caprino Veronese
+name:en=Recycling Center
+recycling_type=centre
+wpt_description=18-SEP-10 11:32:58</desc><link href="http://osm.org/browse/way/301484381"/></wpt><wpt lat="45.4305901" lon="11.2399772"><name>way/310406870</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/310406870"/></wpt><wpt lat="45.4406125" lon="11.0209017"><name>way/329197633</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/way/329197633"/></wpt><wpt lat="45.6483893" lon="10.8828282"><name>way/335812092</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/335812092"/></wpt><wpt lat="45.3466851" lon="10.8415752"><name>node/338322742</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/338322742"/></wpt><wpt lat="45.5797338" lon="10.9564113"><name>way/345845015</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/345845015"/></wpt><wpt lat="45.3962265" lon="10.9176747"><name>way/349863811</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/349863811"/></wpt><wpt lat="45.396404" lon="10.9180364"><name>way/349863812</name><desc>amenity=recycling
+operator=AMIA
+recycling:batteries=yes
+recycling:cans=yes
+recycling:clothes=yes
+recycling:glass=yes
+recycling:paper=yes
+recycling:scrap_metal=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/349863812"/></wpt><wpt lat="45.4171176" lon="10.9720362"><name>way/356938140</name><desc>access=private
+amenity=recycling
+noname=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/356938140"/></wpt><wpt lat="45.3567236" lon="10.8909058"><name>Isola Ecologica di Povegliano Veronese</name><desc>amenity=recycling
+name=Isola Ecologica di Povegliano Veronese
+recycling_type=centre</desc><link href="http://osm.org/browse/way/362089356"/></wpt><wpt lat="45.5100336" lon="10.893747"><name>Ecocentro</name><desc>amenity=recycling
+name=Ecocentro
+recycling_type=centre</desc><link href="http://osm.org/browse/way/369097142"/></wpt><wpt lat="45.1889196" lon="11.1901093"><name>Ecocentro Fontanelle</name><desc>amenity=recycling
+name=Ecocentro Fontanelle
+recycling:batteries=yes
+recycling:electrical_appliances=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:scrap_metal=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/379895661"/></wpt><wpt lat="45.774505" lon="10.813677"><name>node/442190583</name><desc>amenity=recycling
+location=overground
+recycling_type=container</desc><link href="http://osm.org/browse/node/442190583"/></wpt><wpt lat="45.3084981" lon="10.9325657"><name>Isola ecologica</name><desc>amenity=recycling
+collection_times=Martedì pomeriggio e Sabato mattina
+name=Isola ecologica
+recycling_type=container</desc><link href="http://osm.org/browse/way/490685409"/></wpt><wpt lat="45.4396442" lon="10.9816183"><name>way/510691202</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/way/510691202"/></wpt><wpt lat="45.5272255" lon="10.8428192"><name>way/598818617</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/598818617"/></wpt><wpt lat="45.5375561" lon="10.7401197"><name>Isola Ecologica</name><desc>addr:city=Bardolino
+addr:postcode=37011
+addr:street=Strada Campazzi
+amenity=recycling
+name=Isola Ecologica
+operator=Comune di Bardolino
+recycling_type=centre</desc><link href="http://osm.org/browse/way/603789737"/></wpt><wpt lat="45.6277956" lon="10.9561385"><name>way/633952778</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/633952778"/></wpt><wpt lat="45.4886047" lon="10.7918022"><name>way/676060245</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/676060245"/></wpt><wpt lat="45.4867768" lon="10.8730773"><name>way/677439212</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/677439212"/></wpt><wpt lat="45.6335543" lon="10.7343269"><name>Isola Ecologica Comunale</name><desc>amenity=recycling
+name=Isola Ecologica Comunale
+recycling_type=centre</desc><link href="http://osm.org/browse/node/685601721"/></wpt><wpt lat="45.5676434" lon="11.109259"><name>way/690017250</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/690017250"/></wpt><wpt lat="45.4017283" lon="10.7296544"><name>way/762013001</name><desc>amenity=recycling
+barrier=fence
+recycling_type=centre</desc><link href="http://osm.org/browse/way/762013001"/></wpt><wpt lat="45.4810334" lon="10.7230801"><name>way/772234568</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/772234568"/></wpt><wpt lat="45.5375958" lon="10.7400835"><name>Isola Ecologica</name><desc>addr:city=Bardolino
+addr:postcode=37011
+addr:street=Strada Campazzi
+amenity=recycling
+name=Isola Ecologica
+operator=Comune di Badolino
+recycling_type=centre</desc><link href="http://osm.org/browse/node/835521308"/></wpt><wpt lat="45.4252139" lon="11.1468184"><name>Ecocentro</name><desc>amenity=recycling
+name=Ecocentro
+name:it=Ecocentro
+recycling_type=centre</desc><link href="http://osm.org/browse/way/864567334"/></wpt><wpt lat="45.4272809" lon="11.150608"><name>way/864567335</name><desc>amenity=recycling
+operator=AMIA
+recycling:batteries=yes
+recycling:cans=yes
+recycling:clothes=yes
+recycling:glass=yes
+recycling:paper=yes
+recycling:scrap_metal=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/864567335"/></wpt><wpt lat="45.7428071" lon="10.7977745"><name>node/874030242</name><desc>amenity=recycling
+location=overground
+recycling_type=container</desc><link href="http://osm.org/browse/node/874030242"/></wpt><wpt lat="45.5663421" lon="10.756369"><name>Isola Ecologica Comunale</name><desc>amenity=recycling
+name=Isola Ecologica Comunale
+recycling_type=centre</desc><link href="http://osm.org/browse/way/886355803"/></wpt><wpt lat="45.1855659" lon="11.298379"><name>Ecocentro</name><desc>amenity=recycling
+name=Ecocentro
+recycling_type=centre</desc><link href="http://osm.org/browse/way/896158427"/></wpt><wpt lat="45.4859844" lon="10.8660288"><name>node/896958517</name><desc>amenity=recycling
+recycling:aluminium=yes
+recycling:cans=yes
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/896958517"/></wpt><wpt lat="45.444256" lon="10.6765137"><name>node/956794874</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/956794874"/></wpt><wpt lat="45.5017678" lon="10.7341493"><name>node/958293124</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/node/958293124"/></wpt><wpt lat="45.6224019" lon="11.0241977"><name>Isola ecologica</name><desc>amenity=recycling
+name=Isola ecologica
+recycling:batteries=yes
+recycling:cans=yes
+recycling:clothes=no
+recycling:electrical_appliances=yes
+recycling:glass=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:scrap_metal=yes
+recycling:small_appliances=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/980199047"/></wpt><wpt lat="45.466972" lon="10.7842689"><name>Ecocentro Sandrà</name><desc>amenity=recycling
+name=Ecocentro Sandrà
+opening_hours=Oct 01-Mar 31 Mo,We 14:00-18:00, Oct 01-Mar 31 Tu,Fr 08:00-12:00, Oct 01-Mar 31 Sa 08:30-12:00,13:30-17:00; Apr 01-Sep 30 Mo,We,Sa 15:00-19:00, Apr 01-Sep 30 Tu,Fr 08:00-12:00, Apr 01-Sep 30 Sa 08:30-12:00
+operator=Comune di Sandrà
+operator:type=government
+recycling_type=centre
+wheelchair=yes</desc><link href="http://osm.org/browse/way/1056174427"/></wpt><wpt lat="45.4222586" lon="10.8202971"><name>way/1128426668</name><desc>amenity=recycling
+barrier=fence
+fixme=In attesa degli orari invernali dal 31/10
+opening_hours=Apr 02- Oct 31 Mo-Th 08:30-12:00; Tu 16:00-19:00; Fr,Sa 08:30-12:00,16:00-19:00; Su 09:00-12:00; PH off
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1128426668"/></wpt><wpt lat="45.4196602" lon="10.9916236"><name>Isola ecologica AMIA</name><desc>addr:city=Verona
+addr:housenumber=34
+addr:street=Via Bartolomeo Avesani
+amenity=recycling
+barrier=fence
+name=Isola ecologica AMIA
+opening_hours=Mo-Sa 07:30-12:30,14:00-18:00
+recycling_type=centre
+url=https://www.amiavr.it/URP/Isole-ecologiche</desc><link href="http://osm.org/browse/way/1128487112"/></wpt><wpt lat="45.4865337" lon="10.7653959"><name>way/1266027972</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1266027972"/></wpt><wpt lat="45.5549176" lon="10.7883827"><name>way/1296588206</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1296588206"/></wpt><wpt lat="45.428114" lon="10.888466"><name>way/1300667212</name><desc>amenity=recycling
+barrier=fence
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1300667212"/></wpt><wpt lat="45.6529677" lon="10.7218877"><name>way/1304413116</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/way/1304413116"/></wpt><wpt lat="45.4474687" lon="10.8686627"><name>Isola ecologica Bussolengo</name><desc>addr:city=Bussolengo
+addr:postcode=37012
+addr:street=Via Caduti sul Lavoro
+amenity=recycling
+barrier=fence
+building=no
+name=Isola ecologica Bussolengo
+opening_hours=Mo 08:30-11:45,13:30-16:45; Tu 08:30-11:45,14:30-18:00; We 08:30-11:45,13:30-16:45; Th 08:30-11:45; Fr 08:30-11:45,13:30-16:45; Sa 08:30-11:45,14:30-18:00
+recycling_type=centre
+url=https://www.comune.bussolengo.vr.it/it/point-of-interest/707714</desc><link href="http://osm.org/browse/way/1310032097"/></wpt><wpt lat="45.4794665" lon="10.7227375"><name>way/1312111217</name><desc>amenity=recycling
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=limited</desc><link href="http://osm.org/browse/way/1312111217"/></wpt><wpt lat="45.4855616" lon="10.9383967"><name>way/1317839199</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1317839199"/></wpt><wpt lat="45.3269621" lon="11.2804908"><name>Ecocentro di Albaredo d’Adige</name><desc>addr:city=Albaredo d'Adige
+addr:country=IT
+addr:housenumber=20
+addr:postcode=37041
+addr:street=Via Don Sasselli d'Era
+amenity=recycling
+name=Ecocentro di Albaredo d’Adige
+operator=S.I.VE.
+owner=Comune di Albaredo d'Adige
+owner:wikidata=Q46230
+recycling:batteries=yes
+recycling:cans=yes
+recycling:car_batteries=yes
+recycling:cardboard=yes
+recycling:coffee_capsules=yes
+recycling:cooking_oil=yes
+recycling:cork=yes
+recycling:drugs=yes
+recycling:engine_oil=yes
+recycling:fluorescent_tubes=yes
+recycling:furniture=yes
+recycling:garden_waste=yes
+recycling:glass=yes
+recycling:green_waste=yes
+recycling:hazardous_waste=yes
+recycling:paint=yes
+recycling:pallets=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:printer_inkjet_cartridges=yes
+recycling:printer_toner_cartridges=yes
+recycling:rubble=yes
+recycling:scrap_metal=yes
+recycling:small_appliances=yes
+recycling:small_electrical_appliances=yes
+recycling:white_goods=yes
+recycling:wood=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1329156476"/></wpt><wpt lat="45.5364162" lon="10.9127658"><name>way/1386564968</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1386564968"/></wpt><wpt lat="45.5331615" lon="10.8025096"><name>way/1415344635</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1415344635"/></wpt><wpt lat="45.429929" lon="10.7323135"><name>Ecocentro Cavalcaselle</name><desc>amenity=recycling
+name=Ecocentro Cavalcaselle
+recycling_type=centre</desc><link href="http://osm.org/browse/way/1455932726"/></wpt><wpt lat="45.4985587" lon="10.735263"><name>node/1815639220</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/1815639220"/></wpt><wpt lat="45.4997482" lon="10.7340591"><name>node/1815639223</name><desc>addr:street=Peschiera - Lazise - BNF
+amenity=recycling
+opening_hours=Mo-Su 07:00-23:00
+recycling:cardboard=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:scrap_metal=yes
+recycling_type=container
+wheelchair=limited</desc><link href="http://osm.org/browse/node/1815639223"/></wpt><wpt lat="45.5470158" lon="10.8854075"><name>Ecocentro</name><desc>amenity=recycling
+name=Ecocentro
+recycling_type=centre</desc><link href="http://osm.org/browse/node/1824721635"/></wpt><wpt lat="45.4192519" lon="11.111436"><name>Isola Ecologica</name><desc>amenity=recycling
+name=Isola Ecologica
+recycling_type=centre</desc><link href="http://osm.org/browse/node/1858712343"/></wpt><wpt lat="45.2762115" lon="10.8596125"><name>node/2412025064</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/node/2412025064"/></wpt><wpt lat="45.4972014" lon="10.7359081"><name>node/2452229422</name><desc>access=customers
+amenity=recycling
+location=overground
+operator=Camping Spiaggia d'Oro
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2452229422"/></wpt><wpt lat="45.330445" lon="10.78793"><name>node/2592935377</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2592935377"/></wpt><wpt lat="45.330432" lon="10.7879212"><name>node/2592935378</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2592935378"/></wpt><wpt lat="45.3304745" lon="10.7879533"><name>Caritas</name><desc>amenity=recycling
+name=Caritas
+recycling:cans=no
+recycling:clothes=yes
+recycling:glass=no
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2592935379"/></wpt><wpt lat="45.3268231" lon="10.7909903"><name>Vetro</name><desc>amenity=recycling
+name=Vetro
+recycling:cans=yes
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2592935383"/></wpt><wpt lat="45.3312436" lon="10.7862899"><name>node/2594566869</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2594566869"/></wpt><wpt lat="45.3295669" lon="10.7908385"><name>node/2594566885</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2594566885"/></wpt><wpt lat="45.3283966" lon="10.7904259"><name>node/2594577999</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2594577999"/></wpt><wpt lat="45.3264291" lon="10.7885058"><name>node/2594578023</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2594578023"/></wpt><wpt lat="45.3287396" lon="10.7971859"><name>Vetro</name><desc>amenity=recycling
+name=Vetro
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2594578032"/></wpt><wpt lat="45.3290343" lon="10.7895846"><name>node/2594578040</name><desc>amenity=recycling
+recycling:cans=no
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2594578040"/></wpt><wpt lat="45.3292292" lon="10.7931365"><name>node/2594587729</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2594587729"/></wpt><wpt lat="45.306441" lon="10.8171669"><name>node/2595530175</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2595530175"/></wpt><wpt lat="45.305732" lon="10.8177235"><name>node/2595530235</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2595530235"/></wpt><wpt lat="45.3071449" lon="10.8211963"><name>node/2595530386</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2595530386"/></wpt><wpt lat="45.3097525" lon="10.8209689"><name>node/2595956216</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzane</desc><link href="http://osm.org/browse/node/2595956216"/></wpt><wpt lat="45.3121092" lon="10.8143616"><name>node/2596000725</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2596000725"/></wpt><wpt lat="45.3106503" lon="10.8163372"><name>node/2596019272</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2596019272"/></wpt><wpt lat="45.3094635" lon="10.8155223"><name>node/2596042823</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2596042823"/></wpt><wpt lat="45.3070804" lon="10.8157315"><name>node/2596118752</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2596118752"/></wpt><wpt lat="45.3056636" lon="10.8149316"><name>node/2596118753</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2596118753"/></wpt><wpt lat="45.3058249" lon="10.8117675"><name>node/2609108498</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2609108498"/></wpt><wpt lat="45.3063634" lon="10.8105666"><name>node/2609117198</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/2609117198"/></wpt><wpt lat="45.3074624" lon="10.8114272"><name>node/2609117199</name><desc>amenity=recycling
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2609117199"/></wpt><wpt lat="45.3076875" lon="10.8090062"><name>node/2609117200</name><desc>amenity=recycling
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2609117200"/></wpt><wpt lat="45.3124543" lon="10.8160241"><name>node/2727180537</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2727180537"/></wpt><wpt lat="45.3185791" lon="10.8288463"><name>node/2777501316</name><desc>amenity=recycling
+recycling:batteries=no
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2777501316"/></wpt><wpt lat="45.3201501" lon="10.8321677"><name>node/2777501317</name><desc>amenity=recycling
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2777501317"/></wpt><wpt lat="45.3204316" lon="10.8291673"><name>node/2780141939</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2780141939"/></wpt><wpt lat="45.3145502" lon="10.8583177"><name>vetro</name><desc>amenity=recycling
+name=vetro
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2787311435"/></wpt><wpt lat="45.3203639" lon="10.8311004"><name>node/2787311437</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:cans=no
+recycling:clothes=yes
+recycling:glass=no
+recycling:paper=no
+recycling:scrap_metal=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2787311437"/></wpt><wpt lat="45.3027042" lon="10.8127024"><name>node/2790491239</name><desc>amenity=recycling
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2790491239"/></wpt><wpt lat="45.3089055" lon="10.8096599"><name>node/2790491244</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2790491244"/></wpt><wpt lat="45.3098077" lon="10.8184943"><name>node/2791271910</name><desc>amenity=recycling
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2791271910"/></wpt><wpt lat="45.3058163" lon="10.8162626"><name>node/2791275358</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2791275358"/></wpt><wpt lat="45.3507387" lon="10.8509216"><name>node/2791918751</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2791918751"/></wpt><wpt lat="45.3049753" lon="10.8195165"><name>node/2792027406</name><desc>amenity=recycling
+recycling:cans=no
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2792027406"/></wpt><wpt lat="45.3054574" lon="10.8162696"><name>node/2792175990</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2792175990"/></wpt><wpt lat="45.4152177" lon="10.9506129"><name>node/2792364689</name><desc>amenity=recycling
+recycling:clothes=no
+recycling:glass=yes
+recycling:paper=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2792364689"/></wpt><wpt lat="45.3070775" lon="10.8122935"><name>node/2793420913</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2793420913"/></wpt><wpt lat="45.4125202" lon="10.9573913"><name>node/2798738377</name><desc>amenity=recycling
+location=overground
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/2798738377"/></wpt><wpt lat="45.2884936" lon="10.8243269"><name>node/2805558343</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805558343"/></wpt><wpt lat="45.2908834" lon="10.8223211"><name>node/2805558344</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805558344"/></wpt><wpt lat="45.3153882" lon="10.8033946"><name>node/2805584886</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2805584886"/></wpt><wpt lat="45.3119482" lon="10.8126827"><name>node/2805584890</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati del comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805584890"/></wpt><wpt lat="45.3114075" lon="10.8114834"><name>node/2805584891</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati del comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805584891"/></wpt><wpt lat="45.3114046" lon="10.8115076"><name>node/2805584892</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati del comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805584892"/></wpt><wpt lat="45.3114282" lon="10.8138183"><name>node/2805584893</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2805584893"/></wpt><wpt lat="45.2883188" lon="10.8228699"><name>node/2805592940</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:clothes=yes
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805592940"/></wpt><wpt lat="45.313536" lon="10.8144972"><name>node/2805604446</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2805604446"/></wpt><wpt lat="45.3113038" lon="10.8152992"><name>node/2805623688</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati del comune di Mozzecane</desc><link href="http://osm.org/browse/node/2805623688"/></wpt><wpt lat="45.301211" lon="10.8137023"><name>node/2807883913</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807883913"/></wpt><wpt lat="45.3026922" lon="10.8120822"><name>node/2807883914</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807883914"/></wpt><wpt lat="45.3021976" lon="10.8162968"><name>node/2807883915</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807883915"/></wpt><wpt lat="45.3022297" lon="10.8162329"><name>node/2807883916</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807883916"/></wpt><wpt lat="45.302698" lon="10.8152294"><name>node/2807883919</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807883919"/></wpt><wpt lat="45.3077219" lon="10.8195397"><name>node/2807898008</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807898008"/></wpt><wpt lat="45.3077058" lon="10.8195283"><name>node/2807898009</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807898009"/></wpt><wpt lat="45.3097436" lon="10.8210055"><name>node/2807898011</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807898011"/></wpt><wpt lat="45.3091658" lon="10.8248658"><name>node/2807898012</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dati provenienti dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807898012"/></wpt><wpt lat="45.3109408" lon="10.8261066"><name>Vetro e lattine</name><desc>amenity=recycling
+name=Vetro e lattine
+recycling:cans=yes
+recycling:glass=yes
+recycling_type=container
+source=Dato proveniente dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807898013"/></wpt><wpt lat="45.3121168" lon="10.8232914"><name>node/2807898014</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807898014"/></wpt><wpt lat="45.3106141" lon="10.832701"><name>node/2807904588</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=Dato proveniente dal comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807904588"/></wpt><wpt lat="45.3161878" lon="10.825001"><name>node/2807904589</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807904589"/></wpt><wpt lat="45.3078334" lon="10.8165503"><name>Medicinali scaduti</name><desc>amenity=recycling
+name=Medicinali scaduti
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container
+source=Dati del comune di Mozzecane</desc><link href="http://osm.org/browse/node/2807904590"/></wpt><wpt lat="45.3096721" lon="10.8179456"><name>node/2807914604</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2807914604"/></wpt><wpt lat="45.3068015" lon="10.814576"><name>node/2807932559</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807932559"/></wpt><wpt lat="45.3067924" lon="10.8146017"><name>node/2807932560</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807932560"/></wpt><wpt lat="45.3067799" lon="10.8146323"><name>Humana</name><desc>amenity=recycling
+name=Humana
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807932561"/></wpt><wpt lat="45.3067656" lon="10.8146736"><name>Batterie e medicinali</name><desc>amenity=recycling
+name=Batterie e medicinali
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807932562"/></wpt><wpt lat="45.3078177" lon="10.8120414"><name>node/2807960035</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2807960035"/></wpt><wpt lat="45.309179" lon="10.8130303"><name>node/2807960036</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container
+source=dati del comune</desc><link href="http://osm.org/browse/node/2807960036"/></wpt><wpt lat="45.3209033" lon="10.826892"><name>node/2807981511</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807981511"/></wpt><wpt lat="45.3214465" lon="10.8288371"><name>Vetro</name><desc>amenity=recycling
+name=Vetro
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807988550"/></wpt><wpt lat="45.3214451" lon="10.8287877"><name>Humana</name><desc>amenity=recycling
+name=Humana
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807988551"/></wpt><wpt lat="45.3196698" lon="10.8313009"><name>node/2807988552</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807988552"/></wpt><wpt lat="45.3221847" lon="10.8330797"><name>node/2807988555</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807988555"/></wpt><wpt lat="45.3212485" lon="10.831692"><name>node/2807988556</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807988556"/></wpt><wpt lat="45.3213744" lon="10.8327048"><name>node/2807996230</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2807996230"/></wpt><wpt lat="45.3145473" lon="10.8583576"><name>vetro</name><desc>amenity=recycling
+name=vetro
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808026416"/></wpt><wpt lat="45.3145557" lon="10.858276"><name>medicinali e batterie</name><desc>amenity=recycling
+name=medicinali e batterie
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808026417"/></wpt><wpt lat="45.3182046" lon="10.8559224"><name>node/2808042979</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042979"/></wpt><wpt lat="45.3181757" lon="10.8559239"><name>node/2808042980</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042980"/></wpt><wpt lat="45.3170521" lon="10.8573442"><name>node/2808042981</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042981"/></wpt><wpt lat="45.317459" lon="10.8573826"><name>node/2808042982</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042982"/></wpt><wpt lat="45.3151635" lon="10.8582195"><name>vetro</name><desc>amenity=recycling
+name=vetro
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042983"/></wpt><wpt lat="45.3156972" lon="10.859493"><name>node/2808042984</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042984"/></wpt><wpt lat="45.3173287" lon="10.8581155"><name>node/2808042985</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2808042985"/></wpt><wpt lat="45.3057209" lon="10.8133762"><name>node/2817154498</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2817154498"/></wpt><wpt lat="45.3145617" lon="10.8582395"><name>Humana</name><desc>amenity=recycling
+name=Humana
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2822403976"/></wpt><wpt lat="45.3155007" lon="10.8589474"><name>vetro</name><desc>amenity=recycling
+name=vetro
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2822403977"/></wpt><wpt lat="45.3152949" lon="10.8567468"><name>node/2822406409</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2822406409"/></wpt><wpt lat="45.330464" lon="10.7879442"><name>Caritas</name><desc>amenity=recycling
+name=Caritas
+recycling:clothes=yes
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/2824878744"/></wpt><wpt lat="45.3550255" lon="10.7325227"><name>node/2835350451</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/2835350451"/></wpt><wpt lat="45.3340109" lon="10.8208859"><name>node/2993099241</name><desc>recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/2993099241"/></wpt><wpt lat="45.7256758" lon="10.7810113"><name>node/3042199350</name><desc>amenity=recycling
+recycling:cans=no
+recycling:clothes=no
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=no
+recycling_type=container
+source=survey</desc><link href="http://osm.org/browse/node/3042199350"/></wpt><wpt lat="45.5740939" lon="10.7081647"><name>node/3051615231</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3051615231"/></wpt><wpt lat="45.3568192" lon="10.8365157"><name>node/3356431415</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3356431415"/></wpt><wpt lat="45.7586717" lon="10.8091222"><name>node/3437668297</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3437668297"/></wpt><wpt lat="45.7532164" lon="10.8077545"><name>node/3437668298</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/3437668298"/></wpt><wpt lat="45.5547857" lon="10.7267242"><name>node/3521992788</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3521992788"/></wpt><wpt lat="45.4885049" lon="10.9098862"><name>node/3535996083</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3535996083"/></wpt><wpt lat="45.3064862" lon="10.8163741"><name>node/3563510895</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3563510895"/></wpt><wpt lat="45.3028954" lon="10.8186403"><name>node/3586251169</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3586251169"/></wpt><wpt lat="45.304959" lon="10.8195055"><name>node/3615782118</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3615782118"/></wpt><wpt lat="45.4401098" lon="11.0025652"><name>node/3688819475</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3688819475"/></wpt><wpt lat="45.4370451" lon="10.9844201"><name>node/3824218671</name><desc>amenity=recycling
+location=overground
+recycling:cans=yes
+recycling:clothes=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:scrap_metal=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3824218671"/></wpt><wpt lat="45.4969803" lon="11.036212"><name>node/3867193202</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/3867193202"/></wpt><wpt lat="45.4642359" lon="10.7149055"><name>node/4321843758</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/4321843758"/></wpt><wpt lat="45.5637806" lon="10.7135534"><name>node/4377353379</name><desc>access=customers
+amenity=recycling
+recycling:glass=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4377353379"/></wpt><wpt lat="45.5650728" lon="10.7120167"><name>node/4377355139</name><desc>access=customers
+amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4377355139"/></wpt><wpt lat="45.5654133" lon="10.7129886"><name>node/4377355155</name><desc>access=customers
+amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4377355155"/></wpt><wpt lat="45.4307499" lon="11.059896"><name>node/4471111286</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4471111286"/></wpt><wpt lat="45.4308243" lon="11.059546"><name>node/4471111287</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:organic=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4471111287"/></wpt><wpt lat="45.564926" lon="10.7133408"><name>node/4516008869</name><desc>access=customers
+amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4516008869"/></wpt><wpt lat="45.5656922" lon="10.7138344"><name>node/4516008870</name><desc>access=customers
+amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4516008870"/></wpt><wpt lat="45.6832784" lon="10.7518966"><name>node/4683309526</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4683309526"/></wpt><wpt lat="45.6793925" lon="10.7460204"><name>node/4683518514</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4683518514"/></wpt><wpt lat="45.3903235" lon="10.9158042"><name>node/4697121553</name><desc>amenity=recycling
+check_date:recycling=2025-09-29
+operator=Caritas
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4697121553"/></wpt><wpt lat="45.6710226" lon="10.8621949"><name>node/4697459665</name><desc>amenity=recycling
+recycling:glass=no
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4697459665"/></wpt><wpt lat="45.6710241" lon="10.8621701"><name>node/4697459666</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4697459666"/></wpt><wpt lat="45.4174493" lon="10.9525483"><name>node/4706669258</name><desc>amenity=recycling
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669258"/></wpt><wpt lat="45.4174253" lon="10.9525758"><name>node/4706669259</name><desc>amenity=recycling
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669259"/></wpt><wpt lat="45.4174107" lon="10.9525946"><name>node/4706669260</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669260"/></wpt><wpt lat="45.417389" lon="10.9526234"><name>node/4706669261</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669261"/></wpt><wpt lat="45.4173678" lon="10.9526489"><name>node/4706669262</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669262"/></wpt><wpt lat="45.4187789" lon="10.9505236"><name>node/4706669263</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669263"/></wpt><wpt lat="45.4188025" lon="10.9505357"><name>node/4706669264</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669264"/></wpt><wpt lat="45.4188251" lon="10.9505585"><name>node/4706669265</name><desc>amenity=recycling
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669265"/></wpt><wpt lat="45.4146877" lon="10.9434929"><name>node/4706669266</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669266"/></wpt><wpt lat="45.4188411" lon="10.9505866"><name>node/4706669267</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4706669267"/></wpt><wpt lat="45.6539808" lon="10.7261724"><name>node/4761558927</name><desc>amenity=recycling
+recycling:beverage_cartons=yes
+recycling:cardboard=yes
+recycling:green_waste=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4761558927"/></wpt><wpt lat="45.6332683" lon="10.7303567"><name>node/4838784194</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4838784194"/></wpt><wpt lat="45.6277096" lon="10.7224217"><name>node/4842324574</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4842324574"/></wpt><wpt lat="45.6261566" lon="10.7300067"><name>node/4848236671</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4848236671"/></wpt><wpt lat="45.6407678" lon="10.7544063"><name>node/4858048658</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/4858048658"/></wpt><wpt lat="45.4608248" lon="11.2075675"><name>Ecocentro</name><desc>amenity=recycling
+name=Ecocentro
+recycling=yes
+recycling_type=centre</desc><link href="http://osm.org/browse/node/5018070820"/></wpt><wpt lat="45.4440314" lon="11.1310674"><name>node/5028940526</name><desc>amenity=recycling
+recycling_type=centre</desc><link href="http://osm.org/browse/node/5028940526"/></wpt><wpt lat="45.5165345" lon="11.1089665"><name>node/5479602093</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/5479602093"/></wpt><wpt lat="45.4996263" lon="10.9414467"><name>node/5554536576</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5554536576"/></wpt><wpt lat="45.4450141" lon="10.6763144"><name>node/5593843536</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/5593843536"/></wpt><wpt lat="45.4845932" lon="10.7276352"><name>node/5759457507</name><desc>amenity=recycling
+opening_hours=08:00-22:00; PH open
+recycling:PET=yes
+recycling:aluminium=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5759457507"/></wpt><wpt lat="45.4839734" lon="10.7308346"><name>node/5764496003</name><desc>amenity=recycling
+opening_hours=08:00-22:00;PH open
+recycling:PET=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5764496003"/></wpt><wpt lat="45.2971588" lon="10.8979099"><name>node/5783302154</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/5783302154"/></wpt><wpt lat="45.4333292" lon="10.9851321"><name>node/5809093456</name><desc>amenity=recycling
+location=overground
+opening_hours=24/7
+recycling:PET=yes
+recycling:beverage_cartons=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/5809093456"/></wpt><wpt lat="45.7057819" lon="10.7646822"><name>node/5814378981</name><desc>amenity=recycling
+recycling:cardboard=yes
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5814378981"/></wpt><wpt lat="45.7057773" lon="10.7646793"><name>node/5814386873</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5814386873"/></wpt><wpt lat="45.7057795" lon="10.7646806"><name>node/5814386874</name><desc>amenity=recycling
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5814386874"/></wpt><wpt lat="45.4355485" lon="10.988962"><name>node/5820549462</name><desc>amenity=recycling
+location=overground
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5820549462"/></wpt><wpt lat="45.5467475" lon="10.7291079"><name>node/5865198257</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5865198257"/></wpt><wpt lat="45.4537023" lon="10.9736191"><name>node/5921551337</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5921551337"/></wpt><wpt lat="45.6274467" lon="10.9526979"><name>node/5983693565</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5983693565"/></wpt><wpt lat="45.3803813" lon="10.9195498"><name>node/5985533270</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/5985533270"/></wpt><wpt lat="45.5742569" lon="11.0374752"><name>Isola ecologica</name><desc>amenity=recycling
+name=Isola ecologica
+recycling_type=centre</desc><link href="http://osm.org/browse/node/6174852025"/></wpt><wpt lat="45.4599113" lon="10.9732057"><name>node/6341209809</name><desc>amenity=recycling
+recycling:food_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6341209809"/></wpt><wpt lat="45.44843" lon="10.9886878"><name>node/6414728320</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:oil=yes
+recycling:oils=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6414728320"/></wpt><wpt lat="45.448288" lon="10.9900517"><name>node/6414728321</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6414728321"/></wpt><wpt lat="45.4499039" lon="10.9567561"><name>node/6415941226</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6415941226"/></wpt><wpt lat="45.450254" lon="10.9578178"><name>node/6415941227</name><desc>amenity=recycling
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6415941227"/></wpt><wpt lat="45.4495214" lon="10.9580568"><name>node/6415941228</name><desc>amenity=recycling
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6415941228"/></wpt><wpt lat="45.4508956" lon="10.9592421"><name>node/6415941229</name><desc>amenity=recycling
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6415941229"/></wpt><wpt lat="45.4509905" lon="10.9629137"><name>node/6415941230</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6415941230"/></wpt><wpt lat="45.4573724" lon="10.9461684"><name>node/6415941231</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6415941231"/></wpt><wpt lat="45.4447968" lon="10.9690044"><name>node/6437039844</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039844"/></wpt><wpt lat="45.4491013" lon="10.9644105"><name>node/6437039846</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039846"/></wpt><wpt lat="45.4514449" lon="10.9609591"><name>node/6437039847</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039847"/></wpt><wpt lat="45.4487033" lon="10.958572"><name>node/6437039848</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039848"/></wpt><wpt lat="45.4480781" lon="10.9556638"><name>node/6437039849</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039849"/></wpt><wpt lat="45.4482065" lon="10.9542549"><name>node/6437039850</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039850"/></wpt><wpt lat="45.4483966" lon="10.953056"><name>node/6437039851</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039851"/></wpt><wpt lat="45.4486337" lon="10.9516042"><name>node/6437039852</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039852"/></wpt><wpt lat="45.4487071" lon="10.9511731"><name>node/6437039853</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039853"/></wpt><wpt lat="45.4496785" lon="10.9514212"><name>node/6437039854</name><desc>amenity=recycling
+recycling:beverage_cartons=yes
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039854"/></wpt><wpt lat="45.4496051" lon="10.9518456"><name>node/6437039855</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039855"/></wpt><wpt lat="45.4512497" lon="10.9529252"><name>node/6437039856</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039856"/></wpt><wpt lat="45.4540464" lon="10.9546797"><name>node/6437039857</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039857"/></wpt><wpt lat="45.4524424" lon="10.9547511"><name>node/6437039859</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039859"/></wpt><wpt lat="45.4516168" lon="10.9566703"><name>node/6437039860</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039860"/></wpt><wpt lat="45.4510248" lon="10.9605729"><name>node/6437039861</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039861"/></wpt><wpt lat="45.4494461" lon="10.9597166"><name>node/6437039862</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039862"/></wpt><wpt lat="45.4505996" lon="10.9645167"><name>node/6437039863</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039863"/></wpt><wpt lat="45.4499038" lon="10.9652446"><name>node/6437039864</name><desc>amenity=recycling
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039864"/></wpt><wpt lat="45.4488868" lon="10.9692203"><name>node/6437039865</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039865"/></wpt><wpt lat="45.4489225" lon="10.9683339"><name>node/6437039866</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039866"/></wpt><wpt lat="45.4504697" lon="10.9678906"><name>node/6437039867</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039867"/></wpt><wpt lat="45.4503239" lon="10.9690158"><name>node/6437039868</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039868"/></wpt><wpt lat="45.4497105" lon="10.9696817"><name>node/6437039869</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039869"/></wpt><wpt lat="45.447801" lon="10.9699962"><name>node/6437039871</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039871"/></wpt><wpt lat="45.4529031" lon="10.9760365"><name>node/6437039872</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039872"/></wpt><wpt lat="45.4529106" lon="10.9783432"><name>node/6437039873</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6437039873"/></wpt><wpt lat="45.5534405" lon="10.7180746"><name>node/6458009970</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6458009970"/></wpt><wpt lat="45.4490834" lon="10.9669773"><name>node/6514049682</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6514049682"/></wpt><wpt lat="45.4478678" lon="10.9723136"><name>node/6514049683</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6514049683"/></wpt><wpt lat="45.4480024" lon="10.9738984"><name>node/6514049684</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6514049684"/></wpt><wpt lat="45.4296367" lon="10.9815984"><name>node/6552402837</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6552402837"/></wpt><wpt lat="45.49004" lon="10.7347789"><name>node/6722561105</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6722561105"/></wpt><wpt lat="45.4912004" lon="10.7335719"><name>node/6724597613</name><desc>amenity=recycling
+recycling:gas_bottles=yes
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6724597613"/></wpt><wpt lat="45.4932022" lon="10.7299259"><name>node/6724661296</name><desc>amenity=recycling
+recycling:PET=yes
+recycling:aluminium=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6724661296"/></wpt><wpt lat="45.492223" lon="10.7302676"><name>node/6724733912</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6724733912"/></wpt><wpt lat="45.4325073" lon="10.9794506"><name>node/6829683753</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6829683753"/></wpt><wpt lat="45.5205591" lon="10.8205714"><name>node/6857012298</name><desc>amenity=recycling
+check_date:recycling=2024-11-11
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6857012298"/></wpt><wpt lat="45.4230471" lon="11.0552019"><name>node/6861533969</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6861533969"/></wpt><wpt lat="45.423194" lon="11.0489497"><name>node/6861564197</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6861564197"/></wpt><wpt lat="45.4364555" lon="10.9822135"><name>node/6893388884</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893388884"/></wpt><wpt lat="45.4364565" lon="10.9822122"><name>node/6893399985</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399985"/></wpt><wpt lat="45.4364569" lon="10.9822144"><name>node/6893399986</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399986"/></wpt><wpt lat="45.4364561" lon="10.9822155"><name>node/6893399987</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399987"/></wpt><wpt lat="45.4358547" lon="10.9813318"><name>node/6893399992</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399992"/></wpt><wpt lat="45.4358467" lon="10.9813438"><name>node/6893399993</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399993"/></wpt><wpt lat="45.4358429" lon="10.9813287"><name>node/6893399994</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399994"/></wpt><wpt lat="45.4358532" lon="10.9813186"><name>node/6893399995</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/6893399995"/></wpt><wpt lat="45.4839827" lon="10.7289635"><name>node/6904892765</name><desc>amenity=recycling
+opening_hours=08:00-22:00;PH open
+recycling:PET=yes
+recycling:aluminium=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6904892765"/></wpt><wpt lat="45.483935" lon="10.7270661"><name>node/6904892766</name><desc>amenity=recycling
+opening_hours=08:00-22:00;PH open
+recycling:PET=yes
+recycling:aluminium=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6904892766"/></wpt><wpt lat="45.4841325" lon="10.7264988"><name>node/6904892769</name><desc>amenity=recycling
+opening_hours=08:00-22:00;PH open
+recycling:PET=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6904892769"/></wpt><wpt lat="45.4838305" lon="10.7260337"><name>node/6904892775</name><desc>amenity=recycling
+opening_hours=08:00-22:00;PH open
+recycling:PET=yes
+recycling:aluminium=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/6904892775"/></wpt><wpt lat="45.6950725" lon="10.9162936"><name>node/7072088638</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7072088638"/></wpt><wpt lat="45.6954435" lon="10.9168301"><name>node/7074407149</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7074407149"/></wpt><wpt lat="45.6950072" lon="10.916712"><name>node/7074407150</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7074407150"/></wpt><wpt lat="45.6948044" lon="10.9160672"><name>node/7074407151</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7074407151"/></wpt><wpt lat="45.6946897" lon="10.9163116"><name>node/7074407152</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7074407152"/></wpt><wpt lat="45.4610405" lon="11.0658104"><name>node/7490106539</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7490106539"/></wpt><wpt lat="45.4778466" lon="11.0080071"><name>node/7698417326</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/7698417326"/></wpt><wpt lat="45.4974269" lon="10.7336992"><name>node/7775431136</name><desc>access=customers
+amenity=recycling
+location=overground
+operator=Camping Spiaggia d'Oro
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7775431136"/></wpt><wpt lat="45.4963306" lon="10.7381567"><name>node/7775431138</name><desc>amenity=recycling
+location=overground
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7775431138"/></wpt><wpt lat="45.4972048" lon="10.7360539"><name>node/7775431142</name><desc>access=customers
+amenity=recycling
+location=overground
+operator=Camping Spiaggia d'Oro
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7775431142"/></wpt><wpt lat="45.4382048" lon="10.9664382"><name>node/7834311943</name><desc>amenity=recycling
+recycling:diapers=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7834311943"/></wpt><wpt lat="45.4457119" lon="10.9872691"><name>node/7868825674</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7868825674"/></wpt><wpt lat="45.4450143" lon="10.9871596"><name>node/7868852111</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7868852111"/></wpt><wpt lat="45.437904" lon="10.9855615"><name>node/7871540264</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/7871540264"/></wpt><wpt lat="45.3885624" lon="10.9157311"><name>node/7883465398</name><desc>amenity=recycling
+check_date:recycling=2024-10-14
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/7883465398"/></wpt><wpt lat="45.4370435" lon="10.9706009"><name>node/8032877900</name><desc>amenity=recycling
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8032877900"/></wpt><wpt lat="45.4403992" lon="10.966297"><name>node/8037508132</name><desc>amenity=recycling
+recycling:green_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508132"/></wpt><wpt lat="45.4404091" lon="10.9662976"><name>node/8037508133</name><desc>amenity=recycling
+recycling:green_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508133"/></wpt><wpt lat="45.440427" lon="10.9662986"><name>node/8037508134</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508134"/></wpt><wpt lat="45.4404396" lon="10.9662993"><name>node/8037508135</name><desc>amenity=recycling
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508135"/></wpt><wpt lat="45.4404545" lon="10.9663001"><name>node/8037508136</name><desc>amenity=recycling
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508136"/></wpt><wpt lat="45.4404674" lon="10.9663008"><name>node/8037508137</name><desc>amenity=recycling
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508137"/></wpt><wpt lat="45.4404794" lon="10.9663015"><name>node/8037508138</name><desc>amenity=recycling
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8037508138"/></wpt><wpt lat="45.4563124" lon="10.94501"><name>node/8668290103</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8668290103"/></wpt><wpt lat="45.4613413" lon="10.9323245"><name>node/8828201795</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8828201795"/></wpt><wpt lat="45.6474449" lon="11.0185736"><name>node/8829447922</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bags=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:styrofoam=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8829447922"/></wpt><wpt lat="45.6384824" lon="11.0309534"><name>node/8830495793</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8830495793"/></wpt><wpt lat="45.4332122" lon="10.9403396"><name>node/8862752896</name><desc>amenity=recycling
+opening_hours=24/7
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8862752896"/></wpt><wpt lat="45.5887109" lon="11.03278"><name>node/8892464874</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bags=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:styrofoam=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8892464874"/></wpt><wpt lat="45.6400089" lon="11.0278326"><name>node/8892464875</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bags=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:styrofoam=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8892464875"/></wpt><wpt lat="45.5882641" lon="11.0342109"><name>node/8892795413</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8892795413"/></wpt><wpt lat="45.6515296" lon="11.0507172"><name>node/8916056528</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bags=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:styrofoam=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/8916056528"/></wpt><wpt lat="45.5876049" lon="10.7474083"><name>node/9001731498</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9001731498"/></wpt><wpt lat="45.6196051" lon="11.0353689"><name>node/9038029607</name><desc>amenity=recycling
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9038029607"/></wpt><wpt lat="45.6543418" lon="11.0525919"><name>node/9038029608</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bags=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:styrofoam=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9038029608"/></wpt><wpt lat="45.5718954" lon="11.0463198"><name>node/9075987081</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:cartons=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:magazines=yes
+recycling:newspaper=yes
+recycling:paper=yes
+recycling:paper_packaging=yes
+recycling:plastic=yes
+recycling:plastic_bags=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:styrofoam=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9075987081"/></wpt><wpt lat="45.4911488" lon="10.7333516"><name>node/9114967181</name><desc>amenity=recycling
+recycling:organic=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9114967181"/></wpt><wpt lat="45.4946549" lon="10.7322371"><name>node/9116122671</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9116122671"/></wpt><wpt lat="45.4928626" lon="10.7321647"><name>node/9116122672</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9116122672"/></wpt><wpt lat="45.620243" lon="11.0348298"><name>node/9122500078</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9122500078"/></wpt><wpt lat="45.4327729" lon="10.9868772"><name>node/9122755211</name><desc>amenity=recycling
+location=overground
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9122755211"/></wpt><wpt lat="45.4334105" lon="10.98453"><name>node/9122755330</name><desc>amenity=recycling
+location=overground
+opening_hours=24/7
+recycling:PET=yes
+recycling:beverage_cartons=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/9122755330"/></wpt><wpt lat="45.4346817" lon="10.9874671"><name>node/9122811140</name><desc>amenity=recycling
+location=overground
+opening_hours=24/7
+recycling:PET=yes
+recycling:beverage_cartons=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/9122811140"/></wpt><wpt lat="45.4344393" lon="10.9880643"><name>node/9122816152</name><desc>amenity=recycling
+location=overground
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9122816152"/></wpt><wpt lat="45.5754195" lon="10.7298104"><name>node/9150244927</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9150244927"/></wpt><wpt lat="45.3468163" lon="10.83755"><name>node/9152387765</name><desc>amenity=recycling
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9152387765"/></wpt><wpt lat="45.4420975" lon="11.0072752"><name>node/9372242724</name><desc>amenity=recycling
+recycling:cardboard=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9372242724"/></wpt><wpt lat="45.4371005" lon="10.9705557"><name>node/9517286674</name><desc>amenity=recycling
+recycling:green_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286674"/></wpt><wpt lat="45.4370949" lon="10.9705604"><name>node/9517286675</name><desc>amenity=recycling
+recycling:green_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286675"/></wpt><wpt lat="45.4369803" lon="10.9706379"><name>node/9517286676</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286676"/></wpt><wpt lat="45.4370819" lon="10.9705725"><name>node/9517286677</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286677"/></wpt><wpt lat="45.436997" lon="10.9706285"><name>node/9517286678</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286678"/></wpt><wpt lat="45.4370149" lon="10.9706184"><name>node/9517286679</name><desc>amenity=recycling
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286679"/></wpt><wpt lat="45.4370619" lon="10.9705889"><name>node/9517286680</name><desc>amenity=recycling
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9517286680"/></wpt><wpt lat="45.4418516" lon="10.9585069"><name>node/9621127424</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9621127424"/></wpt><wpt lat="45.4418465" lon="10.9585203"><name>node/9621127425</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9621127425"/></wpt><wpt lat="45.4403882" lon="10.9723002"><name>node/9623347247</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling:shoes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347247"/></wpt><wpt lat="45.4404002" lon="10.9722978"><name>node/9623347248</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling:shoes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347248"/></wpt><wpt lat="45.4373574" lon="10.9741791"><name>node/9623347249</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347249"/></wpt><wpt lat="45.4373518" lon="10.974163"><name>node/9623347250</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347250"/></wpt><wpt lat="45.438272" lon="10.9708816"><name>node/9623347251</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347251"/></wpt><wpt lat="45.4382777" lon="10.9708779"><name>node/9623347252</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347252"/></wpt><wpt lat="45.4422967" lon="10.9633791"><name>node/9623347253</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347253"/></wpt><wpt lat="45.4420137" lon="10.9612404"><name>node/9623347254</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347254"/></wpt><wpt lat="45.4379961" lon="10.9687546"><name>node/9623347255</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347255"/></wpt><wpt lat="45.4380063" lon="10.9687486"><name>node/9623347256</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347256"/></wpt><wpt lat="45.4383394" lon="10.9664684"><name>node/9623347257</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347257"/></wpt><wpt lat="45.4383497" lon="10.966467"><name>node/9623347258</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9623347258"/></wpt><wpt lat="45.7240779" lon="10.7822424"><name>node/9675071523</name><desc>amenity=recycling
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:residual_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9675071523"/></wpt><wpt lat="45.4348751" lon="10.9720591"><name>node/9678353817</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/9678353817"/></wpt><wpt lat="45.4348141" lon="11.0396635"><name>node/9742945731</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9742945731"/></wpt><wpt lat="45.5714057" lon="10.7094689"><name>node/9755223330</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9755223330"/></wpt><wpt lat="45.6457671" lon="10.7412327"><name>node/9757508580</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9757508580"/></wpt><wpt lat="45.632396" lon="10.7280879"><name>node/9757508588</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9757508588"/></wpt><wpt lat="45.6266016" lon="10.7313932"><name>node/9759537978</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/9759537978"/></wpt><wpt lat="45.6311056" lon="10.7255194"><name>node/9759568752</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/9759568752"/></wpt><wpt lat="45.5411649" lon="10.7436733"><name>node/9954194897</name><desc>amenity=recycling
+covered=no
+indoor=no
+recycling:batteries=no
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:clothes=no
+recycling:cooking_oil=no
+recycling:engine_oil=no
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling:green_waste=no
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:scrap_metal=no
+recycling:shoes=no
+recycling_type=container</desc><link href="http://osm.org/browse/node/9954194897"/></wpt><wpt lat="45.5754781" lon="10.7124339"><name>node/9959349267</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9959349267"/></wpt><wpt lat="45.5763501" lon="10.713921"><name>node/9959365132</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9959365132"/></wpt><wpt lat="45.5443936" lon="10.7230712"><name>node/9962500903</name><desc>amenity=recycling
+recycling:glass=yes
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/9962500903"/></wpt><wpt lat="45.501213" lon="10.7333066"><name>node/9990178721</name><desc>addr:street=Via Pra' del Principe
+amenity=recycling
+opening_hours=Mo-Su 07:00-23:00
+recycling:aluminium=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/9990178721"/></wpt><wpt lat="45.4423678" lon="10.9899856"><name>node/10120384637</name><desc>amenity=recycling
+location=overground
+recycling_type=container</desc><link href="http://osm.org/browse/node/10120384637"/></wpt><wpt lat="45.4995837" lon="10.7453211"><name>node/10253168080</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10253168080"/></wpt><wpt lat="45.2575765" lon="11.2782544"><name>node/10285662563</name><desc>amenity=recycling
+opening_hours=24/7
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10285662563"/></wpt><wpt lat="45.2585724" lon="11.2761361"><name>node/10285666882</name><desc>amenity=recycling
+opening_hours=24/7
+recycling:batteries=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/10285666882"/></wpt><wpt lat="45.2980316" lon="11.3067883"><name>node/10577800980</name><desc>amenity=recycling
+colour=yellow
+recycling:batteries=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10577800980"/></wpt><wpt lat="45.2980223" lon="11.3067821"><name>node/10577800981</name><desc>amenity=recycling
+colour=white
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10577800981"/></wpt><wpt lat="45.2980176" lon="11.306779"><name>node/10577800982</name><desc>amenity=recycling
+colour=red
+recycling:hazardous_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10577800982"/></wpt><wpt lat="45.3864211" lon="11.0433955"><name>node/10589077299</name><desc>amenity=recycling
+colour=#00a803
+operator=AMIA Verona Spa
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10589077299"/></wpt><wpt lat="45.5782298" lon="10.7299396"><name>node/10766831611</name><desc>amenity=recycling
+check_date:recycling=2025-03-29
+opening_hours=24/7
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10766831611"/></wpt><wpt lat="45.4402336" lon="11.0040194"><name>node/10816041045</name><desc>amenity=recycling
+opening_hours=24/7
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041045"/></wpt><wpt lat="45.4405791" lon="11.0099369"><name>node/10816041054</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041054"/></wpt><wpt lat="45.4396593" lon="11.0098726"><name>node/10816041063</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041063"/></wpt><wpt lat="45.4396085" lon="11.0091779"><name>node/10816041064</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041064"/></wpt><wpt lat="45.4390312" lon="11.0042473"><name>node/10816041077</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041077"/></wpt><wpt lat="45.4379504" lon="11.0041695"><name>node/10816041080</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041080"/></wpt><wpt lat="45.4375923" lon="11.0047091"><name>node/10816041083</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041083"/></wpt><wpt lat="45.4374104" lon="11.0020252"><name>node/10816041089</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:cooking_oil=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041089"/></wpt><wpt lat="45.4406123" lon="11.0064027"><name>node/10816041091</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10816041091"/></wpt><wpt lat="45.2868598" lon="11.3034764"><name>node/10820380686</name><desc>amenity=recycling
+colour=white
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10820380686"/></wpt><wpt lat="45.2868794" lon="11.3034829"><name>node/10820380687</name><desc>amenity=recycling
+colour=yellow
+recycling:batteries=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10820380687"/></wpt><wpt lat="45.2868695" lon="11.3034781"><name>node/10820380688</name><desc>amenity=recycling
+colour=red
+recycling:hazardous_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10820380688"/></wpt><wpt lat="45.2869073" lon="11.3034873"><name>node/10820380689</name><desc>amenity=recycling
+colour=yellow
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10820380689"/></wpt><wpt lat="45.695494" lon="10.9173783"><name>node/10852993114</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10852993114"/></wpt><wpt lat="45.6954447" lon="10.9176329"><name>node/10852993115</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/10852993115"/></wpt><wpt lat="45.5913306" lon="10.7124745"><name>node/11037792108</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11037792108"/></wpt><wpt lat="45.5921264" lon="10.7139473"><name>node/11042927865</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11042927865"/></wpt><wpt lat="45.4120043" lon="11.1812457"><name>node/11065610910</name><desc>amenity=recycling
+colour=green
+opening_hours=24/7
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11065610910"/></wpt><wpt lat="45.4131009" lon="11.1753183"><name>node/11065610911</name><desc>amenity=recycling
+colour=green
+opening_hours=24/7
+recycling:glass_bottles=yes
+recycling_type=container
+source=survey;local knowledge;aerial imagery</desc><link href="http://osm.org/browse/node/11065610911"/></wpt><wpt lat="45.413123" lon="11.1753103"><name>node/11065610912</name><desc>amenity=recycling
+colour=yellow;white
+opening_hours=24/7
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container
+source=survey;local knowledge</desc><link href="http://osm.org/browse/node/11065610912"/></wpt><wpt lat="45.4120103" lon="11.1813061"><name>node/11074368373</name><desc>amenity=recycling
+colour=yellow;white
+opening_hours=24/7
+recycling:batteries=yes
+recycling:drugs=yes
+recycling_type=container
+source=survey;local knowledge</desc><link href="http://osm.org/browse/node/11074368373"/></wpt><wpt lat="45.6312251" lon="10.7259896"><name>node/11184267233</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/11184267233"/></wpt><wpt lat="45.7527821" lon="10.7974013"><name>node/11264571429</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11264571429"/></wpt><wpt lat="45.6922356" lon="10.9110604"><name>node/11305285914</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305285914"/></wpt><wpt lat="45.6925745" lon="10.9120554"><name>node/11305285919</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305285919"/></wpt><wpt lat="45.6921206" lon="10.9107482"><name>node/11305285920</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305285920"/></wpt><wpt lat="45.6953067" lon="10.9168808"><name>node/11305285924</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305285924"/></wpt><wpt lat="45.5512181" lon="10.7851915"><name>node/11305285929</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305285929"/></wpt><wpt lat="45.5510015" lon="10.7855242"><name>node/11305285930</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305285930"/></wpt><wpt lat="45.5514816" lon="10.7875492"><name>node/11305308260</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305308260"/></wpt><wpt lat="45.5511858" lon="10.7870565"><name>node/11305308261</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11305308261"/></wpt><wpt lat="45.5518509" lon="10.7875807"><name>node/11314075455</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11314075455"/></wpt><wpt lat="45.5517882" lon="10.7870839"><name>node/11314075456</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11314075456"/></wpt><wpt lat="45.5520272" lon="10.7876188"><name>node/11314075457</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11314075457"/></wpt><wpt lat="45.1976884" lon="11.3117998"><name>node/11365257395</name><desc>amenity=recycling
+location=overground
+recycling:cooking_oil=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11365257395"/></wpt><wpt lat="45.3179134" lon="11.2697479"><name>node/11663470605</name><desc>amenity=recycling
+colour=yellow
+recycling:batteries=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663470605"/></wpt><wpt lat="45.3181864" lon="11.2789854"><name>node/11663470654</name><desc>amenity=recycling
+recycling:cooking_oil=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663470654"/></wpt><wpt lat="45.3144817" lon="11.2745059"><name>node/11663470656</name><desc>amenity=recycling
+recycling:cooking_oil=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663470656"/></wpt><wpt lat="45.3176933" lon="11.2679122"><name>node/11663470812</name><desc>amenity=recycling
+colour=white
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663470812"/></wpt><wpt lat="45.3376782" lon="11.2439613"><name>node/11663470813</name><desc>amenity=recycling
+colour=white
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663470813"/></wpt><wpt lat="45.3377743" lon="11.2423573"><name>node/11663470814</name><desc>amenity=recycling
+colour=yellow
+recycling:batteries=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663470814"/></wpt><wpt lat="45.3173904" lon="11.2732828"><name>node/11663471237</name><desc>amenity=recycling
+colour=white
+recycling:drugs=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663471237"/></wpt><wpt lat="45.3173957" lon="11.2732872"><name>node/11663471238</name><desc>amenity=recycling
+colour=red
+recycling:hazardous_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663471238"/></wpt><wpt lat="45.3174014" lon="11.2732882"><name>node/11663471239</name><desc>amenity=recycling
+colour=yellow
+recycling:batteries=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663471239"/></wpt><wpt lat="45.320752" lon="11.2631678"><name>node/11663471630</name><desc>amenity=recycling
+colour=yellow
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11663471630"/></wpt><wpt lat="45.4585799" lon="10.9390113"><name>node/11716456844</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11716456844"/></wpt><wpt lat="45.6244063" lon="10.7114588"><name>node/11716962245</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:rest=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11716962245"/></wpt><wpt lat="45.4366751" lon="10.9905948"><name>node/11832479233</name><desc>amenity=recycling
+location=overground
+opening_hours=24/7
+recycling:PET=yes
+recycling:beverage_cartons=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/11832479233"/></wpt><wpt lat="45.4338863" lon="10.9860725"><name>node/11832479234</name><desc>amenity=recycling
+location=overground
+opening_hours=24/7
+recycling:PET=yes
+recycling:beverage_cartons=yes
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container
+wheelchair=yes</desc><link href="http://osm.org/browse/node/11832479234"/></wpt><wpt lat="45.5397139" lon="10.7809919"><name>node/11876761004</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761004"/></wpt><wpt lat="45.5397656" lon="10.7805921"><name>node/11876761005</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761005"/></wpt><wpt lat="45.5395069" lon="10.781286"><name>node/11876761006</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761006"/></wpt><wpt lat="45.5398887" lon="10.7814055"><name>node/11876761007</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761007"/></wpt><wpt lat="45.5397288" lon="10.7802599"><name>node/11876761008</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761008"/></wpt><wpt lat="45.5400778" lon="10.7801402"><name>node/11876761009</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761009"/></wpt><wpt lat="45.5393219" lon="10.7803701"><name>node/11876761010</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761010"/></wpt><wpt lat="45.5396219" lon="10.7806302"><name>node/11876761011</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761011"/></wpt><wpt lat="45.5406038" lon="10.7805618"><name>node/11876761093</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761093"/></wpt><wpt lat="45.540211" lon="10.7806675"><name>node/11876761094</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11876761094"/></wpt><wpt lat="45.6929858" lon="10.9123228"><name>node/11878470478</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11878470478"/></wpt><wpt lat="45.6931691" lon="10.9127676"><name>node/11878470479</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11878470479"/></wpt><wpt lat="45.69293" lon="10.912534"><name>node/11878470480</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11878470480"/></wpt><wpt lat="45.4402311" lon="11.0009762"><name>node/11886502544</name><desc>amenity=recycling
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11886502544"/></wpt><wpt lat="45.6133176" lon="10.702785"><name>node/11922101264</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/11922101264"/></wpt><wpt lat="45.6856712" lon="10.7487933"><name>Glass Container</name><desc>amenity=recycling
+check_date=2024-06-02
+name=Glass Container
+name:it=Riciclaggio del vetro
+opening_hours=24/7
+recycling:glass_bottles=yes
+recycling_type=centre
+wheelchair=yes</desc><link href="http://osm.org/browse/node/11952168281"/></wpt><wpt lat="45.6866659" lon="10.7494514"><name>node/11952619141</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/11952619141"/></wpt><wpt lat="45.5937251" lon="11.0749027"><name>node/12025224212</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12025224212"/></wpt><wpt lat="45.5830803" lon="11.0019631"><name>node/12071754817</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/12071754817"/></wpt><wpt lat="45.5830769" lon="11.0020627"><name>node/12071754818</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12071754818"/></wpt><wpt lat="45.5767809" lon="11.041318"><name>node/12092047106</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12092047106"/></wpt><wpt lat="45.5775881" lon="11.0425242"><name>node/12092123135</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling:glass_bottles=yes
+recycling:shoes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12092123135"/></wpt><wpt lat="45.4260297" lon="10.9938139"><name>node/12096762895</name><desc>amenity=recycling
+check_date=2024-08-01
+covered=no
+indoor=no
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12096762895"/></wpt><wpt lat="45.4135685" lon="10.9628306"><name>node/12120339630</name><desc>amenity=recycling
+opening_hours=24/7
+operator=AMIA spa
+recycling:cans=yes
+recycling:cardboard=yes
+recycling:clothes=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling:plastic_bottles=yes
+recycling:plastic_packaging=yes
+recycling:shoes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12120339630"/></wpt><wpt lat="45.6122535" lon="10.9110442"><name>node/12142079068</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12142079068"/></wpt><wpt lat="45.6419442" lon="11.0003668"><name>node/12153934924</name><desc>recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12153934924"/></wpt><wpt lat="45.6419236" lon="11.0003816"><name>node/12153934925</name><desc>recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12153934925"/></wpt><wpt lat="45.5977194" lon="10.6839465"><name>node/12165171004</name><desc>amenity=recycling
+covered=yes
+indoor=no
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12165171004"/></wpt><wpt lat="45.6010429" lon="10.6903651"><name>node/12181641719</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12181641719"/></wpt><wpt lat="45.4247987" lon="11.0284175"><name>node/12369371134</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/12369371134"/></wpt><wpt lat="45.5400359" lon="10.7793187"><name>node/12467278185</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12467278185"/></wpt><wpt lat="45.5403295" lon="10.7793471"><name>node/12467278186</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12467278186"/></wpt><wpt lat="45.5408512" lon="10.779265"><name>node/12467278187</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12467278187"/></wpt><wpt lat="45.5409964" lon="10.7792646"><name>node/12467278188</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12467278188"/></wpt><wpt lat="45.5407013" lon="10.7793242"><name>node/12467278189</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass=no
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic_packaging=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12467278189"/></wpt><wpt lat="45.4338682" lon="10.9464275"><name>node/12476215403</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12476215403"/></wpt><wpt lat="45.4346145" lon="10.946871"><name>node/12476222887</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12476222887"/></wpt><wpt lat="45.421494" lon="10.9773454"><name>node/12578365626</name><desc>amenity=recycling
+opening_hours=24/7
+operator=Amia Verona s.p.a.
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12578365626"/></wpt><wpt lat="45.6010838" lon="10.7178068"><name>node/12695324082</name><desc>amenity=recycling
+recycling:glass=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12695324082"/></wpt><wpt lat="45.6281515" lon="10.7532838"><name>node/12698851297</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12698851297"/></wpt><wpt lat="45.6886677" lon="10.7517003"><name>node/12720240475</name><desc>amenity=recycling
+check_date=2025-04-01
+colour=yellow
+covered=no
+indoor=no
+level=0
+recycling:clothes=yes
+recycling:shoes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12720240475"/></wpt><wpt lat="45.4429001" lon="10.6999013"><name>node/12886218890</name><desc>amenity=recycling
+recycling:batteries=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12886218890"/></wpt><wpt lat="45.4442161" lon="10.6965787"><name>node/12886218898</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/12886218898"/></wpt><wpt lat="45.4440208" lon="10.6984813"><name>node/12886223302</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/12886223302"/></wpt><wpt lat="45.4287358" lon="10.982781"><name>node/12898557124</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898557124"/></wpt><wpt lat="45.4281987" lon="10.9819219"><name>node/12898572974</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898572974"/></wpt><wpt lat="45.4281832" lon="10.9818444"><name>node/12898581656</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898581656"/></wpt><wpt lat="45.4285229" lon="10.9817067"><name>node/12898589893</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898589893"/></wpt><wpt lat="45.4286936" lon="10.9825758"><name>node/12898600060</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898600060"/></wpt><wpt lat="45.4284416" lon="10.9831521"><name>node/12898600853</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898600853"/></wpt><wpt lat="45.4283456" lon="10.9817787"><name>node/12898602897</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898602897"/></wpt><wpt lat="45.4285388" lon="10.9817856"><name>node/12898602898</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898602898"/></wpt><wpt lat="45.4284107" lon="10.9829751"><name>node/12898609324</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898609324"/></wpt><wpt lat="45.4281402" lon="10.9816057"><name>node/12898611055</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898611055"/></wpt><wpt lat="45.4284016" lon="10.9810681"><name>node/12898614015</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898614015"/></wpt><wpt lat="45.4283512" lon="10.9807464"><name>node/12898619335</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898619335"/></wpt><wpt lat="45.4284889" lon="10.9815276"><name>node/12898623827</name><desc>amenity=recycling
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12898623827"/></wpt><wpt lat="45.7270924" lon="10.7858213"><name>node/12983424102</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/12983424102"/></wpt><wpt lat="45.6585009" lon="10.7253516"><name>node/12985485143</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/12985485143"/></wpt><wpt lat="45.4420064" lon="11.0160357"><name>node/13017852830</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13017852830"/></wpt><wpt lat="45.4656002" lon="10.973745"><name>node/13021363257</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13021363257"/></wpt><wpt lat="45.6513914" lon="10.7239589"><name>node/13022620439</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/13022620439"/></wpt><wpt lat="45.4613723" lon="10.9796744"><name>node/13023114299</name><desc>amenity=recycling
+recycling:food_waste=yes
+recycling:green_waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023114299"/></wpt><wpt lat="45.4613884" lon="10.9795368"><name>node/13023117654</name><desc>amenity=recycling
+operator=Cooperativa Sociale Centro di Lavoro San Giovanni Calabria
+recycling:clothes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023117654"/></wpt><wpt lat="45.4613712" lon="10.97963"><name>node/13023129406</name><desc>amenity=recycling
+recycling:paper=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023129406"/></wpt><wpt lat="45.4613813" lon="10.9795797"><name>node/13023134301</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023134301"/></wpt><wpt lat="45.4613677" lon="10.9797183"><name>node/13023187371</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023187371"/></wpt><wpt lat="45.4594651" lon="10.9819766"><name>node/13023378310</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023378310"/></wpt><wpt lat="45.4604671" lon="10.986456"><name>node/13023570059</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass_bottles=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13023570059"/></wpt><wpt lat="45.4423448" lon="11.0183424"><name>node/13025390211</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling:organic=yes
+recycling:waste=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13025390211"/></wpt><wpt lat="45.5205934" lon="11.2363148"><name>node/13049922933</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13049922933"/></wpt><wpt lat="45.6345423" lon="10.7030489"><name>node/13052034315</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/13052034315"/></wpt><wpt lat="45.6346146" lon="10.7030935"><name>node/13052034316</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/13052034316"/></wpt><wpt lat="45.5179827" lon="11.2362508"><name>node/13052039703</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13052039703"/></wpt><wpt lat="45.5228898" lon="11.233924"><name>node/13052089766</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13052089766"/></wpt><wpt lat="45.4426635" lon="11.018946"><name>node/13065526394</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/13065526394"/></wpt><wpt lat="45.5298944" lon="11.0074446"><name>FALZI SRL</name><desc>addr:city=Grezzana
+addr:postcode=37023
+addr:street=Via Cavaliere Cesare Bellamoli
+amenity=recycling
+name=FALZI SRL
+phone=+39045907143
+recycling:construction_waste=yes
+recycling_type=centre
+website=https://www.falzi.it/</desc><link href="http://osm.org/browse/node/13116169384"/></wpt><wpt lat="45.4347843" lon="10.9905772"><name>node/13134551233</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/13134551233"/></wpt><wpt lat="45.4799591" lon="11.25754"><name>node/13138290466</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13138290466"/></wpt><wpt lat="45.5241711" lon="11.2359273"><name>node/13145146357</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13145146357"/></wpt><wpt lat="45.4398099" lon="11.0140313"><name>node/13176430961</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:glass_bottles=yes
+recycling:paper=yes
+recycling:plastic=no
+recycling:plastic_packaging=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13176430961"/></wpt><wpt lat="45.531245" lon="10.9356769"><name>node/13188513653</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13188513653"/></wpt><wpt lat="45.3980887" lon="10.9151487"><name>node/13270566088</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13270566088"/></wpt><wpt lat="45.1773185" lon="11.0519905"><name>node/13280146062</name><desc>amenity=recycling
+recycling:clothes=yes
+recycling:shoes=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13280146062"/></wpt><wpt lat="45.561442" lon="10.7142042"><name>node/13290682852</name><desc>amenity=recycling
+recycling_type=container</desc><link href="http://osm.org/browse/node/13290682852"/></wpt><wpt lat="45.4449595" lon="10.9716114"><name>node/13322192060</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13322192060"/></wpt><wpt lat="45.6897485" lon="10.7517606"><name>node/13336987563</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13336987563"/></wpt><wpt lat="45.6776948" lon="10.7403927"><name>node/13338962121</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13338962121"/></wpt><wpt lat="45.6750364" lon="10.7386641"><name>node/13338965291</name><desc>amenity=recycling
+recycling:glass_bottles=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13338965291"/></wpt><wpt lat="45.4384896" lon="10.9756401"><name>node/13341177800</name><desc>amenity=recycling
+recycling:cans=yes
+recycling:food_waste=yes
+recycling:glass=yes
+recycling:green_waste=yes
+recycling:paper=yes
+recycling:plastic=yes
+recycling_type=container</desc><link href="http://osm.org/browse/node/13341177800"/></wpt></gpx>
