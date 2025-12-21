@@ -5,7 +5,9 @@ package it.unive.raccoltapp.network;
 import it.unive.raccoltapp.model.LoginCredentials;
 import it.unive.raccoltapp.model.LoginResponse;
 import it.unive.raccoltapp.model.SignUpCredentials;
+import it.unive.raccoltapp.model.UserInfo;
 
+import java.util.List;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Call;
@@ -26,8 +28,10 @@ public class API_MANAGER {
     private static API_MANAGER instance;
     private final SupabaseApiService apiService;
 
-    // Salva il token JWT dell'utente loggato
+    // Salva il token JWT e i dati dell'utente loggato
     private String authToken = null;
+    private String userId = null;
+    private String userEmail = null;
 
     private API_MANAGER() {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -36,7 +40,6 @@ public class API_MANAGER {
                     Request.Builder builder = originalRequest.newBuilder()
                             .header("apikey", API_KEY);
 
-                    // Sostituito TextUtils.isEmpty() con codice Java puro
                     String tokenToUse = (authToken == null || authToken.isEmpty()) ? API_KEY : authToken;
                     builder.header("Authorization", "Bearer " + tokenToUse);
 
@@ -61,23 +64,30 @@ public class API_MANAGER {
         return instance;
     }
 
-    public SupabaseApiService getApiService() {
-        return apiService;
-    }
+    // --- Metodi per l'autenticazione e dati utente ---
 
-    // --- Metodi per l'autenticazione ---
-
-    public void setAuthToken(String token) {
+    public void setAuthToken(String token, String id, String email) {
         this.authToken = token;
+        this.userId = id;
+        this.userEmail = email;
     }
 
     public boolean isLoggedIn() {
-        // Sostituito TextUtils.isEmpty() con codice Java puro
         return authToken != null && !authToken.isEmpty();
     }
 
     public void logout() {
         this.authToken = null;
+        this.userId = null;
+        this.userEmail = null;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
     }
 
     public void loginUser(String email, String password, Callback<LoginResponse> callback) {
@@ -88,7 +98,8 @@ public class API_MANAGER {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    setAuthToken(response.body().getAccessToken());
+                    LoginResponse loginResponse = response.body();
+                    setAuthToken(loginResponse.getAccessToken(), loginResponse.getUser().getId(), loginResponse.getUser().getEmail());
                 }
                 if (callback != null) {
                     callback.onResponse(call, response);
@@ -112,7 +123,9 @@ public class API_MANAGER {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    setAuthToken(response.body().getAccessToken());
+                    // Dopo la registrazione, salviamo i dati base
+                    LoginResponse signUpResponse = response.body();
+                    setAuthToken(signUpResponse.getAccessToken(), signUpResponse.getUser().getId(), signUpResponse.getUser().getEmail());
                 }
                 if (callback != null) {
                     callback.onResponse(call, response);
@@ -126,5 +139,17 @@ public class API_MANAGER {
                 }
             }
         });
+    }
+
+    public void getUserInfo(Callback<List<UserInfo>> callback) {
+        if (userId == null) {
+            // Gestisci il caso in cui l'ID utente non è disponibile
+            callback.onFailure(null, new IllegalStateException("User not logged in"));
+            return;
+        }
+        // il 'eq.' serve a Retrofit per fare il filtro corretto
+        String filter = "eq." + userId;
+        Call<List<UserInfo>> call = apiService.getUserInfo(filter);
+        call.enqueue(callback);
     }
 }

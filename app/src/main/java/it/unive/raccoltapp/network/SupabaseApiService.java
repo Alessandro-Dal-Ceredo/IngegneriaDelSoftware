@@ -5,6 +5,7 @@ import it.unive.raccoltapp.model.LoginResponse;
 import it.unive.raccoltapp.model.Post;
 import it.unive.raccoltapp.model.SignUpCredentials;
 import it.unive.raccoltapp.model.User;
+import it.unive.raccoltapp.model.UserInfo;
 
 import java.util.List;
 
@@ -33,6 +34,16 @@ public interface SupabaseApiService {
      */
     @POST("auth/v1/signup")
     Call<LoginResponse> signup(@Body SignUpCredentials credentials);
+
+    // --- Endpoint per i dati dell'utente ---
+
+    /**
+     * Recupera le informazioni del profilo dell'utente corrente da users_info.
+     * Il filtro 'select=name,username' specifica quali colonne prendere.
+     * Il filtro 'id_user=eq.{user_id}' verra' aggiunto in API_MANAGER.
+     */
+    @GET("rest/v1/users_info?select=name,username")
+    Call<List<UserInfo>> getUserInfo(@Query("id_user") String userId);
 
 
     // --- Endpoint per i Post ---
