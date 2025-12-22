@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/img_logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginBottom="6dp"
             android:src="@drawable/ic_logo"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -33,20 +33,10 @@
             android:layout_marginBottom="3dp"
             android:text="RaccoltApp"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/img_logo"
             app:layout_constraintStart_toEndOf="@id/img_logo" />
-
-        <ImageView
-            android:id="@+id/btn_settings"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_marginBottom="12dp"
-            android:src="@drawable/ic_settingshq"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tint="#757575" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

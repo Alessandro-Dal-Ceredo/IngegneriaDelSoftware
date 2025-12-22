@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:hint="Nome"
+            android:hint="Nome e Cognome"
             app:boxStrokeColor="@color/primary_green"
             app:hintTextColor="@color/primary_green">
 
