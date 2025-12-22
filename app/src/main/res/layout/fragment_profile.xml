@@ -10,59 +10,79 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Header with Avatar -->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/primary"
-            android:padding="@dimen/padding_large"
-            android:gravity="center">
+            android:background="@drawable/bg_profile_header"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
 
-            <!-- Avatar -->
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#E8F5E9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
 
                 <ImageView
-                    android:id="@+id/iv_avatar"
-                    android:layout_width="@dimen/avatar_size_large"
-                    android:layout_height="@dimen/avatar_size_large"
-                    android:src="@android:drawable/ic_menu_manage"
-                    android:padding="@dimen/padding_medium"
-                    android:tint="@color/white" />
+                    android:id="@+id/img_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:padding="20dp"
+                    android:src="@mipmap/ic_account_no_border"/>
+            </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fab_edit_avatar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:layout_margin="4dp"
-                    app:fabSize="mini"
-                    app:backgroundTint="@color/accent"
-                    app:tint="@color/white"
-                    app:srcCompat="@android:drawable/ic_menu_camera" />
-            </FrameLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_edit_photo"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#2196F3"
+                app:strokeWidth="2dp"
+                app:strokeColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@id/card_profile_image"
+                app:layout_constraintEnd_toEndOf="@id/card_profile_image">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_camera"
+                    app:tint="@android:color/white"/>
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/tv_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:text="Caricamento..."
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_headline"
-                android:textStyle="bold" />
+                android:layout_marginTop="12dp"
+                android:text="Mario Rossi"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/card_profile_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/tv_user_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Caricamento..."
-                android:textColor="@color/accent_light"
-                android:textSize="@dimen/text_size_medium" />
-        </LinearLayout>
+                android:text="mario.rossi@email.com"
+                android:textColor="#E0F2F1"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <!-- Form Section -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,8 +110,7 @@
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"
-                    android:enabled="false"
+                    android:hint="@string/profile_name"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,27 +126,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/profile_email"
-                    android:enabled="false"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Address Input -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_address"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_medium"
-                app:endIconContentDescription="Ottieni posizione corrente"
-                app:endIconDrawable="@android:drawable/ic_menu_myplaces"
-                app:endIconMode="custom">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/profile_address"
-                    android:inputType="textPostalAddress" />
+                    android.inputType="textPostalAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Notifications Section -->
@@ -146,7 +161,10 @@
                 style="@style/Widget.RaccoltApp.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_medium">
+                android:layout_marginBottom="@dimen/margin_medium"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -175,7 +193,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android.text="@string/profile_statistics"
+                android:text="@string/profile_statistics"
                 android:textColor="@color/text_primary"
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold"
@@ -194,7 +212,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginEnd="@dimen/margin_small">
+                    android:layout_marginEnd="@dimen/margin_small"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E0E0E0">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -207,7 +228,7 @@
                             android:id="@+id/tv_reports_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="12"
                             android:textColor="@color/primary"
                             android:textSize="32sp"
                             android:textStyle="bold" />
@@ -227,7 +248,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginStart="@dimen/margin_small">
+                    android:layout_marginStart="@dimen/margin_small"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E0E0E0">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,7 +264,7 @@
                             android:id="@+id/tv_eco_points"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="250"
                             android:textColor="@color/accent"
                             android:textSize="32sp"
                             android:textStyle="bold" />
@@ -255,16 +279,20 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
+
+            <!-- Action Buttons -->
             <Button
                 android:id="@+id/button_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vai al Login / Logout"
+                android:layout_marginBottom="32dp"
+                android:orientation="vertical"
+                android:text="Logout"
+                app:cardElevation="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginBottom="32dp" />
-            <!-- Action Buttons -->
+                app:layout_constraintStart_toStartOf="parent" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_save"
                 style="@style/Widget.RaccoltApp.Button"

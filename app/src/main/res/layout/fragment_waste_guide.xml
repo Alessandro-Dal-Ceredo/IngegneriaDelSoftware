@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +8,8 @@
     android:orientation="vertical"
     android:background="@color/background">
 
-    <!-- Header -->
+    <!- Header -->
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,8 +25,8 @@
             android:text="@string/waste_guide_title"
             android:textColor="@color/white" />
 
-        <!-- Search Bar -->
-        <com.google.android.material.card.MaterialCardView
+        <!- Search Bar -->
+      <!--  <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
@@ -51,8 +53,8 @@
             android:orientation="vertical"
             android:padding="@dimen/padding_medium">
 
-            <!-- Categories Section -->
-            <TextView
+            <!- Categories Section -->
+      <!--      <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/waste_categories"
@@ -61,16 +63,16 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="@dimen/margin_medium" />
 
-            <!-- Categories Grid -->
-            <GridLayout
+            <!- Categories Grid -->
+      <!--      <GridLayout
                 android:id="@+id/grid_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
                 android:alignmentMode="alignMargins">
 
-                <!-- Organic Waste Card -->
-                <com.google.android.material.card.MaterialCardView
+                <!- Organic Waste Card -->
+      <!--          <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_organic"
                     style="@style/Widget.RaccoltApp.CardView"
                     android:layout_width="0dp"
@@ -102,8 +104,8 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Plastic Waste Card -->
-                <com.google.android.material.card.MaterialCardView
+                <!- Plastic Waste Card -->
+      <!--          <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_plastic"
                     style="@style/Widget.RaccoltApp.CardView"
                     android:layout_width="0dp"
@@ -135,8 +137,8 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Paper Waste Card -->
-                <com.google.android.material.card.MaterialCardView
+                <!- Paper Waste Card -->
+    <!--            <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_paper"
                     style="@style/Widget.RaccoltApp.CardView"
                     android:layout_width="0dp"
@@ -168,8 +170,8 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Glass Waste Card -->
-                <com.google.android.material.card.MaterialCardView
+                <!- Glass Waste Card -->
+  <!--              <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_glass"
                     style="@style/Widget.RaccoltApp.CardView"
                     android:layout_width="0dp"
@@ -201,8 +203,8 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Electronics Waste Card -->
-                <com.google.android.material.card.MaterialCardView
+                <!- Electronics Waste Card -->
+   <!--             <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_electronics"
                     style="@style/Widget.RaccoltApp.CardView"
                     android:layout_width="0dp"
@@ -234,8 +236,8 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- General Waste Card -->
-                <com.google.android.material.card.MaterialCardView
+                <!- General Waste Card -->
+     <!--           <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_general"
                     style="@style/Widget.RaccoltApp.CardView"
                     android:layout_width="0dp"
@@ -268,8 +270,8 @@
                 </com.google.android.material.card.MaterialCardView>
             </GridLayout>
 
-            <!-- Frequently Searched Section -->
-            <TextView
+            <!- Frequently Searched Section -->
+  <!--          <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_large"
@@ -279,8 +281,8 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="@dimen/margin_medium" />
 
-            <!-- Frequently searched items as chips -->
-            <com.google.android.material.chip.ChipGroup
+            <!- Frequently searched items as chips -->
+    <!--        <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chip_group_frequent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -323,4 +325,146 @@
             </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</LinearLayout> -->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="-3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_bookhq"
+                    app:tint="@color/primary_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Guida alla Raccolta Differenziata"
+                    android:textColor="@color/text_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Impara come differenziare correttamente i tuoi rifiuti e contribuire alla tutela dell'ambiente"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp" />
+
+            <include
+                android:id="@+id/cat_paper"
+                layout="@layout/item_waste_category" />
+
+            <include
+                android:id="@+id/cat_plastic"
+                layout="@layout/item_waste_category" />
+
+            <include
+                android:id="@+id/cat_glass"
+                layout="@layout/item_waste_category" />
+
+            <include
+                android:id="@+id/cat_organic"
+                layout="@layout/item_waste_category" />
+
+            <include
+                android:id="@+id/cat_general"
+                layout="@layout/item_waste_category" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_white"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Segnala Rifiuti Abbandonati"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@android:drawable/stat_sys_warning"
+                            app:tint="@color/alert_orange" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Aiutaci a mantenere pulito il territorio segnalando rifiuti abbandonati"
+                            android:textColor="@color/text_grey"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_send_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/alert_orange"
+                        app:cornerRadius="15dp"
+                        android:text="Invia Segnalazione"
+                        app:icon="@android:drawable/ic_dialog_alert"
+                        app:iconSize="18dp"
+                        app:iconTint="@color/white" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+        </LinearLayout> </LinearLayout> </androidx.core.widget.NestedScrollView>
+

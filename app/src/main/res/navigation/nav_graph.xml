@@ -19,12 +19,6 @@
         tools:layout="@layout/fragment_map" />
 
     <fragment
-        android:id="@+id/nav_reports"
-        android:name="it.unive.raccoltapp.ui.ReportsFragment"
-        android:label="Segnalazioni"
-        tools:layout="@layout/fragment_reports" />
-
-    <fragment
         android:id="@+id/nav_waste_guide"
         android:name="it.unive.raccoltapp.ui.WasteGuideFragment"
         android:label="Dove lo butto?"

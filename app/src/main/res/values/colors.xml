@@ -15,13 +15,11 @@
     <color name="accent_light">#B3E5FC</color>
     
     <!-- Waste type colors -->
-    <color name="waste_organic">#795548</color>
-    <color name="waste_plastic">#FFC107</color>
-    <color name="waste_paper">#2196F3</color>
-    <color name="waste_glass">#4CAF50</color>
-    <color name="waste_metal">#9E9E9E</color>
-    <color name="waste_electronics">#FF5722</color>
-    <color name="waste_general">#607D8B</color>
+    <color name="waste_organic">#D7CCC8</color>
+    <color name="waste_plastic">#D5FAFE</color>
+    <color name="waste_paper">#FFF3E0</color>
+    <color name="waste_glass">#DEFECF</color>
+    <color name="waste_general">#EEEEEE</color>
     
     <!-- UI colors -->
     <color name="background">#F5F5F5</color>
@@ -30,4 +28,15 @@
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="divider">#BDBDBD</color>
+    <color name="primary_green">#2ECC71</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_grey">#757575</color>
+    <color name="cat_paper_blue">#4A90E2</color>
+    <color name="cat_plastic_yellow">#F5A623</color>
+    <color name="cat_glass_green">#00C853</color>
+    <color name="cat_organic_brown">#4CAF50</color>
+    <color name="cat_general_grey">#546E7A</color>
+    <color name="alert_orange">#FF5722</color>
+    <color name="alert_bg_light">#FFF3E0</color>
 </resources>

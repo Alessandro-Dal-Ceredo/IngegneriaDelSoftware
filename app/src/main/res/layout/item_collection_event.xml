@@ -54,7 +54,7 @@
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
             android:src="@android:drawable/ic_lock_idle_alarm"
-            android:tint="@color/accent" />
+            app:tint="@color/accent" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

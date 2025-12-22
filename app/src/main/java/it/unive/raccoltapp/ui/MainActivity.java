@@ -3,7 +3,7 @@ package it.unive.raccoltapp.ui;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -66,5 +66,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    /**
+     * Mostra un popup (AlertDialog) per inviare una segnalazione.
+     * Questo metodo può essere chiamato da qualsiasi fragment ospitato da questa activity.
+     */
+    public void showReportDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Invia Segnalazione");
+        builder.setMessage("Descrivi il problema o il suggerimento che vuoi inviare.");
+
+        // Per ora, un semplice dialog con un pulsante OK
+        // In futuro, qui puoi inserire un layout personalizzato con EditText, etc.
+        builder.setPositiveButton("Invia", (dialog, which) -> {
+            // Logica per inviare la segnalazione
+            dialog.dismiss();
+        });
+        builder.setNegativeButton("Annulla", (dialog, which) -> dialog.cancel());
+
+        builder.create().show();
     }
 }
