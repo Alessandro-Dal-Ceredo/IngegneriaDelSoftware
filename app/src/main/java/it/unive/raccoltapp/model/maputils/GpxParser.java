@@ -1,4 +1,4 @@
-package it.unive.raccoltapp.model;
+package it.unive.raccoltapp.model.maputils;
 
 import android.util.Xml;
 import org.xmlpull.v1.XmlPullParser;

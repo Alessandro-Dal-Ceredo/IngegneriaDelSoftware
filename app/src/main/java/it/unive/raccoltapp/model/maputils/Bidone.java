@@ -1,4 +1,4 @@
-package it.unive.raccoltapp.model;
+package it.unive.raccoltapp.model.maputils;
 
 public class Bidone {
     private double lat;
@@ -9,7 +9,7 @@ public class Bidone {
     public Bidone(double lat, double lon, String nome, String tipo) {
         this.lat = lat;
         this.lon = lon;
-        this.nome = nome;
+        this.nome = tipo;
         this.tipo = tipo;
     }
 

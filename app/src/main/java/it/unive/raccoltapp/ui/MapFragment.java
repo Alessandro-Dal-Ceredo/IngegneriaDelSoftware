@@ -2,11 +2,7 @@ package it.unive.raccoltapp.ui;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +12,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -29,20 +26,33 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.maps.android.clustering.ClusterManager;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import it.unive.raccoltapp.R;
-import it.unive.raccoltapp.model.Bidone;
-import it.unive.raccoltapp.model.GpxParser;
+import it.unive.raccoltapp.databinding.FragmentMapBinding;
+import it.unive.raccoltapp.model.maputils.Bidone;
+import it.unive.raccoltapp.model.maputils.BidoneClusterRenderer;
+import it.unive.raccoltapp.model.maputils.BidoneItem;
+import it.unive.raccoltapp.model.maputils.GpxParser;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
-    private FusedLocationProviderClient fusedLocationClient;
+    private static final int LOCATION_PERMISSION_REQUEST = 1001;
 
-    // Launcher per la richiesta dei permessi di localizzazione
+    private GoogleMap mMap;
+    private FragmentMapBinding binding;
+    // MODIFICA QUESTA RIGA
+    private FusedLocationProviderClient fusedLocationClient; // Invece di locationClient
+
+    private ClusterManager<BidoneItem> clusterManager;
+    private final List<BidoneItem> allItems = new ArrayList<>();
+
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestPermission(),
             isGranted -> {
@@ -56,27 +66,98 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_map, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
+        binding = FragmentMapBinding.inflate(inflater, container, false);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext());
+
+        SupportMapFragment mapFragment = (SupportMapFragment)
+                getChildFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
-        return root;
+
+        setupFilters();
+        return binding.getRoot();
     }
+
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
-        // 1. Tenta di abilitare la localizzazione dell'utente sulla mappa
+        // Abilita i controlli dello zoom
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
         enableMyLocation();
 
-        // 2. Carica i bidoni dal file GPX
+        clusterManager = new ClusterManager<>(requireContext(), mMap);
+        clusterManager.setRenderer(
+                new BidoneClusterRenderer(requireContext(), mMap, clusterManager)
+        );
+
+        mMap.setOnCameraIdleListener(() -> {
+            clusterManager.onCameraIdle();
+            applyFilters();
+        });
+
+        mMap.setOnMarkerClickListener(clusterManager);
+
         loadBidoni();
+    }
+
+    private void loadBidoni() {
+        try {
+            InputStream is = getResources().openRawResource(R.raw.bidoni_verona);
+            List<Bidone> bidoni = GpxParser.parseBidoni(is);
+
+            allItems.clear();
+            for (Bidone b : bidoni) {
+                allItems.add(new BidoneItem(
+                        b.getLat(),
+                        b.getLon(),
+                        b.getNome(),
+                        b.getTipo()
+                ));
+            }
+
+            applyFilters();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setupFilters() {
+        binding.cbCarta.setOnCheckedChangeListener((v, c) -> applyFilters());
+        binding.cbPlastica.setOnCheckedChangeListener((v, c) -> applyFilters());
+        binding.cbVetro.setOnCheckedChangeListener((v, c) -> applyFilters());
+        binding.cbOrganico.setOnCheckedChangeListener((v, c) -> applyFilters());
+        binding.cbPannolini.setOnCheckedChangeListener((v, c) -> applyFilters());
+        binding.cbSecco.setOnCheckedChangeListener((v, c) -> applyFilters());
+    }
+
+    private void applyFilters() {
+        if (clusterManager == null || mMap == null) return;
+
+        Set<String> enabled = new HashSet<>();
+        if (binding.cbCarta.isChecked()) enabled.add(GpxParser.T_CARTA);
+        if (binding.cbPlastica.isChecked()) enabled.add(GpxParser.T_PLASTICA_LATTINE);
+        if (binding.cbVetro.isChecked()) enabled.add(GpxParser.T_VETRO);
+        if (binding.cbOrganico.isChecked()) enabled.add(GpxParser.T_ORGANICO);
+        if (binding.cbPannolini.isChecked()) enabled.add(GpxParser.T_PANNOLINI);
+        if (binding.cbSecco.isChecked()) enabled.add(GpxParser.T_SECCO);
+
+        clusterManager.clearItems();
+        for (BidoneItem item : allItems) {
+            if (enabled.contains(item.getTipo())) {
+                clusterManager.addItem(item);
+            }
+        }
+        clusterManager.cluster();
     }
 
     private void enableMyLocation() {
@@ -100,60 +181,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
     }
 
-    private void loadBidoni() {
-        try {
-            InputStream is = getResources().openRawResource(R.raw.bidoni_verona);
-            List<Bidone> bidoni = GpxParser.parseBidoni(is);
-
-            for (Bidone b : bidoni) {
-                LatLng pos = new LatLng(b.getLat(), b.getLon());
-                MarkerOptions marker = new MarkerOptions().position(pos).title(b.getNome());
-
-                switch (b.getTipo()) {
-                    case GpxParser.T_CARTA:
-                        marker.icon(getScaledIcon(R.drawable.bidone_carta, 36, 36));
-                        break;
-                    case GpxParser.T_PLASTICA_LATTINE:
-                        marker.icon(getScaledIcon(R.drawable.bidone_plastica, 36, 36));
-                        break;
-                    case GpxParser.T_VETRO:
-                        marker.icon(getScaledIcon(R.drawable.bidone_vetro, 36, 36));
-                        break;
-                    case GpxParser.T_ORGANICO:
-                        marker.icon(getScaledIcon(R.drawable.bidone_organico, 36, 36));
-                        break;
-                    case GpxParser.T_PANNOLINI:
-                        marker.icon(getScaledIcon(R.drawable.bidone_pannolini, 36, 36));
-                        break;
-                    case GpxParser.T_SECCO:
-                    default:
-                        marker.icon(getScaledIcon(R.drawable.bidone_secco, 36, 36));
-                        break;
-                }
-                mMap.addMarker(marker);
-            }
-
-            // Muove la camera solo se non è stato possibile ottenere la posizione dell'utente
-            mMap.getUiSettings().setZoomControlsEnabled(true);
-
-        } catch (Exception e) {
-            Log.e("MapFragment", "Errore durante il parsing dei bidoni", e);
-        }
-    }
-
-    private BitmapDescriptor getScaledIcon(int drawableRes, int widthDp, int heightDp) {
-        Drawable drawable = ContextCompat.getDrawable(requireContext(), drawableRes);
-        if (drawable == null) return BitmapDescriptorFactory.defaultMarker();
-
-        float density = getResources().getDisplayMetrics().density;
-        int widthPx = (int) (widthDp * density);
-        int heightPx = (int) (heightDp * density);
-
-        Bitmap bitmap = Bitmap.createBitmap(widthPx, heightPx, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, widthPx, heightPx);
-        drawable.draw(canvas);
-
-        return BitmapDescriptorFactory.fromBitmap(bitmap);
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }
