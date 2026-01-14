@@ -2,6 +2,7 @@ package it.unive.raccoltapp.ui;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -15,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -30,6 +33,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -48,7 +52,7 @@ public class AddReportFragment extends Fragment {
 
     private static final String TAG = "AddReportFragment";
     private FragmentAddReportBinding binding;
-    private Uri imageUri;
+    private List<Uri> imageUris = new ArrayList<>();
     private String currentPhotoPath;
 
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
@@ -66,9 +70,17 @@ public class AddReportFragment extends Fragment {
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
-                    imageUri = result.getData().getData();
-                    binding.ivImagePreview.setImageURI(imageUri);
-                    binding.ivImagePreview.setVisibility(View.VISIBLE);
+                    if (result.getData().getClipData() != null) {
+                        ClipData clipData = result.getData().getClipData();
+                        for (int i = 0; i < clipData.getItemCount(); i++) {
+                            Uri imageUri = clipData.getItemAt(i).getUri();
+                            imageUris.add(imageUri);
+                        }
+                    } else if (result.getData().getData() != null) {
+                        Uri imageUri = result.getData().getData();
+                        imageUris.add(imageUri);
+                    }
+                    updateImagePreviews();
                 }
             }
     );
@@ -78,9 +90,9 @@ public class AddReportFragment extends Fragment {
             result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {
                     File file = new File(currentPhotoPath);
-                    imageUri = Uri.fromFile(file);
-                    binding.ivImagePreview.setImageURI(imageUri);
-                    binding.ivImagePreview.setVisibility(View.VISIBLE);
+                    Uri imageUri = Uri.fromFile(file);
+                    imageUris.add(imageUri);
+                    updateImagePreviews();
                 }
             }
     );
@@ -96,11 +108,14 @@ public class AddReportFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.backArrow.setOnClickListener(v -> NavHostFragment.findNavController(this).popBackStack());
+
         setupCitySpinner();
         setupPriorityMenu();
 
         binding.btnGallery.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
             galleryLauncher.launch(intent);
         });
 
@@ -115,6 +130,34 @@ public class AddReportFragment extends Fragment {
         binding.btnSubmitReport.setOnClickListener(v -> {
             submitReport();
         });
+    }
+
+    private void updateImagePreviews() {
+        binding.glImagePreviews.removeAllViews();
+        if (imageUris.isEmpty()){
+            binding.glImagePreviews.setVisibility(View.GONE);
+        } else {
+            binding.glImagePreviews.setVisibility(View.VISIBLE);
+            for (Uri uri : imageUris) {
+                ImageView imageView = new ImageView(getContext());
+                GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+                params.width = 300;
+                params.height = 300;
+                params.setMargins(8, 8, 8, 8);
+                imageView.setLayoutParams(params);
+                imageView.setImageURI(uri);
+                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                imageView.setOnClickListener(v -> {
+                    try {
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), uri);
+                        ImageZoomFragment.newInstance(bitmap).show(getParentFragmentManager(), "image_zoom");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+                binding.glImagePreviews.addView(imageView);
+            }
+        }
     }
 
     private void openCamera() {
@@ -178,12 +221,12 @@ public class AddReportFragment extends Fragment {
         String city = binding.actvReportCity.getText().toString().trim();
         String street = binding.etReportStreet.getText().toString().trim();
         String priorityString = binding.actvPriority.getText().toString().trim();
-        Priority priority = Priority.valueOf(priorityString);
-
+        
         if (title.isEmpty() || description.isEmpty() || city.isEmpty() || street.isEmpty() || priorityString.isEmpty()) {
             Toast.makeText(getContext(), "Tutti i campi sono obbligatori", Toast.LENGTH_SHORT).show();
             return;
         }
+        Priority priority = Priority.valueOf(priorityString);
 
         API_MANAGER apiManager = API_MANAGER.getInstance();
         if (!apiManager.isLoggedIn()) {
@@ -203,38 +246,40 @@ public class AddReportFragment extends Fragment {
             @Override
             public void onResponse(Call<List<ReportResponse>> call, Response<List<ReportResponse>> response) {
                 if (response.isSuccessful() && response.body() != null && !response.body().isEmpty()) {
-                    Toast.makeText(getContext(), "Segnalazione inviata con successo!", Toast.LENGTH_SHORT).show();
                     long reportId = response.body().get(0).getId();
+                    Toast.makeText(getContext(), "Segnalazione inviata con successo!", Toast.LENGTH_SHORT).show();
 
-                    if (imageUri != null) {
-                        try {
-                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), imageUri);
-                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                            byte[] imageInByte = baos.toByteArray();
-                            String encodedImage = Base64.encodeToString(imageInByte, Base64.DEFAULT);
+                    if (!imageUris.isEmpty()) {
+                        for (Uri uri : imageUris) {
+                            try {
+                                Bitmap bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), uri);
+                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                                byte[] imageInByte = baos.toByteArray();
+                                String encodedImage = Base64.encodeToString(imageInByte, Base64.DEFAULT);
 
-                            Image image = new Image(encodedImage, reportId);
-                            apiManager.uploadImage(image, new Callback<Void>() {
-                                @Override
-                                public void onResponse(Call<Void> call, Response<Void> response) {
-                                    if(response.isSuccessful()){
-                                        Toast.makeText(getContext(), "Immagine caricata con successo!", Toast.LENGTH_SHORT).show();
-                                        NavHostFragment.findNavController(AddReportFragment.this).popBackStack();
+                                Image image = new Image(encodedImage, reportId);
+                                apiManager.uploadImage(image, new Callback<Void>() {
+                                    @Override
+                                    public void onResponse(Call<Void> call, Response<Void> response) {
+                                        if(response.isSuccessful()){
+                                            Log.d(TAG, "Immagine caricata con successo!");
+                                        }
+                                        else{
+                                            Log.e(TAG, "Errore nel caricamento dell'immagine: " + response.code());
+                                        }
                                     }
-                                    else{
-                                        Toast.makeText(getContext(), "Errore nel caricamento dell'immagine", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
 
-                                @Override
-                                public void onFailure(Call<Void> call, Throwable t) {
-                                    Toast.makeText(getContext(), "Errore di rete durante il caricamento dell'immagine", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                                    @Override
+                                    public void onFailure(Call<Void> call, Throwable t) {
+                                        Log.e(TAG, "Errore di rete durante il caricamento dell'immagine", t);
+                                    }
+                                });
+                            } catch (IOException e) {
+                                Log.e(TAG, "Could not process image", e);
+                            }
                         }
+                        NavHostFragment.findNavController(AddReportFragment.this).popBackStack();
                     } else {
                         NavHostFragment.findNavController(AddReportFragment.this).popBackStack();
                     }
