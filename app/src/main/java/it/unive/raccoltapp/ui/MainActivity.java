@@ -41,11 +41,8 @@ public class MainActivity extends AppCompatActivity {
             });
 
             navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-                if (destination.getId() == R.id.SignUpFragment) {
-                    bottomNav.setVisibility(View.GONE);
-                } else {
-                    bottomNav.setVisibility(View.VISIBLE);
-                }
+                // La barra di navigazione è sempre visibile
+                bottomNav.setVisibility(View.VISIBLE);
 
                 if (destination.getId() == R.id.LoginFragment) {
                     bottomNav.getMenu().findItem(R.id.nav_profile).setChecked(true);

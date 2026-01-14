@@ -1,7 +1,6 @@
 package it.unive.raccoltapp.ui;
 
 import it.unive.raccoltapp.databinding.FragmentSignupBinding;
-
 import it.unive.raccoltapp.R;
 
 import android.os.Bundle;
@@ -38,6 +37,7 @@ public class SignUpFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Listener per il pulsante di registrazione
         binding.buttonSignup.setOnClickListener(v -> {
             String name = binding.editTextName.getText().toString();
             String username = binding.editTextUsernameSignup.getText().toString();
@@ -54,7 +54,6 @@ public class SignUpFragment extends Fragment {
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                     if (response.isSuccessful()) {
                         Toast.makeText(getContext(), "Registrazione riuscita! Effettua il login.", Toast.LENGTH_LONG).show();
-                        // Riportiamo l'utente alla pagina di login
                         NavHostFragment.findNavController(SignUpFragment.this)
                                 .navigate(R.id.action_SignUpFragment_to_LoginFragment);
                     } else {
@@ -68,6 +67,12 @@ public class SignUpFragment extends Fragment {
                     Log.e("SignUpFragment", "Errore di rete", t);
                 }
             });
+        });
+
+        // FIX: Aggiunto il listener mancante per tornare al login
+        binding.tvGoToLogin.setOnClickListener(v -> {
+            NavHostFragment.findNavController(SignUpFragment.this)
+                    .navigate(R.id.action_SignUpFragment_to_LoginFragment);
         });
     }
 
