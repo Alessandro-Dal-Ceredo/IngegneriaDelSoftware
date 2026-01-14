@@ -6,8 +6,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
+        android:name=".RaccoltAppApplication"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +22,17 @@
         <!-- Chiave API di Google Maps (DA SOSTITUIRE) -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="Sostituisci-qui-la-API-key" />
+            android:value="" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="it.unive.raccoltapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <activity
             android:name=".ui.MainActivity"

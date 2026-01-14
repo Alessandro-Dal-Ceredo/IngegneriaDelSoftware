@@ -16,6 +16,13 @@
             android:text="Titolo Segnalazione"
             android:textAppearance="?attr/textAppearanceHeadline5" />
 
+        <ImageView
+            android:id="@+id/detail_report_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/detail_report_description"
             android:layout_width="wrap_content"
@@ -25,11 +32,27 @@
             android:textAppearance="?attr/textAppearanceBody1" />
 
         <TextView
-            android:id="@+id/detail_report_location"
+            android:id="@+id/detail_report_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Luogo: Via, Città"
+            android:text="Città"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/detail_report_street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Via"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/detail_report_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Priorità"
             android:textAppearance="?attr/textAppearanceBody2" />
 
         <TextView

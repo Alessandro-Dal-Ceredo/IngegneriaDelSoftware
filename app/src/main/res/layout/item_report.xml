@@ -30,6 +30,23 @@
             android:text="Comune"
             android:textAppearance="?attr/textAppearanceBody2" />
 
+        <TextView
+            android:id="@+id/tv_report_street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Via"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/tv_report_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Priorità"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textStyle="bold"/>
+
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -2,11 +2,12 @@ package it.unive.raccoltapp.model;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
+import java.util.List;
 
 public class Report implements Serializable {
 
     @SerializedName("id")
-    private Long id; // FIX: Modificato da long a Long per permettere il valore null
+    private Long id;
 
     @SerializedName("title")
     private String title;
@@ -29,20 +30,24 @@ public class Report implements Serializable {
     @SerializedName("id_user")
     private Long idUser;
 
+    @SerializedName("priority")
+    private Priority priority;
+
     @SerializedName("users_info")
     private UserInfo authorInfo;
 
-    // Costruttore per la creazione di una nuova segnalazione
-    public Report(String title, String description, String street, String city, Long idUser) {
+    @SerializedName("images")
+    private List<ImageResponse> images;
+
+    public Report(String title, String description, String street, String city, Long idUser, Priority priority) {
         this.title = title;
         this.description = description;
         this.street = street;
         this.city = city;
         this.idUser = idUser;
-        // L'ID non viene impostato, rimane null e verrà generato dal DB
+        this.priority = priority;
     }
 
-    // Getters
     public Long getId() { return id; }
     public String getTitle() { return title; }
     public String getDescription() { return description; }
@@ -52,4 +57,6 @@ public class Report implements Serializable {
     public Double getLatitudine() { return latitudine; }
     public Double getLongitudine() { return longitudine; }
     public Long getIdUser() { return idUser; }
+    public Priority getPriority() { return priority; }
+    public List<ImageResponse> getImages() { return images; }
 }

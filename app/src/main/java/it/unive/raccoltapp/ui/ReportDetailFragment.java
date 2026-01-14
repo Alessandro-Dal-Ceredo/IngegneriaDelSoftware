@@ -1,6 +1,9 @@
 package it.unive.raccoltapp.ui;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.List;
+
 import it.unive.raccoltapp.databinding.FragmentReportDetailBinding;
+import it.unive.raccoltapp.model.ImageResponse;
 import it.unive.raccoltapp.model.Report;
 import it.unive.raccoltapp.model.UserInfo;
 
@@ -28,17 +34,27 @@ public class ReportDetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Recupera i dati della segnalazione passati dal fragment precedente
         if (getArguments() != null) {
             Report report = (Report) getArguments().getSerializable("report");
             if (report != null) {
-                // Popola le viste con i dati della segnalazione
                 binding.detailReportTitle.setText(report.getTitle());
                 binding.detailReportDescription.setText(report.getDescription());
-                String location = "Luogo: " + report.getStreet() + ", " + report.getCity();
-                binding.detailReportLocation.setText(location);
+                binding.detailReportCity.setText("Città: " + report.getCity());
+                binding.detailReportStreet.setText("Via: " + report.getStreet());
+                if (report.getPriority() != null) {
+                    binding.detailReportPriority.setText("Priorità: " + report.getPriority().toString());
+                } else {
+                    binding.detailReportPriority.setText("Priorità: N/D");
+                }
 
-                // FIX: Usa il nuovo metodo per ottenere l'autore
+                List<ImageResponse> images = report.getImages();
+                if (images != null && !images.isEmpty()) {
+                    byte[] decodedString = Base64.decode(images.get(0).getImage(), Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                    binding.detailReportImage.setImageBitmap(decodedByte);
+                    binding.detailReportImage.setVisibility(View.VISIBLE);
+                }
+
                 String authorText = "Autore: Sconosciuto";
                 UserInfo authorInfo = report.getAuthorInfo();
                 if (authorInfo != null && authorInfo.getUsername() != null) {

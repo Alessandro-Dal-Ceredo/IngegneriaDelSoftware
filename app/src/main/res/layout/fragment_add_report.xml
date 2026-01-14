@@ -60,6 +60,33 @@
                 android:hint="Comune"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Via -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_report_street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Via" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Priorità -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/actv_priority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:hint="Priorità"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!-- Immagini -->
         <TextView
             android:layout_width="wrap_content"
@@ -68,12 +95,27 @@
             android:text="Immagini"
             android:textAppearance="?attr/textAppearanceSubtitle1"/>
 
-        <Button
-            android:id="@+id/btn_add_image"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Aggiungi Immagine" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_gallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Scegli da Galleria" />
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scatta Foto" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/iv_image_preview"

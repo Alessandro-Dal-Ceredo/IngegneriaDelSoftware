@@ -62,19 +62,19 @@ public class ReportsFragment extends Fragment {
         CalendarManager.getInstance().fetchComuniFromSupabase(new CalendarManager.OnComuniReadyCallback() {
             @Override
             public void onComuniReady(List<String> comuni) {
-                if (getContext() == null) return;
+                if (binding == null) return;
                 List<String> cities = new ArrayList<>();
                 cities.add("Tutti i comuni");
                 cities.addAll(comuni);
 
-                ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, cities);
+                ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, cities);
                 spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 binding.spinnerCityFilter.setAdapter(spinnerAdapter);
             }
 
             @Override
             public void onError(Exception e) {
-                if (getContext() == null) return;
+                if (binding == null) return;
                 Toast.makeText(getContext(), "Errore nel caricamento dei comuni", Toast.LENGTH_SHORT).show();
             }
         });
@@ -95,6 +95,7 @@ public class ReportsFragment extends Fragment {
         API_MANAGER.getInstance().getReports(new Callback<List<Report>>() {
             @Override
             public void onResponse(Call<List<Report>> call, Response<List<Report>> response) {
+                if (binding == null) return;
                 if (response.isSuccessful() && response.body() != null) {
                     adapter.updateData(response.body());
                 } else {
@@ -104,6 +105,7 @@ public class ReportsFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Report>> call, Throwable t) {
+                if (binding == null) return;
                 Toast.makeText(getContext(), "Errore di rete: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

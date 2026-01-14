@@ -1,8 +1,10 @@
 package it.unive.raccoltapp.network;
 
+import it.unive.raccoltapp.model.Image;
 import it.unive.raccoltapp.model.LoginCredentials;
 import it.unive.raccoltapp.model.LoginResponse;
 import it.unive.raccoltapp.model.Report;
+import it.unive.raccoltapp.model.ReportResponse;
 import it.unive.raccoltapp.model.SignUpCredentials;
 import it.unive.raccoltapp.model.UserInfo;
 
@@ -30,11 +32,15 @@ public interface SupabaseApiService {
 
 
     // --- Segnalazioni (Reports) ---
-    @GET("rest/v1/reports?select=*,users_info(username)&order=id.desc")
+    @GET("rest/v1/reports?select=*,users_info(username),images(id,image)&order=id.desc")
     Call<List<Report>> getReports();
 
     @POST("rest/v1/reports")
+    @Headers("Prefer: return=representation")
+    Call<List<ReportResponse>> createReport(@Body Report report);
+
+    @POST("rest/v1/images")
     @Headers("Prefer: return=minimal")
-    Call<Void> createReport(@Body Report report);
+    Call<Void> uploadImage(@Body Image image);
 
 }

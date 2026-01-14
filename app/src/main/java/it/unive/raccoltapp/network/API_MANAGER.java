@@ -1,17 +1,21 @@
 package it.unive.raccoltapp.network;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
 import java.io.IOException;
+import java.util.List;
+
+import it.unive.raccoltapp.model.Image;
 import it.unive.raccoltapp.model.LoginCredentials;
 import it.unive.raccoltapp.model.LoginResponse;
 import it.unive.raccoltapp.model.Report;
+import it.unive.raccoltapp.model.ReportResponse;
 import it.unive.raccoltapp.model.SignUpCredentials;
 import it.unive.raccoltapp.model.UserInfo;
-
-import java.util.List;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Call;
@@ -26,10 +30,18 @@ public class API_MANAGER {
     public static final String BASE_URL = "https://thigbtdvpcnnwollsnab.supabase.co/";
     public static final String API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRoaWdidGR2cGNubndvbGxzbmFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwNTQyNzIsImV4cCI6MjA4MDYzMDI3Mn0.ht33Tp9ZVTd-R7NwWnyBhQJ0-9TE2iuFsTapcrw8qKc";
 
+    private static final String PREFS_NAME = "RaccoltAppPrefs";
+    private static final String KEY_AUTH_TOKEN = "authToken";
+    private static final String KEY_USER_ID = "userId";
+    private static final String KEY_USER_EMAIL = "userEmail";
+    private static final String KEY_USER_INFO_ID = "userInfoId";
+    private static final String KEY_USERNAME = "username";
+    private static final String KEY_NAME = "name";
+
     private static API_MANAGER instance;
     private final SupabaseApiService apiService;
+    private final SharedPreferences sharedPreferences;
 
-    // Dati utente in memoria
     private String authToken = null;
     private String userId = null;
     private String userEmail = null;
@@ -37,7 +49,10 @@ public class API_MANAGER {
     private String username = null;
     private String name = null;
 
-    private API_MANAGER() {
+    private API_MANAGER(Context context) {
+        sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        loadSession();
+
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(chain -> {
                     Request originalRequest = chain.request();
@@ -57,14 +72,19 @@ public class API_MANAGER {
         apiService = retrofit.create(SupabaseApiService.class);
     }
 
+    public static synchronized void initialize(Context context) {
+        if (instance == null) {
+            instance = new API_MANAGER(context);
+        }
+    }
+
     public static synchronized API_MANAGER getInstance() {
         if (instance == null) {
-            instance = new API_MANAGER();
+            throw new IllegalStateException("API_MANAGER must be initialized in the Application class");
         }
         return instance;
     }
 
-    // --- Getters & User Session ---
     public boolean isLoggedIn() { return authToken != null && !authToken.isEmpty(); }
     public String getUserEmail() { return userEmail; }
     public String getUsername() { return username; }
@@ -74,6 +94,33 @@ public class API_MANAGER {
     public void logout() {
         this.authToken = null; this.userId = null; this.userEmail = null;
         this.userInfoId = null; this.username = null; this.name = null;
+        clearSession();
+    }
+
+    private void saveSession() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_AUTH_TOKEN, authToken);
+        editor.putString(KEY_USER_ID, userId);
+        editor.putString(KEY_USER_EMAIL, userEmail);
+        editor.putLong(KEY_USER_INFO_ID, userInfoId);
+        editor.putString(KEY_USERNAME, username);
+        editor.putString(KEY_NAME, name);
+        editor.apply();
+    }
+
+    private void loadSession() {
+        authToken = sharedPreferences.getString(KEY_AUTH_TOKEN, null);
+        userId = sharedPreferences.getString(KEY_USER_ID, null);
+        userEmail = sharedPreferences.getString(KEY_USER_EMAIL, null);
+        userInfoId = sharedPreferences.getLong(KEY_USER_INFO_ID, 0);
+        username = sharedPreferences.getString(KEY_USERNAME, null);
+        name = sharedPreferences.getString(KEY_NAME, null);
+    }
+
+    private void clearSession() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
     }
 
     private void handleSuccessfulAuth(LoginResponse authResponse, Callback<LoginResponse> originalCallback, Call<LoginResponse> originalCall) {
@@ -126,6 +173,7 @@ public class API_MANAGER {
                         userInfoId = userInfo.getId();
                         username = userInfo.getUsername();
                         name = userInfo.getName();
+                        saveSession();
                         Log.d(TAG, "Login Fase 2 OK. UserInfoID (numerico): " + userInfoId);
                         finalCallback.onResponse(originalCall, Response.success(originalAuthResponse));
                     } else {
@@ -152,5 +200,6 @@ public class API_MANAGER {
     }
 
     public void getReports(Callback<List<Report>> callback) { apiService.getReports().enqueue(callback); }
-    public void createReport(Report report, Callback<Void> callback) { apiService.createReport(report).enqueue(callback); }
+    public void createReport(Report report, Callback<List<ReportResponse>> callback) { apiService.createReport(report).enqueue(callback); }
+    public void uploadImage(Image image, Callback<Void> callback) { apiService.uploadImage(image).enqueue(callback); }
 }

@@ -38,6 +38,12 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         Report report = reportList.get(position);
         holder.title.setText(report.getTitle());
         holder.city.setText(report.getCity());
+        holder.street.setText(report.getStreet());
+        if (report.getPriority() != null) {
+            holder.priority.setText(report.getPriority().toString());
+        } else {
+            holder.priority.setText("N/D");
+        }
 
         // Naviga alla pagina di dettaglio al click
         holder.itemView.setOnClickListener(v -> {
@@ -76,13 +82,14 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }
 
     static class ReportViewHolder extends RecyclerView.ViewHolder {
-        TextView title;
-        TextView city;
+        TextView title, city, street, priority;
 
         public ReportViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.tv_report_title);
             city = itemView.findViewById(R.id.tv_report_city);
+            street = itemView.findViewById(R.id.tv_report_street);
+            priority = itemView.findViewById(R.id.tv_report_priority);
         }
     }
 }
