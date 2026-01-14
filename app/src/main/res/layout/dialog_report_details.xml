@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/dialog_report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titolo Segnalazione"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
+
+    <TextView
+        android:id="@+id/dialog_report_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Descrizione del problema..."
+        android:textAppearance="?attr/textAppearanceBody1" />
+
+    <TextView
+        android:id="@+id/dialog_report_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Luogo: Via, Città"
+        android:textAppearance="?attr/textAppearanceBody2" />
+
+    <TextView
+        android:id="@+id/dialog_report_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Autore: nome.cognome"
+        android:textAppearance="?attr/textAppearanceCaption" />
+
+</LinearLayout>

@@ -1,14 +1,19 @@
 package it.unive.raccoltapp.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class UserInfo {
+
+    @SerializedName("id")
+    private Long id;
+
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("username")
     private String username;
 
-    public String getName() {
-        return name;
-    }
-
-    public String getUsername() {
-        return username;
-    }
+    public Long getId() { return id; }
+    public String getName() { return name; }
+    public String getUsername() { return username; }
 }

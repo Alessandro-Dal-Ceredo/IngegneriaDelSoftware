@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,11 +35,10 @@ public class CalendarFragment extends Fragment {
     private String dataSelezionata;
     private final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        calendarManager = new CalendarManager();
+        calendarManager = CalendarManager.getInstance();
     }
 
     @Nullable
@@ -56,24 +56,7 @@ public class CalendarFragment extends Fragment {
             dataSelezionata = sdf.format(new Date(binding.calendarView.getDate()));
         }
 
-        Spinner spinner = binding.spinnerComuni;
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.comuni, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String comuneSelezionato = parent.getItemAtPosition(position).toString().toLowerCase(Locale.ROOT);
-                calendarManager.setComune(comuneSelezionato);
-                caricaDatiEInizializza();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
+        setupComuniSpinner();
 
         binding.calendarView.setOnDateChangeListener((v, year, month, dayOfMonth) -> {
             Calendar calendar = Calendar.getInstance();
@@ -81,24 +64,57 @@ public class CalendarFragment extends Fragment {
             dataSelezionata = sdf.format(calendar.getTime());
             aggiornaInfoGiorno(dataSelezionata);
         });
+    }
 
-        caricaDatiEInizializza();
+    private void setupComuniSpinner() {
+        Spinner spinner = binding.spinnerComuni;
+
+        CalendarManager.getInstance().fetchComuniFromSupabase(new CalendarManager.OnComuniReadyCallback() {
+            @Override
+            public void onComuniReady(List<String> comuni) {
+                if (getContext() == null) return;
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, comuni);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                if (getContext() == null) return;
+                Toast.makeText(getContext(), "Errore nel caricamento dei comuni", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String comuneSelezionato = parent.getItemAtPosition(position).toString();
+                calendarManager.setComune(comuneSelezionato);
+                caricaDatiEInizializza();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
     }
 
     private void caricaDatiEInizializza() {
-        calendarManager.aggiornaDaServer(getContext(), () -> {
-            if (getActivity() != null) {
-                getActivity().runOnUiThread(this::mappaDatiEInizializzaUI);
-            }
-        });
-        mappaDatiEInizializzaUI();
+        // Mostra uno stato di caricamento e pulisce i dati vecchi
+        binding.collectionInfoText.setText("Caricamento...");
+        if (calendarioMap != null) {
+            calendarioMap.clear();
+        }
+
+        // Scarica i dati e aggiorna la UI SOLO quando il download è completo
+        calendarManager.aggiornaDaServer(getContext(), this::mappaDatiEInizializzaUI);
     }
 
     private void mappaDatiEInizializzaUI() {
+        if (getContext() == null) return; // Evita crash se il fragment viene distrutto
         List<RaccoltaGiorno> calendario = calendarManager.leggiCalendarioLocale(getContext());
         if (calendario != null) {
             calendarioMap = calendario.stream()
-                    .collect(Collectors.toMap(g -> g.data, g -> g));
+                    .collect(Collectors.toMap(g -> g.data, g -> g, (oldValue, newValue) -> newValue));
 
             aggiornaInfoGiorno(dataSelezionata);
 
@@ -110,21 +126,24 @@ public class CalendarFragment extends Fragment {
             } catch (ParseException e) {
                 // ignore
             }
+        } else {
+            // Se il calendario non può essere letto, mostra un errore
+            binding.collectionInfoText.setText("Errore nel caricamento del calendario.");
         }
     }
 
     private void aggiornaInfoGiorno(String data) {
-        if (calendarioMap == null) return;
+        if (calendarioMap == null) {
+            binding.collectionInfoText.setText("Caricamento...");
+            return;
+        }
 
         binding.selectedDateText.setText("Raccolta per il " + data + ":");
 
         RaccoltaGiorno giorno = calendarioMap.get(data);
-        String info;
-        if (giorno != null && giorno.tipologie != null && !giorno.tipologie.isEmpty()) {
-            info = String.join(", ", giorno.tipologie);
-        } else {
-            info = "Nessuna raccolta prevista.";
-        }
+        String info = (giorno != null && giorno.tipologie != null && !giorno.tipologie.isEmpty()) ?
+                String.join(", ", giorno.tipologie) :
+                "Nessuna raccolta prevista.";
         binding.collectionInfoText.setText(info);
     }
 

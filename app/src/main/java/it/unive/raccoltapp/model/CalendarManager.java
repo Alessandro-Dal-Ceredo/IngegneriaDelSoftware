@@ -1,6 +1,8 @@
 package it.unive.raccoltapp.model;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -16,49 +18,116 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import it.unive.raccoltapp.network.API_MANAGER;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class CalendarManager {
 
-    private static final String NOME_FILE_LOCALE_PREFIX = "calendario_raccolta_locale_";
-    private String comuneSelezionato = "treviso"; // default
+    private static final String TAG = "CalendarManager"; // Tag per il logging
+    private static volatile CalendarManager instance;
+    private final List<String> comuniList = new ArrayList<>();
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final OkHttpClient client = new OkHttpClient();
+
+    private CalendarManager() {}
+
+    public static CalendarManager getInstance() {
+        if (instance == null) {
+            synchronized (CalendarManager.class) {
+                if (instance == null) {
+                    instance = new CalendarManager();
+                }
+            }
+        }
+        return instance;
+    }
+
+    public interface OnComuniReadyCallback {
+        void onComuniReady(List<String> comuni);
+        void onError(Exception e);
+    }
+
+    public void fetchComuniFromSupabase(OnComuniReadyCallback callback) {
+        if (!comuniList.isEmpty()) {
+            callback.onComuniReady(comuniList);
+            return;
+        }
+
+        executor.execute(() -> {
+            String url = API_MANAGER.BASE_URL + "rest/v1/rpc/get_comuni_list";
+            RequestBody body = RequestBody.create(MediaType.get("application/json"), "{}");
+
+            Request request = new Request.Builder()
+                    .url(url)
+                    .addHeader("apikey", API_MANAGER.API_KEY)
+                    .addHeader("Authorization", "Bearer " + API_MANAGER.API_KEY)
+                    .post(body)
+                    .build();
+
+            try (Response response = client.newCall(request).execute()) {
+                String jsonString = response.body() != null ? response.body().string() : "";
+                Log.d(TAG, "Risposta da Supabase (Comuni): HTTP " + response.code() + ", Body: " + jsonString);
+
+                if (!response.isSuccessful()) {
+                    throw new IOException("Errore server nel recupero comuni: " + response.code() + " - " + jsonString);
+                }
+
+                Type listType = new TypeToken<List<String>>() {}.getType();
+                List<String> downloadedComuni = new Gson().fromJson(jsonString, listType);
+
+                if (downloadedComuni == null) {
+                    throw new IOException("La lista dei comuni ricevuta è nulla o malformata.");
+                }
+
+                comuniList.clear();
+                comuniList.addAll(downloadedComuni);
+
+                new Handler(Looper.getMainLooper()).post(() -> callback.onComuniReady(comuniList));
+
+            } catch (IOException | JsonSyntaxException e) {
+                Log.e(TAG, "Errore durante il fetch dei comuni", e);
+                new Handler(Looper.getMainLooper()).post(() -> callback.onError(e));
+            }
+        });
+    }
+
+    private static final String NOME_FILE_LOCALE_PREFIX = "calendario_raccolta_locale_";
+    private String comuneSelezionato = "treviso"; // default
 
     public void setComune(String comune) {
         this.comuneSelezionato = comune;
     }
 
     private String getUrlServer() {
-        return API_MANAGER.BASE_URL + "storage/v1/object/public/calendari_rifiuti/" + comuneSelezionato + ".json";
+        return API_MANAGER.BASE_URL + "storage/v1/object/public/calendari_rifiuti/" + comuneSelezionato.toLowerCase() + ".json";
     }
 
     private String getNomeFileLocale() {
-        return NOME_FILE_LOCALE_PREFIX + comuneSelezionato + ".json";
+        return NOME_FILE_LOCALE_PREFIX + comuneSelezionato.toLowerCase() + ".json";
     }
 
-    // Legge il calendario in modo robusto
     public List<RaccoltaGiorno> leggiCalendarioLocale(Context context) {
         InputStream inputStream = null;
         try {
-            // Priorità 1: Cerca il file scaricato dal server
             File file = new File(context.getFilesDir(), getNomeFileLocale());
             if (file.exists() && file.length() > 0) {
+                Log.d(TAG, "Leggo calendario da file locale: " + file.getAbsolutePath());
                 inputStream = new FileInputStream(file);
             } else {
-                // Priorità 2: Se non esiste, usa il file di backup negli assets
+                Log.d(TAG, "File locale non trovato, uso asset di backup.");
                 inputStream = context.getAssets().open("calendario_rifiuti_2026.json");
             }
 
-            // Metodo di lettura robusto
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             StringBuilder stringBuilder = new StringBuilder();
             String line;
@@ -67,38 +136,36 @@ public class CalendarManager {
             }
             String jsonString = stringBuilder.toString();
 
-            // Parsing del JSON con gestione degli errori
             Gson gson = new Gson();
             Type listType = new TypeToken<List<RaccoltaGiorno>>() {}.getType();
             return gson.fromJson(jsonString, listType);
 
-        } catch (IOException e) {
-            Log.e("CalendarManager", "Errore IO durante la lettura del calendario", e);
-        } catch (JsonSyntaxException e) {
-            Log.e("CalendarManager", "Errore di sintassi nel file JSON del calendario", e);
+        } catch (IOException | JsonSyntaxException e) {
+            Log.e(TAG, "Errore durante la lettura del calendario", e);
         } finally {
             if (inputStream != null) {
                 try {
                     inputStream.close();
                 } catch (IOException e) {
-                    Log.e("CalendarManager", "Errore nella chiusura dello stream", e);
+                    Log.e(TAG, "Errore nella chiusura dello stream", e);
                 }
             }
         }
-        return null; // Ritorna null se qualcosa è andato storto
+        return null;
     }
 
-    // Scarica l'aggiornamento da Supabase in background
     public void aggiornaDaServer(Context context, Runnable onSuccess) {
         executor.execute(() -> {
+            String url = getUrlServer();
+            Log.d(TAG, "Provo a scaricare il calendario da: " + url);
             Request request = new Request.Builder()
-                    .url(getUrlServer())
+                    .url(url)
                     .addHeader("apikey", API_MANAGER.API_KEY)
                     .build();
 
             try (Response response = client.newCall(request).execute()) {
                 if (!response.isSuccessful() || response.body() == null) {
-                    Log.e("CalendarManager", "Errore server: " + response.code());
+                    Log.e(TAG, "Errore server scaricamento calendario: " + response.code());
                     return;
                 }
 
@@ -107,14 +174,15 @@ public class CalendarManager {
                     fos.write(response.body().bytes());
                 }
 
-                Log.d("CalendarManager", "Calendario aggiornato con successo.");
+                Log.d(TAG, "Calendario aggiornato con successo: " + fileOutput.getAbsolutePath());
 
+                // FIX: Esegui il callback sul thread principale (UI Thread)
                 if (onSuccess != null) {
-                    onSuccess.run();
+                    new Handler(Looper.getMainLooper()).post(onSuccess);
                 }
 
             } catch (IOException e) {
-                Log.e("CalendarManager", "Errore durante il download del calendario: " + e.getMessage());
+                Log.e(TAG, "Errore durante il download del calendario", e);
             }
         });
     }

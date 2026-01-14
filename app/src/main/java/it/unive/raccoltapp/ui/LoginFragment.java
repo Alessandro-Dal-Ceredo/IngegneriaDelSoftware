@@ -46,17 +46,16 @@ public class LoginFragment extends Fragment {
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                     if (response.isSuccessful()) {
                         Toast.makeText(getContext(), "Login riuscito!", Toast.LENGTH_SHORT).show();
-                        // Usa la nuova azione per navigare al flusso principale
                         NavHostFragment.findNavController(LoginFragment.this)
                                 .navigate(R.id.action_LoginFragment_to_main_flow);
                     } else {
-                        Toast.makeText(getContext(), "Credenziali errate", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Credenziali errate o utente non trovato", Toast.LENGTH_LONG).show();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    Toast.makeText(getContext(), "Errore di rete", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Errore di rete: " + t.getMessage(), Toast.LENGTH_LONG).show();
                     Log.e("LoginFragment", "Errore di rete", t);
                 }
             });

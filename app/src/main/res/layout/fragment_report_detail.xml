@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titolo Segnalazione"
+            android:textAppearance="?attr/textAppearanceHeadline5" />
+
+        <TextView
+            android:id="@+id/detail_report_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Descrizione completa del problema..."
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:id="@+id/detail_report_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Luogo: Via, Città"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/detail_report_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Autore: nome.cognome"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+    </LinearLayout>
+
+</ScrollView>

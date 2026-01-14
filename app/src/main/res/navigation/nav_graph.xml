@@ -25,6 +25,35 @@
         tools:layout="@layout/fragment_waste_guide" />
 
     <fragment
+        android:id="@+id/nav_reports"
+        android:name="it.unive.raccoltapp.ui.ReportsFragment"
+        android:label="Segnala"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_reportDetailFragment"
+            app:destination="@id/reportDetailFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_addReportFragment"
+            app:destination="@id/addReportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addReportFragment"
+        android:name="it.unive.raccoltapp.ui.AddReportFragment"
+        android:label="Nuova Segnalazione"
+        tools:layout="@layout/fragment_add_report" />
+
+    <fragment
+        android:id="@+id/reportDetailFragment"
+        android:name="it.unive.raccoltapp.ui.ReportDetailFragment"
+        android:label="Dettaglio Segnalazione"
+        tools:layout="@layout/fragment_report_detail">
+        <argument
+            android:name="report"
+            app:argType="it.unive.raccoltapp.model.Report" />
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_profile"
         android:name="it.unive.raccoltapp.ui.ProfileFragment"
         android:label="Profilo"
@@ -65,8 +94,7 @@
         <!-- L'utente torna al login dopo la registrazione -->
         <action
             android:id="@+id/action_SignUpFragment_to_LoginFragment"
-            app:destination="@id/LoginFragment"
-            app:popUpTo="@id/LoginFragment" 
+            app:destination="@id/LoginFragment" 
             app:popUpToInclusive="true"/>
     </fragment>
 

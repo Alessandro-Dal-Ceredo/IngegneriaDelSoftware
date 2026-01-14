@@ -17,6 +17,11 @@
         android:title="Dove lo butto?" />
 
     <item
+        android:id="@+id/nav_reports"
+        android:icon="@android:drawable/ic_menu_report_image"
+        android:title="Segnala" />
+
+    <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_accounthq"
         android:title="Profilo" />
