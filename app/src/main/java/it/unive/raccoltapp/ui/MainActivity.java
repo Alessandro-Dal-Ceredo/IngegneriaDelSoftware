@@ -27,10 +27,6 @@ public class MainActivity extends AppCompatActivity {
             NavController navController = navHostFragment.getNavController();
             BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
 
-            if (!API_MANAGER.getInstance().isLoggedIn()) {
-                navController.navigate(R.id.LoginFragment);
-            }
-
             bottomNav.setOnItemSelectedListener(item -> {
                 if (item.getItemId() == R.id.nav_profile) {
                     if (API_MANAGER.getInstance().isLoggedIn()) {
@@ -45,11 +41,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
             navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-                if (destination.getId() == R.id.LoginFragment || destination.getId() == R.id.SignUpFragment) {
-                    bottomNav.setVisibility(View.GONE);
-                } else {
-                    bottomNav.setVisibility(View.VISIBLE);
-                }
+                bottomNav.setVisibility(View.VISIBLE);
 
                 if (destination.getId() == R.id.LoginFragment) {
                     bottomNav.getMenu().findItem(R.id.nav_profile).setChecked(true);
