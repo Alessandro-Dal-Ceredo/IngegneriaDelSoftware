@@ -66,23 +66,38 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(
+            @NonNull LayoutInflater inflater,
+            @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState) {
 
         binding = FragmentMapBinding.inflate(inflater, container, false);
 
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext());
+        fusedLocationClient =
+                LocationServices.getFusedLocationProviderClient(requireContext());
 
-        SupportMapFragment mapFragment = (SupportMapFragment)
-                getChildFragmentManager().findFragmentById(R.id.map);
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getChildFragmentManager()
+                        .findFragmentById(R.id.map);
+
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
 
         setupFilters();
+
+        // ✅ FILTER DROPDOWN TOGGLE
+        binding.filterHeader.setOnClickListener(v -> {
+            if (binding.filterContent.getVisibility() == View.VISIBLE) {
+                binding.filterContent.setVisibility(View.GONE);
+            } else {
+                binding.filterContent.setVisibility(View.VISIBLE);
+            }
+        });
+
         return binding.getRoot();
     }
+
 
 
     @Override
@@ -111,7 +126,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     private void loadBidoni() {
         try {
-            InputStream is = getResources().openRawResource(R.raw.bidoni_verona);
+            InputStream is = getResources().openRawResource(R.raw.bidoni_veneto);
             List<Bidone> bidoni = GpxParser.parseBidoni(is);
 
             allItems.clear();

@@ -57,44 +57,118 @@
                 app:strokeWidth="1dp">
 
                 <!-- MODIFICA QUI: Altezza della mappa impostata a 650dp -->
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/map"
-                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                <it.unive.raccoltapp.model.maputils.MapTouchWrapper
                     android:layout_width="match_parent"
-                    android:layout_height="650dp" />
+                    android:layout_height="650dp">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </it.unive.raccoltapp.model.maputils.MapTouchWrapper>
 
             </com.google.android.material.card.MaterialCardView>
 
             <!-- Card per i filtri, in overlay sulla mappa -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/filterLayout"
+                android:id="@+id/filterCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="#E6FFFFFF"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#E6FFFFFF">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
+                    android:orientation="vertical">
 
-                    <CheckBox android:id="@+id/cbCarta" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Carta" android:checked="true" />
-                    <CheckBox android:id="@+id/cbPlastica" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Plastica / Lattine" android:checked="true" />
-                    <CheckBox android:id="@+id/cbVetro" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Vetro" android:checked="true" />
-                    <CheckBox android:id="@+id/cbOrganico" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Organico" android:checked="true" />
-                    <CheckBox android:id="@+id/cbPannolini" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Pannolini" android:checked="true" />
-                    <CheckBox android:id="@+id/cbSecco" android:layout_width="wrap_content" android:layout_height="36dp" android:text="Secco" android:checked="true" />
+                    <!-- HEADER (always visible) -->
+                    <LinearLayout
+                        android:id="@+id/filterHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_manage"
+                            app:tint="@color/primary_green"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Filtri"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- DROPDOWN CONTENT -->
+                    <LinearLayout
+                        android:id="@+id/filterContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="8dp">
+
+                        <CheckBox
+                            android:id="@+id/cbCarta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carta"
+                            android:checked="true" />
+
+                        <CheckBox
+                            android:id="@+id/cbPlastica"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plastica / Lattine"
+                            android:checked="true" />
+
+                        <CheckBox
+                            android:id="@+id/cbVetro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vetro"
+                            android:checked="true" />
+
+                        <CheckBox
+                            android:id="@+id/cbOrganico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Organico"
+                            android:checked="true" />
+
+                        <CheckBox
+                            android:id="@+id/cbPannolini"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pannolini"
+                            android:checked="true" />
+
+                        <CheckBox
+                            android:id="@+id/cbSecco"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Secco"
+                            android:checked="true" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
 
         </RelativeLayout>
 
