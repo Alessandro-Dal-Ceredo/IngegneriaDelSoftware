@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
@@ -30,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
             bottomNav.setOnItemSelectedListener(item -> {
                 if (item.getItemId() == R.id.nav_profile) {
                     if (API_MANAGER.getInstance().isLoggedIn()) {
-                        navController.navigate(R.id.nav_profile);
+                        navigateTo(navController, R.id.nav_profile);
                     } else {
-                        navController.navigate(R.id.LoginFragment);
+                        navigateTo(navController, R.id.LoginFragment);
                     }
                     return true;
                 } else {
@@ -53,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void navigateTo(NavController navController, int destinationId) {
+        NavOptions navOptions = new NavOptions.Builder()
+                .setPopUpTo(navController.getGraph().getStartDestinationId(), true)
+                .setLaunchSingleTop(true)
+                .build();
+        navController.navigate(destinationId, null, navOptions);
     }
 
     public void showReportDialog() {
