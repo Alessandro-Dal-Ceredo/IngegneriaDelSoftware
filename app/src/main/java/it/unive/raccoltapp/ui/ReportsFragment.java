@@ -64,12 +64,24 @@ public class ReportsFragment extends Fragment {
             public void onComuniReady(List<String> comuni) {
                 if (binding == null) return;
                 List<String> cities = new ArrayList<>();
-                cities.add("Tutti i comuni");
+                cities.add("Tutti i comuni"); // Opzione di default
                 cities.addAll(comuni);
 
                 ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, cities);
                 spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 binding.spinnerCityFilter.setAdapter(spinnerAdapter);
+
+                // Se l'utente è loggato, preseleziona il suo comune
+                API_MANAGER apiManager = API_MANAGER.getInstance();
+                if (apiManager.isLoggedIn()) {
+                    String userCity = apiManager.getCity();
+                    if (userCity != null) {
+                        int position = spinnerAdapter.getPosition(userCity);
+                        if (position >= 0) {
+                            binding.spinnerCityFilter.setSelection(position);
+                        }
+                    }
+                }
             }
 
             @Override
@@ -91,6 +103,7 @@ public class ReportsFragment extends Fragment {
         });
     }
 
+
     private void loadReportsFromApi() {
         API_MANAGER.getInstance().getReports(new Callback<List<Report>>() {
             @Override
@@ -106,8 +119,7 @@ public class ReportsFragment extends Fragment {
             @Override
             public void onFailure(Call<List<Report>> call, Throwable t) {
                 if (binding == null) return;
-                Toast.makeText(getContext(), "Errore di rete: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
+                Toast.makeText(getContext(), "Errore di rete: " + t.getMessage(), Toast.LENGTH_SHORT).show();      }
         });
     }
 

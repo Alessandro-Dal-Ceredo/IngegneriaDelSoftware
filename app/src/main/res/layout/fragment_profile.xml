@@ -135,20 +135,21 @@
                     android:cursorVisible="false" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Address Input -->
+            <!-- City Dropdown -->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_address"
+                android:id="@+id/til_city"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_medium"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                android:hint="Comune">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_address"
+                <AutoCompleteTextView
+                    android:id="@+id/city_dropdown_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/profile_address"
-                    android:inputType="textPostalAddress" />
+                    android:inputType="none"
+                    app:simpleItems="@array/comuni" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -196,25 +197,19 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Action Buttons -->
-            <Button
-                android:id="@+id/button_logout"
-                android:layout_width="wrap_content"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_changes"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:orientation="vertical"
-                android:text="Logout"
-                app:cardElevation="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
+                android:text="@string/profile_save"
+                android:layout_marginTop="16dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_logout"
                 style="@style/Widget.RaccoltApp.Button.Outlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/profile_logout"
                 android:textColor="@color/error" />
         </LinearLayout>

@@ -2,6 +2,7 @@ package it.unive.raccoltapp.ui;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.ClipData;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -34,15 +35,20 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
+import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.databinding.FragmentAddReportBinding;
 import it.unive.raccoltapp.model.CalendarManager;
 import it.unive.raccoltapp.model.Image;
 import it.unive.raccoltapp.model.Priority;
 import it.unive.raccoltapp.model.Report;
 import it.unive.raccoltapp.model.ReportResponse;
+import it.unive.raccoltapp.model.TypeOfReport;
 import it.unive.raccoltapp.network.API_MANAGER;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -54,6 +60,7 @@ public class AddReportFragment extends Fragment {
     private FragmentAddReportBinding binding;
     private List<Uri> imageUris = new ArrayList<>();
     private String currentPhotoPath;
+    private Calendar selectedDate = Calendar.getInstance();
 
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestPermission(),
@@ -112,6 +119,8 @@ public class AddReportFragment extends Fragment {
 
         setupCitySpinner();
         setupPriorityMenu();
+        setupReportTypeMenu();
+        setupDatePicker();
 
         binding.btnGallery.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -180,7 +189,7 @@ public class AddReportFragment extends Fragment {
     }
 
     private File createImageFile() throws IOException {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
         File storageDir = requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = File.createTempFile(
@@ -215,18 +224,63 @@ public class AddReportFragment extends Fragment {
         binding.actvPriority.setAdapter(adapter);
     }
 
+    private void setupReportTypeMenu() {
+        if (getContext() == null) return;
+        List<String> reportTypes = Arrays.asList(getResources().getStringArray(R.array.report_types));
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, reportTypes);
+        binding.actvReportType.setAdapter(adapter);
+    }
+
+    private void setupDatePicker() {
+        updateDateInView(); // Imposta la data odierna come default
+        binding.etReportDate.setOnClickListener(v -> {
+            DatePickerDialog.OnDateSetListener dateSetListener = (view, year, month, dayOfMonth) -> {
+                selectedDate.set(Calendar.YEAR, year);
+                selectedDate.set(Calendar.MONTH, month);
+                selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateDateInView();
+            };
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), dateSetListener,
+                    selectedDate.get(Calendar.YEAR),
+                    selectedDate.get(Calendar.MONTH),
+                    selectedDate.get(Calendar.DAY_OF_MONTH));
+
+            datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+            datePickerDialog.show();
+        });
+    }
+
+    private void updateDateInView() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        binding.etReportDate.setText(sdf.format(selectedDate.getTime()));
+    }
+
     private void submitReport() {
         String title = binding.etReportTitle.getText().toString().trim();
         String description = binding.etReportDescription.getText().toString().trim();
         String city = binding.actvReportCity.getText().toString().trim();
         String street = binding.etReportStreet.getText().toString().trim();
         String priorityString = binding.actvPriority.getText().toString().trim();
-        
-        if (title.isEmpty() || description.isEmpty() || city.isEmpty() || street.isEmpty() || priorityString.isEmpty()) {
+        String typeString = binding.actvReportType.getText().toString().trim();
+        String dateString = binding.etReportDate.getText().toString().trim();
+
+        if (title.isEmpty() || description.isEmpty() || city.isEmpty() || street.isEmpty() || priorityString.isEmpty() || typeString.isEmpty() || dateString.isEmpty()) {
             Toast.makeText(getContext(), "Tutti i campi sono obbligatori", Toast.LENGTH_SHORT).show();
             return;
         }
-        Priority priority = Priority.valueOf(priorityString);
+
+        Priority priority = Priority.valueOf(priorityString.toUpperCase(Locale.ROOT));
+
+        List<String> reportTypesList = Arrays.asList(getResources().getStringArray(R.array.report_types));
+        int typeIndex = reportTypesList.indexOf(typeString);
+        TypeOfReport type = TypeOfReport.OTHER; // Valore di default
+        if (typeIndex != -1 && typeIndex < TypeOfReport.values().length) {
+            type = TypeOfReport.values()[typeIndex];
+        }
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String formattedDate = sdf.format(selectedDate.getTime());
 
         API_MANAGER apiManager = API_MANAGER.getInstance();
         if (!apiManager.isLoggedIn()) {
@@ -240,7 +294,7 @@ public class AddReportFragment extends Fragment {
             return;
         }
 
-        Report newReport = new Report(title, description, street, city, userId, priority);
+        Report newReport = new Report(title, description, street, city, userId, priority, formattedDate, type);
 
         apiManager.createReport(newReport, new Callback<List<ReportResponse>>() {
             @Override
@@ -276,8 +330,7 @@ public class AddReportFragment extends Fragment {
                                     }
                                 });
                             } catch (IOException e) {
-                                Log.e(TAG, "Could not process image", e);
-                            }
+                                Log.e(TAG, "Could not process image", e);                            }
                         }
                         NavHostFragment.findNavController(AddReportFragment.this).popBackStack();
                     } else {

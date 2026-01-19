@@ -39,6 +39,13 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         holder.title.setText(report.getTitle());
         holder.city.setText(report.getCity());
         holder.street.setText(report.getStreet());
+
+        if(report.getDate() != null)
+            holder.date.setText(report.getDate());
+
+        if(report.getType() != null)
+            holder.type.setText(report.getType().toString().replace("_", " "));
+
         if (report.getPriority() != null) {
             holder.priority.setText(report.getPriority().toString());
         } else {
@@ -82,7 +89,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }
 
     static class ReportViewHolder extends RecyclerView.ViewHolder {
-        TextView title, city, street, priority;
+        TextView title, city, street, priority, date, type;
 
         public ReportViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -90,6 +97,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             city = itemView.findViewById(R.id.tv_report_city);
             street = itemView.findViewById(R.id.tv_report_street);
             priority = itemView.findViewById(R.id.tv_report_priority);
+            date = itemView.findViewById(R.id.tv_report_date);
+            type = itemView.findViewById(R.id.tv_report_type);
         }
     }
 }

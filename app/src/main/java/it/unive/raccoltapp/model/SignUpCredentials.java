@@ -12,14 +12,14 @@ public class SignUpCredentials {
     private String password;
     private Map<String, String> data; // Campo speciale per i metadati dell'utente
 
-    public SignUpCredentials(String email, String password, String name, String username) {
+    public SignUpCredentials(String email, String password, String name, String username, String city) {
         this.email = email;
         this.password = password;
-
         // Inseriamo i dati extra nel campo 'data' come richiesto da Supabase
         this.data = new HashMap<>();
         this.data.put("name", name);
         this.data.put("username", username);
+        this.data.put("city", city);
     }
 
     // Getters e Setters

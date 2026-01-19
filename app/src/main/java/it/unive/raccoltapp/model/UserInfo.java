@@ -13,7 +13,11 @@ public class UserInfo {
     @SerializedName("username")
     private String username;
 
+    @SerializedName("city")
+    private String city;
+
     public Long getId() { return id; }
     public String getName() { return name; }
     public String getUsername() { return username; }
+    public String getCity() { return city; }
 }

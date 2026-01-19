@@ -43,13 +43,14 @@ public class SignUpFragment extends Fragment {
             String username = binding.editTextUsernameSignup.getText().toString();
             String email = binding.editTextEmailSignup.getText().toString();
             String password = binding.editTextPasswordSignup.getText().toString();
+            String city = binding.cityDropdown.getText().toString();
 
-            if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || city.isEmpty()) {
                 Toast.makeText(getContext(), "Tutti i campi sono obbligatori", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            API_MANAGER.getInstance().signUpUser(email, password, name, username, new Callback<LoginResponse>() {
+            API_MANAGER.getInstance().signUpUser(email, password, name, username, city, new Callback<LoginResponse>() {
                 @Override
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                     if (response.isSuccessful()) {

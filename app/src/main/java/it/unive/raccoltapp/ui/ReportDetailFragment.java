@@ -46,6 +46,19 @@ public class ReportDetailFragment extends Fragment {
                 binding.detailReportDescription.setText(report.getDescription());
                 binding.detailReportCity.setText("Città: " + report.getCity());
                 binding.detailReportStreet.setText("Via: " + report.getStreet());
+
+                if (report.getType() != null) {
+                    binding.detailReportType.setText("Tipo: " + report.getType().toString().replace("_", " "));
+                } else {
+                    binding.detailReportType.setText("Tipo: N/D");
+                }
+
+                if (report.getDate() != null) {
+                    binding.detailReportDate.setText("Data: " + report.getDate());
+                } else {
+                    binding.detailReportDate.setText("Data: N/D");
+                }
+
                 if (report.getPriority() != null) {
                     binding.detailReportPriority.setText("Priorità: " + report.getPriority().toString());
                 } else {

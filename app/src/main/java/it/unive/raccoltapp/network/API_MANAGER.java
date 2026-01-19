@@ -7,7 +7,9 @@ import android.os.Looper;
 import android.util.Log;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import it.unive.raccoltapp.model.Image;
 import it.unive.raccoltapp.model.LoginCredentials;
@@ -37,6 +39,7 @@ public class API_MANAGER {
     private static final String KEY_USER_INFO_ID = "userInfoId";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_NAME = "name";
+    private static final String KEY_CITY = "city"; // Aggiunto
 
     private static API_MANAGER instance;
     private final SupabaseApiService apiService;
@@ -48,6 +51,7 @@ public class API_MANAGER {
     private Long userInfoId = null;
     private String username = null;
     private String name = null;
+    private String city = null; // Aggiunto
 
     private API_MANAGER(Context context) {
         sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -89,11 +93,13 @@ public class API_MANAGER {
     public String getUserEmail() { return userEmail; }
     public String getUsername() { return username; }
     public String getName() { return name; }
+    public String getCity() { return city; } // Aggiunto
+    public void setCity(String city) { this.city = city; saveSession(); } // Aggiunto
     public Long getUserInfoId() { return userInfoId; }
 
     public void logout() {
         this.authToken = null; this.userId = null; this.userEmail = null;
-        this.userInfoId = null; this.username = null; this.name = null;
+        this.userInfoId = null; this.username = null; this.name = null; this.city = null; // Aggiunto
         clearSession();
     }
 
@@ -105,6 +111,7 @@ public class API_MANAGER {
         editor.putLong(KEY_USER_INFO_ID, userInfoId);
         editor.putString(KEY_USERNAME, username);
         editor.putString(KEY_NAME, name);
+        editor.putString(KEY_CITY, city); // Aggiunto
         editor.apply();
     }
 
@@ -115,6 +122,7 @@ public class API_MANAGER {
         userInfoId = sharedPreferences.getLong(KEY_USER_INFO_ID, 0);
         username = sharedPreferences.getString(KEY_USERNAME, null);
         name = sharedPreferences.getString(KEY_NAME, null);
+        city = sharedPreferences.getString(KEY_CITY, null); // Aggiunto
     }
 
     private void clearSession() {
@@ -149,8 +157,18 @@ public class API_MANAGER {
         });
     }
 
-    public void signUpUser(String email, String password, String name, String username, Callback<LoginResponse> callback) {
-        apiService.signup(new SignUpCredentials(email, password, name, username)).enqueue(callback);
+    public void signUpUser(String email, String password, String name, String username, String city, Callback<LoginResponse> callback) {
+        apiService.signup(new SignUpCredentials(email, password, name, username, city)).enqueue(callback);
+    }
+
+    public void updateUserCity(String newCity, Callback<Void> callback) {
+        if (userInfoId == 0) {
+            callback.onFailure(null, new IllegalStateException("ID utente non disponibile"));
+            return;
+        }
+        Map<String, String> cityUpdate = new HashMap<>();
+        cityUpdate.put("city", newCity);
+        apiService.updateUserCity("eq." + userInfoId, cityUpdate).enqueue(callback);
     }
 
     private void fetchAndSetUserInfo(Callback<LoginResponse> finalCallback, Call<LoginResponse> originalCall, LoginResponse originalAuthResponse) {
@@ -173,6 +191,7 @@ public class API_MANAGER {
                         userInfoId = userInfo.getId();
                         username = userInfo.getUsername();
                         name = userInfo.getName();
+                        city = userInfo.getCity(); // Aggiunto
                         saveSession();
                         Log.d(TAG, "Login Fase 2 OK. UserInfoID (numerico): " + userInfoId);
                         finalCallback.onResponse(originalCall, Response.success(originalAuthResponse));

@@ -1,5 +1,8 @@
 package it.unive.raccoltapp.network;
 
+import java.util.List;
+import java.util.Map;
+
 import it.unive.raccoltapp.model.Image;
 import it.unive.raccoltapp.model.LoginCredentials;
 import it.unive.raccoltapp.model.LoginResponse;
@@ -7,13 +10,11 @@ import it.unive.raccoltapp.model.Report;
 import it.unive.raccoltapp.model.ReportResponse;
 import it.unive.raccoltapp.model.SignUpCredentials;
 import it.unive.raccoltapp.model.UserInfo;
-
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -27,8 +28,12 @@ public interface SupabaseApiService {
     Call<LoginResponse> signup(@Body SignUpCredentials credentials);
 
     // --- Dati Utente ---
-    @GET("rest/v1/users_info?select=id,name,username") // FIX: Aggiunto 'id'
+    @GET("rest/v1/users_info?select=id,name,username,city")
     Call<List<UserInfo>> getUserInfo(@Query("id_user") String userId);
+
+    @PATCH("rest/v1/users_info")
+    @Headers("Prefer: return=minimal")
+    Call<Void> updateUserCity(@Query("id") String userId, @Body Map<String, String> cityUpdate);
 
 
     // --- Segnalazioni (Reports) ---

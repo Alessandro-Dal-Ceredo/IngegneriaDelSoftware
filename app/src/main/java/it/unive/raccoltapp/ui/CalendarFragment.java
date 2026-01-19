@@ -28,6 +28,7 @@ import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.databinding.FragmentCalendarBinding;
 import it.unive.raccoltapp.model.CalendarManager;
 import it.unive.raccoltapp.model.RaccoltaGiorno;
+import it.unive.raccoltapp.network.API_MANAGER;
 
 public class CalendarFragment extends Fragment {
 
@@ -80,6 +81,18 @@ public class CalendarFragment extends Fragment {
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, comuni);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+
+                // Se l'utente è loggato, preseleziona il suo comune
+                API_MANAGER apiManager = API_MANAGER.getInstance();
+                if (apiManager.isLoggedIn()) {
+                    String userCity = apiManager.getCity();
+                    if (userCity != null) {
+                        int position = adapter.getPosition(userCity);
+                        if (position >= 0) {
+                            spinner.setSelection(position);
+                        }
+                    }
+                }
             }
 
             @Override

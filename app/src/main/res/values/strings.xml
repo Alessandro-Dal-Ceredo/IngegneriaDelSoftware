@@ -79,6 +79,18 @@
         <item>Venezia</item>
         <item>Vicenza</item>
     </string-array>
+
+    <string-array name="report_types">
+        <item>Rifiuti abbandonati</item>
+        <item>Cassonetto traboccante</item>
+        <item>Rifiuti ingombranti</item>
+        <item>Discarica abusiva</item>
+        <item>Cassonetto danneggiato</item>
+        <item>Rifiuti non differenziati</item>
+        <item>Mancata raccolta</item>
+        <item>Altro</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_settings">SettingsActivity</string>
