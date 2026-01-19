@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/nav_calendar"
@@ -18,7 +19,7 @@
 
     <item
         android:id="@+id/nav_reports"
-        android:icon="@android:drawable/ic_menu_report_image"
+        android:icon="@drawable/ic_reportshq"
         android:title="Segnala" />
 
     <item
