@@ -84,18 +84,6 @@ public class WasteGuideFragment extends Fragment {
                 "💡 Suggerimento: Il secco è l'ultima spiaggia! Se hai dubbi, consulta il dizionario dei rifiuti nell'app prima di gettare qui."
         );
 
-        // --- GESTIONE BOTTONE SEGNALAZIONE ---
-        // Recuperiamo il bottone dal layout del fragment
-        Button btnReport = view.findViewById(R.id.btn_send_report);
-        if (btnReport != null) {
-            btnReport.setOnClickListener(v -> {
-                // Chiamiamo il metodo del MainActivity
-                if (getActivity() instanceof MainActivity) {
-                    ((MainActivity) getActivity()).showReportDialog();
-                }
-            });
-        }
-        // Gestione Tasto Impostazioni (Ingranaggio in alto)
         return view;
     }
 
@@ -125,7 +113,6 @@ public class WasteGuideFragment extends Fragment {
         tvTitle.setText(title);
         imgIcon.setImageResource(iconResId);
 
-        // CORREZIONE: Usare requireContext() invece di 'this' nei Fragment
         int color = ContextCompat.getColor(requireContext(), colorResId);
         iconContainer.setBackgroundTintList(ColorStateList.valueOf(color));
 
