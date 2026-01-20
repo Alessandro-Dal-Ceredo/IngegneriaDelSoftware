@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +41,7 @@ public class API_MANAGER {
     private static final String KEY_USER_INFO_ID = "userInfoId";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_NAME = "name";
-    private static final String KEY_CITY = "city"; // Aggiunto
+    private static final String KEY_CITY = "city";
 
     private static API_MANAGER instance;
     private final SupabaseApiService apiService;
@@ -51,7 +53,7 @@ public class API_MANAGER {
     private Long userInfoId = null;
     private String username = null;
     private String name = null;
-    private String city = null; // Aggiunto
+    private String city = null;
 
     private API_MANAGER(Context context) {
         sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -93,13 +95,47 @@ public class API_MANAGER {
     public String getUserEmail() { return userEmail; }
     public String getUsername() { return username; }
     public String getName() { return name; }
-    public String getCity() { return city; } // Aggiunto
-    public void setCity(String city) { this.city = city; saveSession(); } // Aggiunto
+    public String getCity() { return city; } 
+    public void setCity(String newCity) { 
+        String oldCity = this.city;
+        if (oldCity != null && !oldCity.isEmpty() && !oldCity.equals(newCity)) {
+            String oldTopic = "city_" + oldCity.replaceAll("\\s+", "_");
+            FirebaseMessaging.getInstance().unsubscribeFromTopic(oldTopic).addOnCompleteListener(task -> {
+                if(task.isSuccessful()) {
+                    Log.d(TAG, "Disiscrizione dal topic " + oldTopic + " RIUSCITA.");
+                } else {
+                    Log.e(TAG, "Disiscrizione dal topic " + oldTopic + " FALLITA.", task.getException());
+                }
+            });
+        }
+        this.city = newCity;
+        if (newCity != null && !newCity.isEmpty()) {
+            String newTopic = "city_" + newCity.replaceAll("\\s+", "_");
+            FirebaseMessaging.getInstance().subscribeToTopic(newTopic).addOnCompleteListener(task -> {
+                if(task.isSuccessful()) {
+                    Log.d(TAG, "Iscrizione al topic " + newTopic + " RIUSCITA.");
+                } else {
+                    Log.e(TAG, "Iscrizione al topic " + newTopic + " FALLITA.", task.getException());
+                }
+            });
+        }
+        saveSession(); 
+    } 
     public Long getUserInfoId() { return userInfoId; }
 
     public void logout() {
+        if (this.city != null && !this.city.isEmpty()) {
+            String topic = "city_" + this.city.replaceAll("\\s+", "_");
+            FirebaseMessaging.getInstance().unsubscribeFromTopic(topic).addOnCompleteListener(task -> {
+                if(task.isSuccessful()) {
+                    Log.d(TAG, "Disiscrizione (logout) dal topic " + topic + " RIUSCITA.");
+                } else {
+                    Log.e(TAG, "Disiscrizione (logout) dal topic " + topic + " FALLITA.", task.getException());
+                }
+            });
+        }
         this.authToken = null; this.userId = null; this.userEmail = null;
-        this.userInfoId = null; this.username = null; this.name = null; this.city = null; // Aggiunto
+        this.userInfoId = null; this.username = null; this.name = null; this.city = null;
         clearSession();
     }
 
@@ -111,7 +147,7 @@ public class API_MANAGER {
         editor.putLong(KEY_USER_INFO_ID, userInfoId);
         editor.putString(KEY_USERNAME, username);
         editor.putString(KEY_NAME, name);
-        editor.putString(KEY_CITY, city); // Aggiunto
+        editor.putString(KEY_CITY, city);
         editor.apply();
     }
 
@@ -122,7 +158,7 @@ public class API_MANAGER {
         userInfoId = sharedPreferences.getLong(KEY_USER_INFO_ID, 0);
         username = sharedPreferences.getString(KEY_USERNAME, null);
         name = sharedPreferences.getString(KEY_NAME, null);
-        city = sharedPreferences.getString(KEY_CITY, null); // Aggiunto
+        city = sharedPreferences.getString(KEY_CITY, null);
     }
 
     private void clearSession() {
@@ -191,7 +227,8 @@ public class API_MANAGER {
                         userInfoId = userInfo.getId();
                         username = userInfo.getUsername();
                         name = userInfo.getName();
-                        city = userInfo.getCity(); // Aggiunto
+                        setCity(userInfo.getCity()); // Usa il nuovo metodo setCity per iscrivere al topic
+                        
                         saveSession();
                         Log.d(TAG, "Login Fase 2 OK. UserInfoID (numerico): " + userInfoId);
                         finalCallback.onResponse(originalCall, Response.success(originalAuthResponse));
