@@ -32,6 +32,10 @@ public class ReportsFragment extends Fragment {
     private ReportAdapter adapter;
     private List<Report> reportList = new ArrayList<>();
 
+    private String currentCityFilter = "Comuni";
+    private String currentPriorityFilter = "Priorità";
+    private String currentTypeFilter = "Tipo";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,6 +49,8 @@ public class ReportsFragment extends Fragment {
 
         setupRecyclerView();
         setupFilterSpinner();
+        setupPrioritySpinner();
+        setupTypeSpinner();
         loadReportsFromApi();
 
         binding.fabAddReport.setOnClickListener(v -> {
@@ -64,7 +70,7 @@ public class ReportsFragment extends Fragment {
             public void onComuniReady(List<String> comuni) {
                 if (binding == null) return;
                 List<String> cities = new ArrayList<>();
-                cities.add("Tutti i comuni"); // Opzione di default
+                cities.add("Comuni"); // Opzione di default
                 cities.addAll(comuni);
 
                 ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, cities);
@@ -90,7 +96,7 @@ public class ReportsFragment extends Fragment {
                 Toast.makeText(getContext(), "Errore nel caricamento dei comuni", Toast.LENGTH_SHORT).show();
             }
         });
-
+/*
         binding.spinnerCityFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -101,8 +107,22 @@ public class ReportsFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
         });
-    }
+    }*/
+        binding.spinnerCityFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                currentCityFilter = parent.getItemAtPosition(position).toString();
+                if (adapter != null) {
+                    // AGGIUNGI IL TERZO PARAMETRO
+                    adapter.filter(currentCityFilter, currentPriorityFilter, currentTypeFilter);
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+    }
 
     private void loadReportsFromApi() {
         API_MANAGER.getInstance().getReports(new Callback<List<Report>>() {
@@ -120,6 +140,68 @@ public class ReportsFragment extends Fragment {
             public void onFailure(Call<List<Report>> call, Throwable t) {
                 if (binding == null) return;
                 Toast.makeText(getContext(), "Errore di rete: " + t.getMessage(), Toast.LENGTH_SHORT).show();      }
+        });
+    }
+
+    private void setupPrioritySpinner() {
+        // 1. Creiamo la lista delle opzioni
+        List<String> priorities = new ArrayList<>();
+        priorities.add("Priorità"); // Opzione di default
+
+        // Prendiamo i valori dall'Enum Priority che hai già nel progetto
+        for (it.unive.raccoltapp.model.Priority p : it.unive.raccoltapp.model.Priority.values()) {
+            priorities.add(p.toString()); // Aggiunge LOW, MEDIUM, HIGH, EXTREME, etc.
+        }
+
+        // 2. Colleghiamo all'Adapter dello Spinner
+        ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, priorities);
+        adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Assicurati che nel tuo XML il nuovo spinner abbia un ID, es: spinner_priority_filter
+        binding.spinnerPriorityFilter.setAdapter(adapterSpinner);
+
+        // 3. Gestiamo il click
+        binding.spinnerPriorityFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                currentPriorityFilter = parent.getItemAtPosition(position).toString();
+                if (adapter != null) {
+                    // AGGIUNGI IL TERZO PARAMETRO
+                    adapter.filter(currentCityFilter, currentPriorityFilter, currentTypeFilter);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+    }
+
+    private void setupTypeSpinner() {
+        List<String> types = new ArrayList<>();
+        types.add("Tipo"); // Stringa di default (uguale alla variabile)
+
+        // Carica i tipi dall'Enum (come hai fatto per le priorità)
+        // Assicurati che TypeOfReport sia l'enum corretto del tuo progetto
+        for (it.unive.raccoltapp.model.TypeOfReport t : it.unive.raccoltapp.model.TypeOfReport.values()) {
+            types.add(t.toString());
+        }
+
+        ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, types);
+        adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.spinnerTypeFilter.setAdapter(adapterSpinner);
+
+        binding.spinnerTypeFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                currentTypeFilter = parent.getItemAtPosition(position).toString();
+                // CHIAMATA A 3 PARAMETRI
+                if (adapter != null) {
+                    adapter.filter(currentCityFilter, currentPriorityFilter, currentTypeFilter);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
     }
 

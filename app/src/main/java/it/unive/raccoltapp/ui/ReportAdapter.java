@@ -66,6 +66,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }
 
     // Metodo per filtrare la lista
+    /*
     public void filter(String city) {
         reportList.clear();
         if (city.isEmpty() || city.equals("Tutti i comuni")) {
@@ -75,6 +76,36 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
                 if (report.getCity() != null && report.getCity().equalsIgnoreCase(city)) {
                     reportList.add(report);
                 }
+            }
+        }
+        notifyDataSetChanged();
+    }*/
+    // Modifica la firma per accettare DUE parametri
+    public void filter(String city, String priority, String type) {
+        reportList.clear();
+
+        if (reportListFull == null || reportListFull.isEmpty()) {
+            notifyDataSetChanged();
+            return;
+        }
+
+        for (Report report : reportListFull) {
+            // CHECK 1: Città (Default: "Comuni")
+            boolean matchCity = city.equals("Comuni") ||
+                    (report.getCity() != null && report.getCity().equalsIgnoreCase(city));
+
+            // CHECK 2: Priorità (Default: "Priorità")
+            boolean matchPriority = priority.equals("Priorità") ||
+                    (report.getPriority() != null && report.getPriority().toString().equalsIgnoreCase(priority));
+
+            // CHECK 3: Tipo (Default: "Tipo")
+            // Assumiamo che report.getType() restituisca un Enum
+            boolean matchType = type.equals("Tipo") ||
+                    (report.getType() != null && report.getType().toString().equalsIgnoreCase(type));
+
+            // LOGICA AND: Passa solo se TUTTI e 3 sono veri
+            if (matchCity && matchPriority && matchType) {
+                reportList.add(report);
             }
         }
         notifyDataSetChanged();
