@@ -17,6 +17,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import java.util.List;
 
+import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.databinding.FragmentReportDetailBinding;
 import it.unive.raccoltapp.model.ImageResponse;
 import it.unive.raccoltapp.model.Report;
@@ -61,6 +62,67 @@ public class ReportDetailFragment extends Fragment {
 
                 if (report.getPriority() != null) {
                     binding.detailReportPriority.setText("Priorità: " + report.getPriority().toString());
+                    // --- INIZIO LOGICA COLORE BORDO ---
+                    int colorCode;
+
+                    // Assumo che il tuo Enum Priority abbia valori tipo LOW, MEDIUM, HIGH, EXTREME
+                    // Verifica i nomi esatti nel tuo file Priority.java
+                    switch (report.getPriority()) {
+                        case EXTREME:
+                            colorCode = android.graphics.Color.RED;
+                            break;
+                        case HIGH:
+                            colorCode = android.graphics.Color.parseColor("#FFA500"); // Arancione
+                            break;
+                        case MEDIUM:
+                            colorCode = android.graphics.Color.parseColor("#FFEE53"); // Giallo
+                            break;
+                        case LOW:
+                            colorCode = android.graphics.Color.parseColor("#4CAF50"); // Verde
+                            break;
+                        default:
+                            colorCode = android.graphics.Color.GRAY; // Colore per priorità sconosciute
+                            break;
+                    }
+                    if (report.getType() != null) {
+                        int iconResId;
+
+                        // Assicurati che i nomi dei case (Enum) e dei drawable siano corretti
+                        switch (report.getType()) {
+                            case ABANDONED_WASTE:
+                                iconResId = R.drawable.ic_abandoned_waste;
+                                break;
+                            case OVERFLOWING_BIN:
+                                iconResId = R.drawable.ic_overflowing_bin;
+                                break;
+                            case BULKY_WASTE:
+                                iconResId = R.drawable.ic_bulky_waste;
+                                break;
+                            case ILLEGAL_DUMPING:
+                                iconResId = R.drawable.ic_illegal_dumping;
+                                break;
+                            case DAMAGED_BIN:
+                                iconResId = R.drawable.ic_damaged_bin;
+                                break;
+                            case UNSORTED_WASTE:
+                                iconResId = R.drawable.ic_unsorted_waste;
+                                break;
+                            case MISSED_COLLECTION:
+                                iconResId = R.drawable.ic_missed_collection;
+                                break;
+                            default:
+                                iconResId = R.drawable.ic_waste_default;
+                                break;
+                        }
+
+                        // Imposta l'immagine nel Fragment
+                        binding.detailReportIcon.setImageResource(iconResId);
+                    }
+
+                    // Applica il colore al bordo della CardView
+                    binding.cardDetailContainer.setStrokeColor(colorCode);
+                    binding.detailReportPriority.setTextColor(colorCode);
+                    binding.detailReportPriority.setTypeface(null, android.graphics.Typeface.BOLD);
                 } else {
                     binding.detailReportPriority.setText("Priorità: N/D");
                 }

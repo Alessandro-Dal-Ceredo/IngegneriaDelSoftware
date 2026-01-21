@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
 
     private List<Report> reportList;
     private List<Report> reportListFull;
+
 
     public ReportAdapter(List<Report> reportList) {
         this.reportList = reportList;
@@ -39,6 +41,66 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         holder.title.setText(report.getTitle());
         holder.city.setText(report.getCity());
         holder.street.setText(report.getStreet());
+        int colorCode = android.graphics.Color.GRAY; // Colore di default
+
+        if (report.getPriority() != null) {
+            // Usa gli stessi colori che hai scelto per il dettaglio
+            switch (report.getPriority()) {
+                case EXTREME:
+                    colorCode = android.graphics.Color.RED;
+                    break;
+                case HIGH:
+                    colorCode = android.graphics.Color.parseColor("#FFA500"); // Arancione
+                    break;
+                case MEDIUM:
+                    colorCode = android.graphics.Color.parseColor("#FFEE53"); // Giallo
+                    break;
+                case LOW:
+                    colorCode = android.graphics.Color.parseColor("#4CAF50"); // Verde
+                    break;
+            }
+        }
+
+        // Applica il colore al bordo della card di QUESTA riga specifica
+        if (holder.cardView != null) {
+            holder.cardView.setStrokeColor(colorCode);
+            holder.priority.setTextColor(colorCode);
+            holder.priority.setTypeface(null, android.graphics.Typeface.BOLD);
+        }
+
+        if (report.getType() != null && holder.iconView != null) {
+            int iconResId;
+
+            // Assumiamo che il tuo Enum si chiami TypeOfReport
+            switch (report.getType()) {
+                case ABANDONED_WASTE:
+                    iconResId = R.drawable.ic_abandoned_waste; // Usa i TUOI nomi file
+                    break;
+                case OVERFLOWING_BIN:
+                    iconResId = R.drawable.ic_overflowing_bin;
+                    break;
+                case BULKY_WASTE:
+                    iconResId = R.drawable.ic_bulky_waste;
+                    break;
+                case ILLEGAL_DUMPING:
+                    iconResId = R.drawable.ic_illegal_dumping;
+                    break;
+                case DAMAGED_BIN:
+                    iconResId = R.drawable.ic_damaged_bin;
+                    break;
+                case UNSORTED_WASTE:
+                    iconResId = R.drawable.ic_unsorted_waste;
+                    break;
+                case MISSED_COLLECTION:
+                    iconResId = R.drawable.ic_missed_collection;
+                    break;
+                default: // Caso OTHER o tipi non gestiti
+                    iconResId = R.drawable.ic_waste_default;
+                    break;
+            }
+            // Imposta l'immagine
+            holder.iconView.setImageResource(iconResId);
+        }
 
         if(report.getDate() != null)
             holder.date.setText(report.getDate());
@@ -65,22 +127,6 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         return reportList.size();
     }
 
-    // Metodo per filtrare la lista
-    /*
-    public void filter(String city) {
-        reportList.clear();
-        if (city.isEmpty() || city.equals("Tutti i comuni")) {
-            reportList.addAll(reportListFull);
-        } else {
-            for (Report report : reportListFull) {
-                if (report.getCity() != null && report.getCity().equalsIgnoreCase(city)) {
-                    reportList.add(report);
-                }
-            }
-        }
-        notifyDataSetChanged();
-    }*/
-    // Modifica la firma per accettare DUE parametri
     public void filter(String city, String priority, String type) {
         android.util.Log.d("FILTRO_DEBUG", "Cercando: " + city + " | " + priority + " | " + type);
 
@@ -134,6 +180,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
 
     static class ReportViewHolder extends RecyclerView.ViewHolder {
         TextView title, city, street, priority, date, type;
+        ImageView iconView;
+        com.google.android.material.card.MaterialCardView cardView;
 
         public ReportViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -143,6 +191,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             priority = itemView.findViewById(R.id.tv_report_priority);
             date = itemView.findViewById(R.id.tv_report_date);
             type = itemView.findViewById(R.id.tv_report_type);
+            cardView = itemView.findViewById(R.id.card_item_container);
+            iconView = itemView.findViewById(R.id.iv_report_icon);
         }
     }
 }

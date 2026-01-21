@@ -96,18 +96,8 @@ public class ReportsFragment extends Fragment {
                 Toast.makeText(getContext(), "Errore nel caricamento dei comuni", Toast.LENGTH_SHORT).show();
             }
         });
-/*
-        binding.spinnerCityFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selectedCity = parent.getItemAtPosition(position).toString();
-                adapter.filter(selectedCity);
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) { }
-        });
-    }*/
+
         binding.spinnerCityFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
