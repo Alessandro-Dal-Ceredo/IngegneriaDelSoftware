@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="it.unive.raccoltapp" />
-                  <option name="mobileSdkAppId" value="1:249823269241:android:4454507c0e2b16f6749fa8" />
-                  <option name="projectId" value="raccoltapp-c0ce7" />
-                  <option name="projectNumber" value="249823269241" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
