@@ -82,6 +82,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }*/
     // Modifica la firma per accettare DUE parametri
     public void filter(String city, String priority, String type) {
+        android.util.Log.d("FILTRO_DEBUG", "Cercando: " + city + " | " + priority + " | " + type);
+
         reportList.clear();
 
         if (reportListFull == null || reportListFull.isEmpty()) {
@@ -100,8 +102,19 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
 
             // CHECK 3: Tipo (Default: "Tipo")
             // Assumiamo che report.getType() restituisca un Enum
-            boolean matchType = type.equals("Tipo") ||
-                    (report.getType() != null && report.getType().toString().equalsIgnoreCase(type));
+            boolean matchType = false;
+            if (type.equals("Tipo")) { // O qual è la tua stringa di default
+                matchType = true;
+            } else if (report.getType() != null) {
+                // 1. Prendo il tipo grezzo dal report (es. "HEAVY_WASTE")
+                String rawType = report.getType().toString();
+
+                // 2. Lo "pulisco" togliendo gli underscore, proprio come fai nel dettaglio
+                String cleanType = rawType.replace("_", " ");
+
+                // 3. Ora confronto la versione pulita con quella dello spinner
+                matchType = cleanType.equalsIgnoreCase(type);
+            }
 
             // LOGICA AND: Passa solo se TUTTI e 3 sono veri
             if (matchCity && matchPriority && matchType) {

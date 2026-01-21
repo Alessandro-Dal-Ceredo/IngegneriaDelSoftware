@@ -48,7 +48,7 @@ public class ReportsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         setupRecyclerView();
-        setupFilterSpinner();
+        setupCitySpinner();
         setupPrioritySpinner();
         setupTypeSpinner();
         loadReportsFromApi();
@@ -64,7 +64,7 @@ public class ReportsFragment extends Fragment {
         binding.recyclerViewReports.setAdapter(adapter);
     }
 
-    private void setupFilterSpinner() {
+    private void setupCitySpinner() {
         CalendarManager.getInstance().fetchComuniFromSupabase(new CalendarManager.OnComuniReadyCallback() {
             @Override
             public void onComuniReady(List<String> comuni) {
@@ -131,6 +131,7 @@ public class ReportsFragment extends Fragment {
                 if (binding == null) return;
                 if (response.isSuccessful() && response.body() != null) {
                     adapter.updateData(response.body());
+                    adapter.filter(currentCityFilter, currentPriorityFilter, currentTypeFilter);
                 } else {
                     Toast.makeText(getContext(), "Errore nel caricamento delle segnalazioni", Toast.LENGTH_SHORT).show();
                 }
@@ -183,7 +184,7 @@ public class ReportsFragment extends Fragment {
         // Carica i tipi dall'Enum (come hai fatto per le priorità)
         // Assicurati che TypeOfReport sia l'enum corretto del tuo progetto
         for (it.unive.raccoltapp.model.TypeOfReport t : it.unive.raccoltapp.model.TypeOfReport.values()) {
-            types.add(t.toString());
+            types.add(t.toString().replace("_", " "));
         }
 
         ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, types);

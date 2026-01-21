@@ -140,22 +140,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp">
 
                 <Button
-                    android:id="@+id/btn_gallery"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="8dp"
-                    android:text="Scegli da Galleria" />
+                android:id="@+id/btn_gallery"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/primary_green"
+                android:text="Seleziona foto"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp"
+                app:cornerRadius="8dp" />
 
                 <Button
                     android:id="@+id/btn_camera"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
                     android:layout_weight="1"
-                    android:text="Scatta Foto" />
+                    android:backgroundTint="@color/primary_green"
+                    android:text="Scatta foto"
+                    android:textStyle="bold"
+                    android:layout_marginStart="4dp"
+                    app:cornerRadius="8dp" />
 
             </LinearLayout>
 
@@ -166,13 +175,15 @@
                 android:columnCount="3"
                 android:layout_marginTop="8dp"
                 android:visibility="gone" />
-
             <Button
                 android:id="@+id/btn_submit_report"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Invia Segnalazione" />
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/error"
+                android:text="Invia Segnalazione"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
 
         </LinearLayout>
     </ScrollView>
