@@ -35,13 +35,11 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.databinding.FragmentAddReportBinding;
 import it.unive.raccoltapp.model.CalendarManager;
 import it.unive.raccoltapp.model.Image;
@@ -60,7 +58,6 @@ public class AddReportFragment extends Fragment {
     private FragmentAddReportBinding binding;
     private List<Uri> imageUris = new ArrayList<>();
     private String currentPhotoPath;
-    private Calendar selectedDate = Calendar.getInstance();
 
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestPermission(),
@@ -119,7 +116,7 @@ public class AddReportFragment extends Fragment {
 
         setupCitySpinner();
         setupPriorityMenu();
-        setupReportTypeMenu();
+        setupTypeOfReportMenu();
         setupDatePicker();
 
         binding.btnGallery.setOnClickListener(v -> {
@@ -138,6 +135,24 @@ public class AddReportFragment extends Fragment {
 
         binding.btnSubmitReport.setOnClickListener(v -> {
             submitReport();
+        });
+    }
+
+    private void setupDatePicker() {
+        binding.etReportDate.setOnClickListener(v -> {
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    requireContext(),
+                    (view, year1, monthOfYear, dayOfMonth) -> {
+                        String selectedDate = year1 + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
+                        binding.etReportDate.setText(selectedDate);
+                    },
+                    year, month, day);
+            datePickerDialog.show();
         });
     }
 
@@ -189,7 +204,7 @@ public class AddReportFragment extends Fragment {
     }
 
     private File createImageFile() throws IOException {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
         File storageDir = requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = File.createTempFile(
@@ -224,63 +239,45 @@ public class AddReportFragment extends Fragment {
         binding.actvPriority.setAdapter(adapter);
     }
 
-    private void setupReportTypeMenu() {
+    private void setupTypeOfReportMenu() {
         if (getContext() == null) return;
-        List<String> reportTypes = Arrays.asList(getResources().getStringArray(R.array.report_types));
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, reportTypes);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, TypeOfReport.getItalianNames());
         binding.actvReportType.setAdapter(adapter);
     }
 
-    private void setupDatePicker() {
-        updateDateInView(); // Imposta la data odierna come default
-        binding.etReportDate.setOnClickListener(v -> {
-            DatePickerDialog.OnDateSetListener dateSetListener = (view, year, month, dayOfMonth) -> {
-                selectedDate.set(Calendar.YEAR, year);
-                selectedDate.set(Calendar.MONTH, month);
-                selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                updateDateInView();
-            };
+    private byte[] getScaledImage(Bitmap originalBitmap, int quality) {
+        int originalWidth = originalBitmap.getWidth();
+        int originalHeight = originalBitmap.getHeight();
+        float aspectRatio = (float) originalWidth / originalHeight;
+        int targetWidth = 1280;
+        int targetHeight = (int) (targetWidth / aspectRatio);
 
-            DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), dateSetListener,
-                    selectedDate.get(Calendar.YEAR),
-                    selectedDate.get(Calendar.MONTH),
-                    selectedDate.get(Calendar.DAY_OF_MONTH));
+        if (originalWidth <= targetWidth) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            originalBitmap.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+            return baos.toByteArray();
+        }
 
-            datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-            datePickerDialog.show();
-        });
-    }
-
-    private void updateDateInView() {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-        binding.etReportDate.setText(sdf.format(selectedDate.getTime()));
+        Bitmap scaledBitmap = Bitmap.createScaledBitmap(originalBitmap, targetWidth, targetHeight, true);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        scaledBitmap.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+        return baos.toByteArray();
     }
 
     private void submitReport() {
-        String title = binding.etReportTitle.getText().toString().trim();
         String description = binding.etReportDescription.getText().toString().trim();
         String city = binding.actvReportCity.getText().toString().trim();
         String street = binding.etReportStreet.getText().toString().trim();
         String priorityString = binding.actvPriority.getText().toString().trim();
         String typeString = binding.actvReportType.getText().toString().trim();
-        String dateString = binding.etReportDate.getText().toString().trim();
-
-        if (title.isEmpty() || description.isEmpty() || city.isEmpty() || street.isEmpty() || priorityString.isEmpty() || typeString.isEmpty() || dateString.isEmpty()) {
+        String date = binding.etReportDate.getText().toString().trim();
+        
+        if (description.isEmpty() || city.isEmpty() || street.isEmpty() || priorityString.isEmpty() || typeString.isEmpty() || date.isEmpty()) {
             Toast.makeText(getContext(), "Tutti i campi sono obbligatori", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        Priority priority = Priority.valueOf(priorityString.toUpperCase(Locale.ROOT));
-
-        List<String> reportTypesList = Arrays.asList(getResources().getStringArray(R.array.report_types));
-        int typeIndex = reportTypesList.indexOf(typeString);
-        TypeOfReport type = TypeOfReport.OTHER; // Valore di default
-        if (typeIndex != -1 && typeIndex < TypeOfReport.values().length) {
-            type = TypeOfReport.values()[typeIndex];
-        }
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        String formattedDate = sdf.format(selectedDate.getTime());
+        Priority priority = Priority.valueOf(priorityString);
+        TypeOfReport type = TypeOfReport.fromItalianName(typeString);
 
         API_MANAGER apiManager = API_MANAGER.getInstance();
         if (!apiManager.isLoggedIn()) {
@@ -294,7 +291,7 @@ public class AddReportFragment extends Fragment {
             return;
         }
 
-        Report newReport = new Report(title, description, street, city, userId, priority, formattedDate, type);
+        Report newReport = new Report(description, street, city, userId, priority, date, type);
 
         apiManager.createReport(newReport, new Callback<List<ReportResponse>>() {
             @Override
@@ -307,9 +304,7 @@ public class AddReportFragment extends Fragment {
                         for (Uri uri : imageUris) {
                             try {
                                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), uri);
-                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                                byte[] imageInByte = baos.toByteArray();
+                                byte[] imageInByte = getScaledImage(bitmap, 80);
                                 String encodedImage = Base64.encodeToString(imageInByte, Base64.DEFAULT);
 
                                 Image image = new Image(encodedImage, reportId);
@@ -330,7 +325,8 @@ public class AddReportFragment extends Fragment {
                                     }
                                 });
                             } catch (IOException e) {
-                                Log.e(TAG, "Could not process image", e);                            }
+                                Log.e(TAG, "Could not process image", e);
+                            }
                         }
                         NavHostFragment.findNavController(AddReportFragment.this).popBackStack();
                     } else {

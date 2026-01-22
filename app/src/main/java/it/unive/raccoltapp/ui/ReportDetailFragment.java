@@ -4,11 +4,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +24,10 @@ import it.unive.raccoltapp.databinding.FragmentReportDetailBinding;
 import it.unive.raccoltapp.model.ImageResponse;
 import it.unive.raccoltapp.model.Report;
 import it.unive.raccoltapp.model.UserInfo;
+import it.unive.raccoltapp.network.API_MANAGER;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ReportDetailFragment extends Fragment {
 
@@ -43,7 +49,6 @@ public class ReportDetailFragment extends Fragment {
         if (getArguments() != null) {
             Report report = (Report) getArguments().getSerializable("report");
             if (report != null) {
-                binding.detailReportTitle.setText(report.getTitle());
                 binding.detailReportDescription.setText(report.getDescription());
                 binding.detailReportCity.setText("Città: " + report.getCity());
                 binding.detailReportStreet.setText("Via: " + report.getStreet());
@@ -65,8 +70,6 @@ public class ReportDetailFragment extends Fragment {
                     // --- INIZIO LOGICA COLORE BORDO ---
                     int colorCode;
 
-                    // Assumo che il tuo Enum Priority abbia valori tipo LOW, MEDIUM, HIGH, EXTREME
-                    // Verifica i nomi esatti nel tuo file Priority.java
                     switch (report.getPriority()) {
                         case EXTREME:
                             colorCode = android.graphics.Color.RED;
@@ -87,7 +90,6 @@ public class ReportDetailFragment extends Fragment {
                     if (report.getType() != null) {
                         int iconResId;
 
-                        // Assicurati che i nomi dei case (Enum) e dei drawable siano corretti
                         switch (report.getType()) {
                             case ABANDONED_WASTE:
                                 iconResId = R.drawable.ic_abandoned_waste;
@@ -115,11 +117,9 @@ public class ReportDetailFragment extends Fragment {
                                 break;
                         }
 
-                        // Imposta l'immagine nel Fragment
                         binding.detailReportIcon.setImageResource(iconResId);
                     }
 
-                    // Applica il colore al bordo della CardView
                     binding.cardDetailContainer.setStrokeColor(colorCode);
                     binding.detailReportPriority.setTextColor(colorCode);
                     binding.detailReportPriority.setTypeface(null, android.graphics.Typeface.BOLD);
@@ -127,29 +127,50 @@ public class ReportDetailFragment extends Fragment {
                     binding.detailReportPriority.setText("Priorità: N/D");
                 }
 
-                List<ImageResponse> images = report.getImages();
-                if (images != null && !images.isEmpty()) {
-                    binding.glReportImages.removeAllViews();
-                    binding.glReportImages.setVisibility(View.VISIBLE);
-                    for (ImageResponse image : images) {
-                        byte[] decodedString = Base64.decode(image.getImage(), Base64.DEFAULT);
-                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                        ImageView imageView = new ImageView(getContext());
-                        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-                        params.width = 300;
-                        params.height = 300;
-                        params.setMargins(8, 8, 8, 8);
-                        imageView.setLayoutParams(params);
-                        imageView.setImageBitmap(decodedByte);
-                        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                        imageView.setOnClickListener(v -> {
-                            ImageZoomFragment.newInstance(decodedByte).show(getParentFragmentManager(), "image_zoom");
-                        });
-                        binding.glReportImages.addView(imageView);
+                // --- LOGICA CARICAMENTO IMMAGINI ---
+                API_MANAGER.getInstance().getReportImages("eq." + report.getId(), new Callback<List<Report>>() {
+                    @Override
+                    public void onResponse(Call<List<Report>> call, Response<List<Report>> response) {
+                        if (isAdded() && binding != null && response.isSuccessful() && response.body() != null && !response.body().isEmpty()) {
+                            List<ImageResponse> images = response.body().get(0).getImages();
+
+                            if (images != null && !images.isEmpty()) {
+                                binding.glReportImages.removeAllViews();
+                                binding.glReportImages.setVisibility(View.VISIBLE);
+                                for (ImageResponse image : images) {
+                                    byte[] decodedString = Base64.decode(image.getImage(), Base64.DEFAULT);
+                                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                                    ImageView imageView = new ImageView(getContext());
+                                    GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+                                    params.width = 300;
+                                    params.height = 300;
+                                    params.setMargins(8, 8, 8, 8);
+                                    imageView.setLayoutParams(params);
+                                    imageView.setImageBitmap(decodedByte);
+                                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                                    imageView.setOnClickListener(v -> {
+                                        ImageZoomFragment.newInstance(decodedByte).show(getParentFragmentManager(), "image_zoom");
+                                    });
+                                    binding.glReportImages.addView(imageView);
+                                }
+                            } else {
+                                binding.glReportImages.setVisibility(View.GONE);
+                            }
+                        } else {
+                            if (isAdded() && binding != null) {
+                                binding.glReportImages.setVisibility(View.GONE);
+                            }
+                        }
                     }
-                } else {
-                    binding.glReportImages.setVisibility(View.GONE);
-                }
+
+                    @Override
+                    public void onFailure(Call<List<Report>> call, Throwable t) {
+                        if (isAdded() && getContext() != null) {
+                            Log.e("ReportDetailFragment", "Failed to load images", t);
+                            Toast.makeText(getContext(), "Errore nel caricamento delle immagini", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
 
                 String authorText = "Autore: Sconosciuto";
                 UserInfo authorInfo = report.getAuthorInfo();

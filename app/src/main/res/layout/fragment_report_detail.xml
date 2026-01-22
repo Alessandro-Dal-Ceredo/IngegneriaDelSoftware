@@ -19,112 +19,93 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_detail_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
+            app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
-            app:strokeWidth="4dp"
-            app:strokeColor="#E0E0E0">
+            app:strokeWidth="3dp"
+            app:strokeColor="#E0E0E0"
+            android:layout_margin="8dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="1dp">
+                android:orientation="vertical"
+                android:padding="16dp">
+
                 <ImageView
                     android:id="@+id/detail_report_icon"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_waste_default"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:contentDescription="Icona tipo segnalazione" />
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_waste_default" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+                <GridLayout
+                    android:id="@+id/gl_report_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/detail_report_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Titolo Segnalazione"
-                android:textAppearance="?attr/textAppearanceHeadline5" />
+                <TextView
+                    android:id="@+id/detail_report_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
 
-            <GridLayout
-                android:id="@+id/gl_report_images"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:layout_marginTop="16dp"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/detail_report_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Descrizione completa del problema..."
+                    android:textAppearance="?attr/textAppearanceBody1" />
 
-            <TextView
-                android:id="@+id/detail_report_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Descrizione completa del problema..."
-                android:textAppearance="?attr/textAppearanceBody1" />
+                <TextView
+                    android:id="@+id/detail_report_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Città"
+                    android:textAppearance="?attr/textAppearanceBody2" />
 
-            <TextView
-                android:id="@+id/detail_report_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Tipo"
-                android:textAppearance="?attr/textAppearanceBody2" />
+                <TextView
+                    android:id="@+id/detail_report_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Via"
+                    android:textAppearance="?attr/textAppearanceBody2" />
 
-            <TextView
-                android:id="@+id/detail_report_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Data"
-                android:textAppearance="?attr/textAppearanceBody2" />
+                <TextView
+                    android:id="@+id/detail_report_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Data"
+                    android:textAppearance="?attr/textAppearanceBody2" />
 
-            <TextView
-                android:id="@+id/detail_report_city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Città"
-                android:textAppearance="?attr/textAppearanceBody2" />
+                <TextView
+                    android:id="@+id/detail_report_priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Priorità"
+                    android:textAppearance="?attr/textAppearanceBody2" />
 
-            <TextView
-                android:id="@+id/detail_report_street"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Via"
-                android:textAppearance="?attr/textAppearanceBody2" />
+                <TextView
+                    android:id="@+id/detail_report_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Autore: nome.cognome"
+                    android:textAppearance="?attr/textAppearanceCaption" />
 
-            <TextView
-                android:id="@+id/detail_report_priority"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Priorità"
-                android:textAppearance="?attr/textAppearanceBody2" />
-
-            <TextView
-                android:id="@+id/detail_report_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Autore: nome.cognome"
-                android:textAppearance="?attr/textAppearanceCaption" />
-
-        </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
     </ScrollView>
 </LinearLayout>

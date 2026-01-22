@@ -37,8 +37,11 @@ public interface SupabaseApiService {
 
 
     // --- Segnalazioni (Reports) ---
-    @GET("rest/v1/reports?select=*,users_info(username),images(id,image)&order=id.desc")
+    @GET("rest/v1/reports?select=*,users_info(username)&order=id.desc")
     Call<List<Report>> getReports();
+
+    @GET("rest/v1/reports?select=images(id,image)")
+    Call<List<Report>> getReportImages(@Query("id") String reportId);
 
     @POST("rest/v1/reports")
     @Headers("Prefer: return=representation")

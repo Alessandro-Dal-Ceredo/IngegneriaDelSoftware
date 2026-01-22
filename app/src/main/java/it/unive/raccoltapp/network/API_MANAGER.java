@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import it.unive.raccoltapp.model.Image;
 import it.unive.raccoltapp.model.LoginCredentials;
@@ -60,6 +61,9 @@ public class API_MANAGER {
         loadSession();
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
                 .addInterceptor(chain -> {
                     Request originalRequest = chain.request();
                     Request.Builder builder = originalRequest.newBuilder().header("apikey", API_KEY);
@@ -256,6 +260,7 @@ public class API_MANAGER {
     }
 
     public void getReports(Callback<List<Report>> callback) { apiService.getReports().enqueue(callback); }
+    public void getReportImages(String reportId, Callback<List<Report>> callback) { apiService.getReportImages(reportId).enqueue(callback); }
     public void createReport(Report report, Callback<List<ReportResponse>> callback) { apiService.createReport(report).enqueue(callback); }
     public void uploadImage(Image image, Callback<Void> callback) { apiService.uploadImage(image).enqueue(callback); }
 }

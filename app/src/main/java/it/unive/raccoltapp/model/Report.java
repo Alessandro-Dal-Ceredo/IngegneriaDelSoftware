@@ -9,9 +9,6 @@ public class Report implements Serializable {
     @SerializedName("id")
     private Long id;
 
-    @SerializedName("title")
-    private String title;
-
     @SerializedName("description")
     private String description;
 
@@ -45,8 +42,7 @@ public class Report implements Serializable {
     @SerializedName("images")
     private List<ImageResponse> images;
 
-    public Report(String title, String description, String street, String city, Long idUser, Priority priority, String date, TypeOfReport type) {
-        this.title = title;
+    public Report(String description, String street, String city, Long idUser, Priority priority, String date, TypeOfReport type) {
         this.description = description;
         this.street = street;
         this.city = city;
@@ -57,7 +53,6 @@ public class Report implements Serializable {
     }
 
     public Long getId() { return id; }
-    public String getTitle() { return title; }
     public String getDescription() { return description; }
     public String getStreet() { return street; }
     public String getCity() { return city; }

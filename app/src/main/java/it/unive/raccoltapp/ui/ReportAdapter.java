@@ -16,6 +16,7 @@ import java.util.List;
 
 import it.unive.raccoltapp.R;
 import it.unive.raccoltapp.model.Report;
+import it.unive.raccoltapp.model.TypeOfReport;
 
 public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
 
@@ -38,7 +39,6 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     @Override
     public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
         Report report = reportList.get(position);
-        holder.title.setText(report.getTitle());
         holder.city.setText(report.getCity());
         holder.street.setText(report.getStreet());
         int colorCode = android.graphics.Color.GRAY; // Colore di default
@@ -106,7 +106,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             holder.date.setText(report.getDate());
 
         if(report.getType() != null)
-            holder.type.setText(report.getType().toString().replace("_", " "));
+            holder.type.setText(report.getType().toString());
 
         if (report.getPriority() != null) {
             holder.priority.setText(report.getPriority().toString());
@@ -147,20 +147,9 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
                     (report.getPriority() != null && report.getPriority().toString().equalsIgnoreCase(priority));
 
             // CHECK 3: Tipo (Default: "Tipo")
-            // Assumiamo che report.getType() restituisca un Enum
-            boolean matchType = false;
-            if (type.equals("Tipo")) { // O qual è la tua stringa di default
-                matchType = true;
-            } else if (report.getType() != null) {
-                // 1. Prendo il tipo grezzo dal report (es. "HEAVY_WASTE")
-                String rawType = report.getType().toString();
+            boolean matchType = type.equals("Tipo") ||
+                    (report.getType() != null && report.getType().toString().equalsIgnoreCase(type));
 
-                // 2. Lo "pulisco" togliendo gli underscore, proprio come fai nel dettaglio
-                String cleanType = rawType.replace("_", " ");
-
-                // 3. Ora confronto la versione pulita con quella dello spinner
-                matchType = cleanType.equalsIgnoreCase(type);
-            }
 
             // LOGICA AND: Passa solo se TUTTI e 3 sono veri
             if (matchCity && matchPriority && matchType) {
@@ -179,13 +168,12 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }
 
     static class ReportViewHolder extends RecyclerView.ViewHolder {
-        TextView title, city, street, priority, date, type;
+        TextView city, street, priority, date, type;
         ImageView iconView;
         com.google.android.material.card.MaterialCardView cardView;
 
         public ReportViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.tv_report_title);
             city = itemView.findViewById(R.id.tv_report_city);
             street = itemView.findViewById(R.id.tv_report_street);
             priority = itemView.findViewById(R.id.tv_report_priority);
