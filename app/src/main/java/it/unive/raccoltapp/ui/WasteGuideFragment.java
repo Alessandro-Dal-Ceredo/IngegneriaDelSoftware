@@ -84,6 +84,7 @@ public class WasteGuideFragment extends Fragment {
                 "💡 Suggerimento: Il secco è l'ultima spiaggia! Se hai dubbi, consulta il dizionario dei rifiuti nell'app prima di gettare qui."
         );
 
+        // Gestione Tasto Impostazioni (Ingranaggio in alto)
         return view;
     }
 
@@ -113,6 +114,7 @@ public class WasteGuideFragment extends Fragment {
         tvTitle.setText(title);
         imgIcon.setImageResource(iconResId);
 
+        // CORREZIONE: Usare requireContext() invece di 'this' nei Fragment
         int color = ContextCompat.getColor(requireContext(), colorResId);
         iconContainer.setBackgroundTintList(ColorStateList.valueOf(color));
 
