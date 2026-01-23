@@ -73,6 +73,9 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
 
             // Assumiamo che il tuo Enum si chiami TypeOfReport
             switch (report.getType()) {
+                case METEO_ALERT:
+                    iconResId = R.drawable.ic_meteo_alert;
+                    break;// Usa i TUOI nomi file
                 case ABANDONED_WASTE:
                     iconResId = R.drawable.ic_abandoned_waste; // Usa i TUOI nomi file
                     break;

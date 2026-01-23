@@ -91,6 +91,9 @@ public class ReportDetailFragment extends Fragment {
                         int iconResId;
 
                         switch (report.getType()) {
+                            case METEO_ALERT:
+                                iconResId = R.drawable.ic_meteo_alert;
+                                break;
                             case ABANDONED_WASTE:
                                 iconResId = R.drawable.ic_abandoned_waste;
                                 break;

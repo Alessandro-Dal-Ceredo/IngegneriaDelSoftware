@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum TypeOfReport {
+    METEO_ALERT("Allerta meteo"),
     ABANDONED_WASTE("Rifiuti abbandonati"),
     OVERFLOWING_BIN("Cassonetto strapieno"),
     BULKY_WASTE("Rifiuto ingombrante"),
