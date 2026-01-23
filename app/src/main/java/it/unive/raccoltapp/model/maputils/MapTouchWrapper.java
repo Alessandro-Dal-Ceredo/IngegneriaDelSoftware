@@ -1,8 +1,7 @@
-package it.unive.raccoltapp.model.maputils;
-
-import android.content.Context;
+package it.unive.raccoltapp.model.maputils;import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.ViewParent; // Importa ViewParent
 import android.widget.FrameLayout;
 
 public class MapTouchWrapper extends FrameLayout {
@@ -17,8 +16,15 @@ public class MapTouchWrapper extends FrameLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        // Tell NestedScrollView NOT to intercept touch events
-        getParent().requestDisallowInterceptTouchEvent(true);
+        // Ottieni il genitore
+        ViewParent parent = getParent();
+
+        // Controlla che il genitore non sia null prima di usarlo
+        if (parent != null) {
+            // "Dici" al NestedScrollView di NON intercettare gli eventi di tocco
+            parent.requestDisallowInterceptTouchEvent(true);
+        }
+
         return super.dispatchTouchEvent(ev);
     }
 }
